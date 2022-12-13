@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<CommandBarLocation>None</CommandBarLocation>
+	<ReportResult>Результат</ReportResult>
+	<DetailsData>ДанныеРасшифровки</DetailsData>
+	<ReportFormType>Main</ReportFormType>
+	<AutoShowState>Auto</AutoShowState>
+	<CustomSettingsFolder>КомпоновщикНастроекПользовательскиеНастройки</CustomSettingsFolder>
+	<ReportResultViewMode>Auto</ReportResultViewMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnLoadVariantAtServer">ПриЗагрузкеВариантаНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="КомпоновщикНастроекПользовательскиеНастройки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="4"/>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="23">
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="24"/>
+			<ChildItems>
+				<Table name="КомпоновщикНастроекНастройкиПараметрыДанных" id="8">
+					<Representation>Tree</Representation>
+					<Autofill>true</Autofill>
+					<Width>50</Width>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<MaxHeight>2</MaxHeight>
+					<Header>false</Header>
+					<InitialTreeView>ExpandAllLevels</InitialTreeView>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Отчет.SettingsComposer.Settings.DataParameters</DataPath>
+					<ContextMenu name="КомпоновщикНастроекНастройкиПараметрыДанныхКонтекстноеМеню" id="9"/>
+					<AutoCommandBar name="КомпоновщикНастроекНастройкиПараметрыДанныхКоманднаяПанель" id="10">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="КомпоновщикНастроекНастройкиПараметрыДанныхРасширеннаяПодсказка" id="11"/>
+					<SearchStringAddition name="КомпоновщикНастроекНастройкиПараметрыДанныхСтрокаПоиска" id="12">
+						<AdditionSource>
+							<Item>КомпоновщикНастроекНастройкиПараметрыДанных</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="КомпоновщикНастроекНастройкиПараметрыДанныхСтрокаПоискаКонтекстноеМеню" id="13"/>
+						<ExtendedTooltip name="КомпоновщикНастроекНастройкиПараметрыДанныхСтрокаПоискаРасширеннаяПодсказка" id="14"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="КомпоновщикНастроекНастройкиПараметрыДанныхСостояниеПросмотра" id="15">
+						<AdditionSource>
+							<Item>КомпоновщикНастроекНастройкиПараметрыДанных</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="КомпоновщикНастроекНастройкиПараметрыДанныхСостояниеПросмотраКонтекстноеМеню" id="16"/>
+						<ExtendedTooltip name="КомпоновщикНастроекНастройкиПараметрыДанныхСостояниеПросмотраРасширеннаяПодсказка" id="17"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="КомпоновщикНастроекНастройкиПараметрыДанныхУправлениеПоиском" id="18">
+						<AdditionSource>
+							<Item>КомпоновщикНастроекНастройкиПараметрыДанных</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="КомпоновщикНастроекНастройкиПараметрыДанныхУправлениеПоискомКонтекстноеМеню" id="19"/>
+						<ExtendedTooltip name="КомпоновщикНастроекНастройкиПараметрыДанныхУправлениеПоискомРасширеннаяПодсказка" id="20"/>
+					</SearchControlAddition>
+				</Table>
+				<UsualGroup name="Группа2" id="27">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="28"/>
+					<ChildItems>
+						<Button name="ФормаСформировать" id="21">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.StandardCommand.Generate</CommandName>
+							<Shape>Oval</Shape>
+							<ShapeRepresentation>WhenActive</ShapeRepresentation>
+							<ExtendedTooltip name="ФормаСформироватьРасширеннаяПодсказка" id="22"/>
+						</Button>
+						<Button name="ОткрытьИерархию" id="25">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОткрытьИерархию</CommandName>
+							<Shape>Oval</Shape>
+							<ShapeRepresentation>WhenActive</ShapeRepresentation>
+							<ExtendedTooltip name="ОткрытьИерархиюРасширеннаяПодсказка" id="26"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Стр" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтрРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<Page name="СтрОтчет" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчет</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стр отчет</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтрОтчетРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<SpreadSheetDocumentField name="Результат" id="5">
+							<DataPath>Результат</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>100</Width>
+							<ContextMenu name="РезультатКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="7"/>
+						</SpreadSheetDocumentField>
+					</ChildItems>
+				</Page>
+				<Page name="СтрЗадачиИнтернетЗаявки" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задачи по интернет-заявкам</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стр задачи интернет заявки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтрЗадачиИнтернетЗаявкиРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<Table name="ЗадачиИнтернетЗаявки" id="35">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Отчет.ЗадачиИнтернетЗаявки</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЗадачиИнтернетЗаявкиКонтекстноеМеню" id="36"/>
+							<AutoCommandBar name="ЗадачиИнтернетЗаявкиКоманднаяПанель" id="37"/>
+							<ExtendedTooltip name="ЗадачиИнтернетЗаявкиРасширеннаяПодсказка" id="38"/>
+							<SearchStringAddition name="ЗадачиИнтернетЗаявкиСтрокаПоиска" id="39">
+								<AdditionSource>
+									<Item>ЗадачиИнтернетЗаявки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиИнтернетЗаявкиСтрокаПоискаКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="ЗадачиИнтернетЗаявкиСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗадачиИнтернетЗаявкиСостояниеПросмотра" id="42">
+								<AdditionSource>
+									<Item>ЗадачиИнтернетЗаявки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиИнтернетЗаявкиСостояниеПросмотраКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="ЗадачиИнтернетЗаявкиСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗадачиИнтернетЗаявкиУправлениеПоиском" id="45">
+								<AdditionSource>
+									<Item>ЗадачиИнтернетЗаявки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиИнтернетЗаявкиУправлениеПоискомКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="ЗадачиИнтернетЗаявкиУправлениеПоискомРасширеннаяПодсказка" id="47"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЗадачиИнтернетЗаявкиНомерСтроки" id="48">
+									<DataPath>Отчет.ЗадачиИнтернетЗаявки.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗадачиИнтернетЗаявкиНомерСтрокиКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="ЗадачиИнтернетЗаявкиНомерСтрокиРасширеннаяПодсказка" id="50"/>
+								</LabelField>
+								<InputField name="ЗадачиИнтернетЗаявкиСигнатура" id="51">
+									<DataPath>Отчет.ЗадачиИнтернетЗаявки.Сигнатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗадачиИнтернетЗаявкиСигнатураКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="ЗадачиИнтернетЗаявкиСигнатураРасширеннаяПодсказка" id="53"/>
+								</InputField>
+								<InputField name="ЗадачиИнтернетЗаявкиТелефон" id="111">
+									<DataPath>Отчет.ЗадачиИнтернетЗаявки.Телефон</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗадачиИнтернетЗаявкиТелефонКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="ЗадачиИнтернетЗаявкиТелефонРасширеннаяПодсказка" id="113"/>
+								</InputField>
+								<InputField name="ЗадачиИнтернетЗаявкиДатаЗаявки" id="54">
+									<DataPath>Отчет.ЗадачиИнтернетЗаявки.Дата</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗадачиИнтернетЗаявкиДатаЗаявкиКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ЗадачиИнтернетЗаявкиДатаЗаявкиРасширеннаяПодсказка" id="56"/>
+								</InputField>
+								<InputField name="ЗадачиИнтернетЗаявкиИнициатор" id="57">
+									<DataPath>Отчет.ЗадачиИнтернетЗаявки.Инициатор</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗадачиИнтернетЗаявкиИнициаторКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ЗадачиИнтернетЗаявкиИнициаторРасширеннаяПодсказка" id="59"/>
+								</InputField>
+								<InputField name="ЗадачиИнтернетЗаявкиИсточникЗаявки" id="60">
+									<DataPath>Отчет.ЗадачиИнтернетЗаявки.ИсточникЗаявки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗадачиИнтернетЗаявкиИсточникЗаявкиКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ЗадачиИнтернетЗаявкиИсточникЗаявкиРасширеннаяПодсказка" id="62"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтрЦелевыеЗвонки" id="63">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Целевые звонки ОУ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стр целевые звонки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтрЦелевыеЗвонкиРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<Table name="ЦелевыеЗвонки" id="65">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Отчет.ЦелевыеЗвонки</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЦелевыеЗвонкиКонтекстноеМеню" id="66"/>
+							<AutoCommandBar name="ЦелевыеЗвонкиКоманднаяПанель" id="67"/>
+							<ExtendedTooltip name="ЦелевыеЗвонкиРасширеннаяПодсказка" id="68"/>
+							<SearchStringAddition name="ЦелевыеЗвонкиСтрокаПоиска" id="69">
+								<AdditionSource>
+									<Item>ЦелевыеЗвонки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦелевыеЗвонкиСтрокаПоискаКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="ЦелевыеЗвонкиСтрокаПоискаРасширеннаяПодсказка" id="71"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЦелевыеЗвонкиСостояниеПросмотра" id="72">
+								<AdditionSource>
+									<Item>ЦелевыеЗвонки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦелевыеЗвонкиСостояниеПросмотраКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="ЦелевыеЗвонкиСостояниеПросмотраРасширеннаяПодсказка" id="74"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЦелевыеЗвонкиУправлениеПоиском" id="75">
+								<AdditionSource>
+									<Item>ЦелевыеЗвонки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦелевыеЗвонкиУправлениеПоискомКонтекстноеМеню" id="76"/>
+								<ExtendedTooltip name="ЦелевыеЗвонкиУправлениеПоискомРасширеннаяПодсказка" id="77"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЦелевыеЗвонкиНомерСтроки" id="78">
+									<DataPath>Отчет.ЦелевыеЗвонки.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЦелевыеЗвонкиНомерСтрокиКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ЦелевыеЗвонкиНомерСтрокиРасширеннаяПодсказка" id="80"/>
+								</LabelField>
+								<InputField name="ЦелевыеЗвонкиСигнатура" id="81">
+									<DataPath>Отчет.ЦелевыеЗвонки.Сигнатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЦелевыеЗвонкиСигнатураКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ЦелевыеЗвонкиСигнатураРасширеннаяПодсказка" id="83"/>
+								</InputField>
+								<InputField name="ЦелевыеЗвонкиСтатус" id="84">
+									<DataPath>Отчет.ЦелевыеЗвонки.Статус</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЦелевыеЗвонкиСтатусКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ЦелевыеЗвонкиСтатусРасширеннаяПодсказка" id="86"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтрЦелевыеЗвонкиЗаявки" id="87">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Целевые звонки на основании заявок</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стр целевые звонки заявки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтрЦелевыеЗвонкиЗаявкиРасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<Table name="ЦелевыеЗвокиНаОснованииИнтернетЗаявок" id="89">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Отчет.ЦелевыеЗвокиНаОснованииИнтернетЗаявок</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокКонтекстноеМеню" id="90"/>
+							<AutoCommandBar name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокКоманднаяПанель" id="91"/>
+							<ExtendedTooltip name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокРасширеннаяПодсказка" id="92"/>
+							<SearchStringAddition name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокСтрокаПоиска" id="93">
+								<AdditionSource>
+									<Item>ЦелевыеЗвокиНаОснованииИнтернетЗаявок</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокСтрокаПоискаКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокСтрокаПоискаРасширеннаяПодсказка" id="95"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокСостояниеПросмотра" id="96">
+								<AdditionSource>
+									<Item>ЦелевыеЗвокиНаОснованииИнтернетЗаявок</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокСостояниеПросмотраКонтекстноеМеню" id="97"/>
+								<ExtendedTooltip name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокСостояниеПросмотраРасширеннаяПодсказка" id="98"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокУправлениеПоиском" id="99">
+								<AdditionSource>
+									<Item>ЦелевыеЗвокиНаОснованииИнтернетЗаявок</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокУправлениеПоискомКонтекстноеМеню" id="100"/>
+								<ExtendedTooltip name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокУправлениеПоискомРасширеннаяПодсказка" id="101"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокНомерСтроки" id="102">
+									<DataPath>Отчет.ЦелевыеЗвокиНаОснованииИнтернетЗаявок.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокНомерСтрокиКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокНомерСтрокиРасширеннаяПодсказка" id="104"/>
+								</LabelField>
+								<InputField name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокСигнатураЗвонка" id="105">
+									<DataPath>Отчет.ЦелевыеЗвокиНаОснованииИнтернетЗаявок.СигнатураЗвонка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокСигнатураЗвонкаКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокСигнатураЗвонкаРасширеннаяПодсказка" id="107"/>
+								</InputField>
+								<InputField name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокСигнатураЗаявки" id="108">
+									<DataPath>Отчет.ЦелевыеЗвокиНаОснованииИнтернетЗаявок.СигнатураЗаявки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокСигнатураЗаявкиКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="ЦелевыеЗвокиНаОснованииИнтернетЗаявокСигнатураЗаявкиРасширеннаяПодсказка" id="110"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтрЗвонкиНаКорпоративныйОтдел" id="114">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входящие звонки корпоративного отдела на основании заявок</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стр звонки на корпоративный отдел</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтрЗвонкиНаКорпоративныйОтделРасширеннаяПодсказка" id="115"/>
+					<ChildItems>
+						<Table name="ВходящиеЗвонкиКорпоративные" id="116">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Отчет.ВходящиеЗвонкиКорпоративногоОтдела</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВходящиеЗвонкиКорпоративныеКонтекстноеМеню" id="117"/>
+							<AutoCommandBar name="ВходящиеЗвонкиКорпоративныеКоманднаяПанель" id="118"/>
+							<ExtendedTooltip name="ВходящиеЗвонкиКорпоративныеРасширеннаяПодсказка" id="119"/>
+							<SearchStringAddition name="ВходящиеЗвонкиКорпоративныеСтрокаПоиска" id="120">
+								<AdditionSource>
+									<Item>ВходящиеЗвонкиКорпоративные</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВходящиеЗвонкиКорпоративныеСтрокаПоискаКонтекстноеМеню" id="121"/>
+								<ExtendedTooltip name="ВходящиеЗвонкиКорпоративныеСтрокаПоискаРасширеннаяПодсказка" id="122"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВходящиеЗвонкиКорпоративныеСостояниеПросмотра" id="123">
+								<AdditionSource>
+									<Item>ВходящиеЗвонкиКорпоративные</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВходящиеЗвонкиКорпоративныеСостояниеПросмотраКонтекстноеМеню" id="124"/>
+								<ExtendedTooltip name="ВходящиеЗвонкиКорпоративныеСостояниеПросмотраРасширеннаяПодсказка" id="125"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВходящиеЗвонкиКорпоративныеУправлениеПоиском" id="126">
+								<AdditionSource>
+									<Item>ВходящиеЗвонкиКорпоративные</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВходящиеЗвонкиКорпоративныеУправлениеПоискомКонтекстноеМеню" id="127"/>
+								<ExtendedTooltip name="ВходящиеЗвонкиКорпоративныеУправлениеПоискомРасширеннаяПодсказка" id="128"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ВходящиеЗвонкиКорпоративныеНомерСтроки" id="129">
+									<DataPath>Отчет.ВходящиеЗвонкиКорпоративногоОтдела.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВходящиеЗвонкиКорпоративныеНомерСтрокиКонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="ВходящиеЗвонкиКорпоративныеНомерСтрокиРасширеннаяПодсказка" id="131"/>
+								</LabelField>
+								<InputField name="ВходящиеЗвонкиКорпоративныеСигнатура" id="132">
+									<DataPath>Отчет.ВходящиеЗвонкиКорпоративногоОтдела.СигнатураЗвонка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВходящиеЗвонкиКорпоративныеСигнатураКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="ВходящиеЗвонкиКорпоративныеСигнатураРасширеннаяПодсказка" id="134"/>
+								</InputField>
+								<InputField name="ВходящиеЗвонкиКорпоративныеСигнатураЗаявки" id="135">
+									<DataPath>Отчет.ВходящиеЗвонкиКорпоративногоОтдела.СигнатураЗаявки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВходящиеЗвонкиКорпоративныеСигнатураЗаявкиКонтекстноеМеню" id="136"/>
+									<ExtendedTooltip name="ВходящиеЗвонкиКорпоративныеСигнатураЗаявкиРасширеннаяПодсказка" id="137"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтрПредположительноЦелевые" id="138">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предполагаемые заявки целевых звонков не на основании заявок</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стр предположительно целевые</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтрПредположительноЦелевыеРасширеннаяПодсказка" id="139"/>
+					<ChildItems>
+						<Table name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявок" id="140">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Отчет.ПредполагаемыеЗаявкиЦелевыхБезЗаявок</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокКонтекстноеМеню" id="141"/>
+							<AutoCommandBar name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокКоманднаяПанель" id="142"/>
+							<ExtendedTooltip name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокРасширеннаяПодсказка" id="143"/>
+							<SearchStringAddition name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСтрокаПоиска" id="144">
+								<AdditionSource>
+									<Item>ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявок</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСтрокаПоискаКонтекстноеМеню" id="145"/>
+								<ExtendedTooltip name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСтрокаПоискаРасширеннаяПодсказка" id="146"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСостояниеПросмотра" id="147">
+								<AdditionSource>
+									<Item>ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявок</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСостояниеПросмотраКонтекстноеМеню" id="148"/>
+								<ExtendedTooltip name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСостояниеПросмотраРасширеннаяПодсказка" id="149"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокУправлениеПоиском" id="150">
+								<AdditionSource>
+									<Item>ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявок</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокУправлениеПоискомКонтекстноеМеню" id="151"/>
+								<ExtendedTooltip name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокУправлениеПоискомРасширеннаяПодсказка" id="152"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокНомерСтроки" id="153">
+									<DataPath>Отчет.ПредполагаемыеЗаявкиЦелевыхБезЗаявок.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокНомерСтрокиКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокНомерСтрокиРасширеннаяПодсказка" id="155"/>
+								</LabelField>
+								<InputField name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСигнатураЗаявки" id="159">
+									<DataPath>Отчет.ПредполагаемыеЗаявкиЦелевыхБезЗаявок.СигнатураЗаявки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСигнатураЗаявкиКонтекстноеМеню" id="160"/>
+									<ExtendedTooltip name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСигнатураЗаявкиРасширеннаяПодсказка" id="161"/>
+								</InputField>
+								<InputField name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСигнатураЗвонкаИсходящегоПоЗаявкеНеСтавшегоЦелевым" id="162">
+									<DataPath>Отчет.ПредполагаемыеЗаявкиЦелевыхБезЗаявок.СигнатураЗвонкаИсходящегоПоЗаявкеНеСтавшегоЦелевым</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСигнатураЗвонкаИсходящегоПоЗаявкеНеСтавшегоЦелевымКонтекстноеМеню" id="163"/>
+									<ExtendedTooltip name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСигнатураЗвонкаИсходящегоПоЗаявкеНеСтавшегоЦелевымРасширеннаяПодсказка" id="164"/>
+								</InputField>
+								<InputField name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокДатаЗвонкаИсходящегоПоЗаявкеНеСтавшегоЦелевым" id="168">
+									<DataPath>Отчет.ПредполагаемыеЗаявкиЦелевыхБезЗаявок.ДатаЗвонкаИсходящегоПоЗаявкеНеСтавшегоЦелевым</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокДатаЗвонкаИсходящегоПоЗаявкеНеСтавшегоЦелевымКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокДатаЗвонкаИсходящегоПоЗаявкеНеСтавшегоЦелевымРасширеннаяПодсказка" id="170"/>
+								</InputField>
+								<InputField name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСигнатураЗвонкаЦелевогоНеПоЗаявке" id="156">
+									<DataPath>Отчет.ПредполагаемыеЗаявкиЦелевыхБезЗаявок.СигнатураЗвонкаЦелевогоНеПоЗаявке</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСигнатураЗвонкаЦелевогоНеПоЗаявкеКонтекстноеМеню" id="157"/>
+									<ExtendedTooltip name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокСигнатураЗвонкаЦелевогоНеПоЗаявкеРасширеннаяПодсказка" id="158"/>
+								</InputField>
+								<InputField name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокДатаЗвонкаЦелевогоНеПоЗаявке" id="165">
+									<DataPath>Отчет.ПредполагаемыеЗаявкиЦелевыхБезЗаявок.ДатаЗвонкаЦелевогоНеПоЗаявке</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокДатаЗвонкаЦелевогоНеПоЗаявкеКонтекстноеМеню" id="166"/>
+									<ExtendedTooltip name="ЦелевыеЗвокиПредположительноНаОснованииИнтернетЗаявокДатаЗвонкаЦелевогоНеПоЗаявкеРасширеннаяПодсказка" id="167"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Отчет" id="1">
+			<Type>
+				<v8:Type>cfg:ReportObject.ПрогнозЗадачПоИнтернетЗаявкамДинамикаПоМесяцам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Результат" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеРасшифровки" id="3">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьИерархию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть иерархию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть иерархию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListViewModeHierarchicalList</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьИерархию</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

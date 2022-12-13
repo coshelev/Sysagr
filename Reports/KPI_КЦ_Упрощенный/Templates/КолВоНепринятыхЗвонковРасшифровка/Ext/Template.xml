@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВремя</dataPath>
+			<field>ДатаВремя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата время</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолВоЗвонковОжиданиеСверхНормы</dataPath>
+			<field>КолВоЗвонковОжиданиеСверхНормы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол во звонков ожидание сверх нормы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолВоЗвонковПринятых</dataPath>
+			<field>КолВоЗвонковПринятых</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол во звонков принятых</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаименованиеПодразделения</dataPath>
+			<field>НаименованиеПодразделения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование подразделения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВремяОжидания</dataPath>
+			<field>ВремяОжидания</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время ожидания</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолВоЗвонковАнонимныхВсего</dataPath>
+			<field>КолВоЗвонковАнонимныхВсего</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол во звонков анонимных всего</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолВоЗвонковАнонимныхПринятых</dataPath>
+			<field>КолВоЗвонковАнонимныхПринятых</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол во звонков анонимных принятых</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВремяНач</dataPath>
+			<field>ВремяНач</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время нач</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДеньНедели</dataPath>
+			<field>ДеньНедели</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>День недели</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АбонентВнешний</dataPath>
+			<field>АбонентВнешний</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолВоЗвонковВсего</dataPath>
+			<field>КолВоЗвонковВсего</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол во звонков всего</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолВоЗвонковНеПринятых</dataPath>
+			<field>КолВоЗвонковНеПринятых</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол во звонков не принятых</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВремяКон</dataPath>
+			<field>ВремяКон</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время кон</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолВоЗвонковАнонимныхНеПринятых</dataPath>
+			<field>КолВоЗвонковАнонимныхНеПринятых</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол во звонков анонимных не принятых</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сигнатура</dataPath>
+			<field>Сигнатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ГрафикиРаботы.Ссылка КАК Ссылка,
+	1 КАК ДеньНедели,
+	ГрафикиРаботы.БудНач КАК ВремяНач,
+	ГрафикиРаботы.БудКон КАК ВремяКон
+ПОМЕСТИТЬ ВТ_ГрафикиРаботы
+ИЗ
+	Справочник.ГрафикиРаботы КАК ГрафикиРаботы
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ГрафикиРаботы.Ссылка,
+	2,
+	ГрафикиРаботы.БудНач,
+	ГрафикиРаботы.БудКон
+ИЗ
+	Справочник.ГрафикиРаботы КАК ГрафикиРаботы
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ГрафикиРаботы.Ссылка,
+	3,
+	ГрафикиРаботы.БудНач,
+	ГрафикиРаботы.БудКон
+ИЗ
+	Справочник.ГрафикиРаботы КАК ГрафикиРаботы
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ГрафикиРаботы.Ссылка,
+	4,
+	ГрафикиРаботы.БудНач,
+	ГрафикиРаботы.БудКон
+ИЗ
+	Справочник.ГрафикиРаботы КАК ГрафикиРаботы
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ГрафикиРаботы.Ссылка,
+	5,
+	ГрафикиРаботы.БудНач,
+	ГрафикиРаботы.БудКон
+ИЗ
+	Справочник.ГрафикиРаботы КАК ГрафикиРаботы
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ГрафикиРаботы.Ссылка,
+	6,
+	ГрафикиРаботы.СубНач,
+	ГрафикиРаботы.СубКон
+ИЗ
+	Справочник.ГрафикиРаботы КАК ГрафикиРаботы
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ГрафикиРаботы.Ссылка,
+	7,
+	ГрафикиРаботы.ВскНач,
+	ГрафикиРаботы.ВскКон
+ИЗ
+	Справочник.ГрафикиРаботы КАК ГрафикиРаботы
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Звонки.Дата КАК Дата,
+	ВЫБОР
+		КОГДА НЕ Звонки.Принят
+				И ЗвонкиСтатОбщая.КЦСсылка &lt;&gt; ЗНАЧЕНИЕ(Справочник.Предприятие.ПустаяСсылка)
+				И ЗвонкиСтатОбщая.КЦРазговор = 0
+				И ЗвонкиСтатОбщая.КЦОжидание &gt;= &amp;МинВремяОжиданияВОчереди
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КолВоЗвонковНеПринятых,
+	ВЫБОР
+		КОГДА НЕ Звонки.Принят
+				И ЗвонкиСтатОбщая.КЦСсылка &lt;&gt; ЗНАЧЕНИЕ(Справочник.Предприятие.ПустаяСсылка)
+				И ЗвонкиСтатОбщая.КЦРазговор = 0
+				И Звонки.АбонентВнешний = "Anonimous"
+				И ЗвонкиСтатОбщая.КЦОжидание &gt;= &amp;МинВремяОжиданияВОчереди
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КолВоЗвонковАнонимныхНеПринятых,
+	ВЫБОР
+		КОГДА Звонки.Принят
+				ИЛИ НЕ Звонки.Принят
+					И ЗвонкиСтатОбщая.КЦРазговор &gt; 0
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КолВоЗвонковПринятых,
+	ВЫБОР
+		КОГДА Звонки.Принят
+				И ЗвонкиСтатОбщая.КЦСсылка &lt;&gt; ЗНАЧЕНИЕ(Справочник.Предприятие.ПустаяСсылка)
+				И ЗвонкиСтатОбщая.КЦРазговор &gt; 0
+				И Звонки.АбонентВнешний = "Anonimous"
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КолВоЗвонковАнонимныхПринятых,
+	1 КАК КолВоЗвонковВсего,
+	ВЫБОР
+		КОГДА Звонки.АбонентВнешний = "Anonimous"
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КолВоЗвонковАнонимныхВсего,
+	ВЫБОР
+		КОГДА ЗвонкиСтатОбщая.КЦРазговор &gt; 0
+			ТОГДА ЗвонкиСтатОбщая.КЦОжидание
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВремяОжидания,
+	ВЫБОР
+		КОГДА (Звонки.Принят
+				ИЛИ НЕ Звонки.Принят
+					И ЗвонкиСтатОбщая.КЦРазговор &gt; 0)
+				И ЗвонкиСтатОбщая.КЦОжидание &gt; &amp;НормаВремениОжиданияКЦ
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КолВоЗвонковОжиданиеСверхНормы,
+	ЗвонкиСтатОбщая.КЦСсылка КАК Подразделение,
+	ЗвонкиСтатОбщая.КЦСсылка.НаименованиеПолное КАК НаименованиеПодразделения,
+	ЗвонкиСтатОбщая.КЦСсылка.ГрафикРаботы КАК ГрафикРаботы,
+	Звонки.Сигнатура КАК Сигнатура,
+	Звонки.АбонентВнешний КАК АбонентВнешний,
+	Звонки.Инициатор
+ПОМЕСТИТЬ ВТ_ЗвонкиБезФильтраПоВремени_КЦ_0
+ИЗ
+	РегистрСведений.ЗвонкиСтатОбщая КАК ЗвонкиСтатОбщая
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.Звонки КАК Звонки
+		ПО ЗвонкиСтатОбщая.Сигнатура = Звонки.Сигнатура
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.КонтактЦентры КАК КонтактЦентры
+		ПО ЗвонкиСтатОбщая.КЦСсылка = КонтактЦентры.Подразделение
+ГДЕ
+	Звонки.Дата МЕЖДУ НАЧАЛОПЕРИОДА(&amp;НачалоПериода, ДЕНЬ) И КОНЕЦПЕРИОДА(&amp;КонецПериода, ДЕНЬ)
+	И Звонки.ЭтоВходящий = ИСТИНА
+	И НЕ Звонки.Инициатор В (&amp;ИсключаемыеТеНомераПриемники)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Звонки.Сигнатура КАК Сигнатура
+ПОМЕСТИТЬ ВТ_ПришлиВОчередьИПрерваныАбонентомВтчПотомуЧтоВсеОператорыЗаняты
+ИЗ
+	РегистрСведений.Звонки КАК Звонки
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗвонкиМаршруты КАК ЗвонкиМаршруты
+		ПО Звонки.Сигнатура = ЗвонкиМаршруты.Сигнатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗвонкиСтатОбщая КАК ЗвонкиСтатОбщая
+		ПО Звонки.Сигнатура = ЗвонкиСтатОбщая.Сигнатура
+ГДЕ
+	Звонки.Дата МЕЖДУ НАЧАЛОПЕРИОДА(&amp;НачалоПериода, ДЕНЬ) И КОНЕЦПЕРИОДА(&amp;КонецПериода, ДЕНЬ)
+	И Звонки.ЭтоВходящий = ИСТИНА
+	И НЕ Звонки.Инициатор В (&amp;ИсключаемыеТеНомераПриемники)
+	И НЕ Звонки.Принят
+	И ЗвонкиСтатОбщая.КЦСсылка &lt;&gt; ЗНАЧЕНИЕ(Справочник.Предприятие.ПустаяСсылка)
+	И ЗвонкиСтатОбщая.КЦРазговор = 0
+	И ЗвонкиМаршруты.КодСобытия В ("ENTERQUEUE", "ABANDON")
+
+СГРУППИРОВАТЬ ПО
+	Звонки.Сигнатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Звонки.Сигнатура КАК Сигнатура
+ПОМЕСТИТЬ ВТ_ПришлиВОчередьИПрерваныАбонентомИменноПотомуЧтоВсеОператорыЗаняты
+ИЗ
+	РегистрСведений.Звонки КАК Звонки
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗвонкиМаршруты КАК ЗвонкиМаршруты
+		ПО Звонки.Сигнатура = ЗвонкиМаршруты.Сигнатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗвонкиСтатОбщая КАК ЗвонкиСтатОбщая
+		ПО Звонки.Сигнатура = ЗвонкиСтатОбщая.Сигнатура
+ГДЕ
+	Звонки.Сигнатура В
+			(ВЫБРАТЬ
+				Т.Сигнатура
+			ИЗ
+				ВТ_ПришлиВОчередьИПрерваныАбонентомВтчПотомуЧтоВсеОператорыЗаняты КАК Т)
+	И ЗвонкиМаршруты.КодСобытия В ("BUSY", "RINGNOANSWER")
+
+СГРУППИРОВАТЬ ПО
+	Звонки.Сигнатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ.Сигнатура
+ПОМЕСТИТЬ ВТ_ПришлиВОчередьИПрерваныАбонентомДоПопыткиСоединенияСОператором
+ИЗ
+	ВТ_ПришлиВОчередьИПрерваныАбонентомВтчПотомуЧтоВсеОператорыЗаняты КАК ВТ
+ГДЕ
+	НЕ ВТ.Сигнатура В
+				(ВЫБРАТЬ
+					Т.Сигнатура
+				ИЗ
+					ВТ_ПришлиВОчередьИПрерваныАбонентомИменноПотомуЧтоВсеОператорыЗаняты КАК Т)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ.Дата,
+	ВТ.КолВоЗвонковНеПринятых,
+	ВТ.КолВоЗвонковАнонимныхНеПринятых,
+	ВТ.КолВоЗвонковПринятых,
+	ВТ.КолВоЗвонковАнонимныхПринятых,
+	ВТ.КолВоЗвонковВсего,
+	ВТ.КолВоЗвонковАнонимныхВсего,
+	ВТ.ВремяОжидания,
+	ВТ.КолВоЗвонковОжиданиеСверхНормы,
+	ВТ.Подразделение,
+	ВТ.НаименованиеПодразделения,
+	ВТ.ГрафикРаботы,
+	ВТ.Сигнатура,
+	ВТ.АбонентВнешний,
+	ВТ.Инициатор
+ПОМЕСТИТЬ ВТ_ЗвонкиБезФильтраПоВремени_КЦ
+ИЗ
+	ВТ_ЗвонкиБезФильтраПоВремени_КЦ_0 КАК ВТ
+ГДЕ
+	НЕ ВТ.Сигнатура В
+				(ВЫБРАТЬ
+					Т.Сигнатура
+				ИЗ
+					ВТ_ПришлиВОчередьИПрерваныАбонентомДоПопыткиСоединенияСОператором КАК Т)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	НАЧАЛОПЕРИОДА(ВТ01.Дата, ДЕНЬ) КАК Дата,
+	ВТ01.Дата КАК ДатаВремя,
+	ВТ01.Сигнатура КАК Сигнатура,
+	ВТ01.КолВоЗвонковНеПринятых КАК КолВоЗвонковНеПринятых,
+	ВТ01.КолВоЗвонковАнонимныхНеПринятых КАК КолВоЗвонковАнонимныхНеПринятых,
+	ВТ01.КолВоЗвонковПринятых КАК КолВоЗвонковПринятых,
+	ВТ01.КолВоЗвонковАнонимныхПринятых КАК КолВоЗвонковАнонимныхПринятых,
+	ВТ01.КолВоЗвонковВсего КАК КолВоЗвонковВсего,
+	ВТ01.КолВоЗвонковАнонимныхВсего КАК КолВоЗвонковАнонимныхВсего,
+	ВТ01.ВремяОжидания КАК ВремяОжидания,
+	ВТ01.КолВоЗвонковОжиданиеСверхНормы КАК КолВоЗвонковОжиданиеСверхНормы,
+	ВТ01.Подразделение КАК Подразделение,
+	ВТ01.НаименованиеПодразделения,
+	ВТ_ГрафикиРаботы.ДеньНедели КАК ДеньНедели,
+	ВТ_ГрафикиРаботы.ВремяНач КАК ВремяНач,
+	ВТ_ГрафикиРаботы.ВремяКон КАК ВремяКон,
+	ВТ01.АбонентВнешний КАК АбонентВнешний
+ИЗ
+	ВТ_ЗвонкиБезФильтраПоВремени_КЦ КАК ВТ01
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ГрафикиРаботы КАК ВТ_ГрафикиРаботы
+		ПО (ДЕНЬНЕДЕЛИ(ВТ01.Дата) = ВТ_ГрафикиРаботы.ДеньНедели)
+			И ВТ01.ГрафикРаботы = ВТ_ГрафикиРаботы.Ссылка
+ГДЕ
+	ЧАС(ВТ01.Дата) МЕЖДУ ЧАС(ВТ_ГрафикиРаботы.ВремяНач) И ЧАС(ВТ_ГрафикиРаботы.ВремяКон)</query>
+	</dataSet>
+	<parameter>
+		<name>ИсключаемыеТеНомераПриемники</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Исключаемые те номера приемники</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ТелВнутренние</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ТелВнешние</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>МинВремяОжиданияВОчереди</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Мин время ожидания в очереди</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>5</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НормаВремениОжиданияКЦ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Норма времени ожидания КЦ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>5</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

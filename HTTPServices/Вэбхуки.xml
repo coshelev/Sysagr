@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<HTTPService uuid="86f97b88-246c-49d1-9d02-05948440af01">
+		<Properties>
+			<Name>Вэбхуки</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вэбхуки</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<RootURL>webhooks</RootURL>
+			<ReuseSessions>DontUse</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<URLTemplate uuid="4367e2e7-25bf-45dd-a002-821832ac01f4">
+				<Properties>
+					<Name>ШаблонURL1</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>HTTP - сервис интернет заявок УАЗ и Chery</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Используется для интернет заявок с сайтов УАЗ (вызов вписан в файл www/uaz-luidor.ru/assets/components/uaz/request.php) и сайта chery-luidor.ru (вызов вписан в файл www/motor-luidor/coshelev_chery.php). А также заявок с webjack</Comment>
+					<Template>/callback/v1</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="13ed2790-e20c-436e-8cab-1ff23e15fb5e">
+						<Properties>
+							<Name>DoPost</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Do post</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment>Обработка POST-запроса интернет-заявки на обратный звонок</Comment>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ШаблонURL1Метод1</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="0d1c3e72-d29f-45d8-8479-db63f9ea2175">
+				<Properties>
+					<Name>Test</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Test</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/test</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="2c779305-0d97-4c11-91fe-ad164dbaf375">
+						<Properties>
+							<Name>DoGet</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Do get</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ШаблонURL2Метод1</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="8993a819-9e4e-47d8-8547-7dbfcb375130">
+				<Properties>
+					<Name>ШаблонДляПроизвольныхДанныхPOST</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон для произвольных данных получаемых через POST</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Используется для интернет заявок с любых сайтов (вызов вписан в файл www/motor-luidor/coshelev_agr.php)</Comment>
+					<Template>/anypost/v1</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="c185fd61-7415-4f5f-9cd0-f413f60e0184">
+						<Properties>
+							<Name>DoPost</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Do post</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ШаблонДляПроизвольныхДанныхPOSTМетод1</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+		</ChildObjects>
+	</HTTPService>
+</MetaDataObject>

@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Customizable>false</Customizable>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Create</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Create</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>Top</SearchStringLocation>
+			<ViewStatusLocation>Bottom</ViewStatusLocation>
+			<SearchControlLocation>CommandBar</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>1:02023637-7868-4a5f-8576-835a76e0c9ba</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<BackColor>style:ToolTipBackColor</BackColor>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Тип" id="22">
+					<DataPath>Список.Тип</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип задачи</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТипКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ТипРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="Телефон" id="16">
+					<DataPath>Список.Телефон</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ТелефонКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="Состояние" id="48">
+					<DataPath>Список.Состояние</DataPath>
+					<ContextMenu name="СостояниеКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="50"/>
+				</LabelField>
+				<LabelField name="Исполнитель" id="28">
+					<DataPath>Список.Исполнитель</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ИсполнительКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ИсполнительРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="ТочкаРазмещения" id="45">
+					<DataPath>Список.ТочкаРазмещения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение исполнителя</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТочкаРазмещенияКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ТочкаРазмещенияРасширеннаяПодсказка" id="47"/>
+				</LabelField>
+				<LabelField name="ДатаПостановки" id="37">
+					<DataPath>Список.ДатаПостановки</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаПостановкиКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ДатаПостановкиРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="ДатаАктуальности" id="40">
+					<DataPath>Список.ДатаАктуальности</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнить до</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаАктуальностиКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ДатаАктуальностиРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="Канал" id="51">
+					<DataPath>Список.Канал</DataPath>
+					<ContextMenu name="КаналКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="КаналРасширеннаяПодсказка" id="53"/>
+				</LabelField>
+				<LabelField name="Регион" id="54">
+					<DataPath>Список.Регион</DataPath>
+					<ContextMenu name="РегионКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="РегионРасширеннаяПодсказка" id="56"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ДатаЗакрытия</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Т.Тип КАК Тип,
+	Т.Телефон КАК Телефон,
+	Т.Исполнитель КАК Исполнитель,
+	Т.ДатаЗакрытия КАК ДатаЗакрытия,
+	Т.ДатаПостановки КАК ДатаПостановки,
+	Т.ДатаАктуальности КАК ДатаАктуальности,
+	Т.Основание КАК Основание,
+	ЕСТЬNULL(Звонки.Инициатор, "") КАК Канал,
+	ЕСТЬNULL(Звонки.Регион, "") КАК Регион,
+	ВЫБОР
+		КОГДА Т.ДатаЗакрытия = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА "В работе"
+		КОГДА Т.Исполнитель ССЫЛКА Справочник.ТелВнутренние
+			ТОГДА "Исполнена"
+		ИНАЧЕ "Отменена"
+	КОНЕЦ КАК Состояние,
+	ВЫБОР
+		КОГДА Т.Исполнитель ССЫЛКА Справочник.КонтактЦентры
+			ТОГДА Т.Исполнитель.Подразделение.ТочкаРазмещения
+		КОГДА Т.Исполнитель ССЫЛКА Справочник.Пользователи
+			ТОГДА Т.Исполнитель.ТочкаРазмещения
+		КОГДА Т.Исполнитель ССЫЛКА Справочник.ТелВнутренние
+			ТОГДА Прив.Владелец.ТочкаРазмещения
+		ИНАЧЕ ""
+	КОНЕЦ КАК ТочкаРазмещения
+ИЗ
+	РегистрСведений.ЗадачиОбратныйЗвонок КАК Т
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОбъектыПривязка КАК Прив
+		ПО (Прив.Объект = Т.Исполнитель)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Звонки КАК Звонки
+		ПО Т.ЗвонокИнициатор = Звонки.Сигнатура</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПисьмоИнициатор</dcssch:dataPath>
+					<dcssch:field>ПисьмоИнициатор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПостановки</dcssch:dataPath>
+					<dcssch:field>ДатаПостановки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗвонокЗакрытия</dcssch:dataPath>
+					<dcssch:field>ЗвонокЗакрытия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Регион</dcssch:dataPath>
+					<dcssch:field>Регион</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регион</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗвонокИнициатор</dcssch:dataPath>
+					<dcssch:field>ЗвонокИнициатор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПервогоПерезвона</dcssch:dataPath>
+					<dcssch:field>ДатаПервогоПерезвона</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Исполнитель</dcssch:dataPath>
+					<dcssch:field>Исполнитель</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НапоминаниеПерезвонить</dcssch:dataPath>
+					<dcssch:field>НапоминаниеПерезвонить</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПричинаЗакрытия</dcssch:dataPath>
+					<dcssch:field>ПричинаЗакрытия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИсполнительПлан</dcssch:dataPath>
+					<dcssch:field>ИсполнительПлан</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаАктуальности</dcssch:dataPath>
+					<dcssch:field>ДатаАктуальности</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СоИсполнительПлан</dcssch:dataPath>
+					<dcssch:field>СоИсполнительПлан</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СоИсполнителиПлан</dcssch:dataPath>
+					<dcssch:field>СоИсполнителиПлан</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Основание</dcssch:dataPath>
+					<dcssch:field>Основание</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Тип</dcssch:dataPath>
+					<dcssch:field>Тип</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Телефон</dcssch:dataPath>
+					<dcssch:field>Телефон</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаЗакрытия</dcssch:dataPath>
+					<dcssch:field>ДатаЗакрытия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Канал</dcssch:dataPath>
+					<dcssch:field>Канал</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Канал</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Состояние</dcssch:dataPath>
+					<dcssch:field>Состояние</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТочкаРазмещения</dcssch:dataPath>
+					<dcssch:field>ТочкаРазмещения</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Точка размещения</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<MainTable>InformationRegister.ЗадачиОбратныйЗвонок</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаПостановки</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

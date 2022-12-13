@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Subsystem uuid="a714dd4d-2dda-4b74-a118-90ba44ece16e">
+		<Properties>
+			<Name>Администрирование</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Администрирование</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Инструментарий для управления приложением</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструментарий для управления приложением</v8:content>
+				</v8:item>
+			</Explanation>
+			<Picture>
+				<xr:Ref>CommonPicture.Шестеренка_МaterialDesign_16</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.УправлениеКонстантами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Пользователи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Предприятие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.AsteriskNnov.Table.ТелАбоненты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УчетнаяПолитика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.AsteriskNnov.Table.Провайдеры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Файлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">c3f965ba-95f8-4f46-a001-f9374572e5d6</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбслуживаниеСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Праздники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">66cb80dc-7c3d-442e-94a6-7b81911eaaa9</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">BusinessProcess.ОбратнаяСвязьЛояльности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БизнесПроцессыСвойства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.НастроечныеТаблицыXMLвУчетнойПолитике</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ТаблицаXML_ПланПоЦелевомуТрафику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПланПоЦелевомуТрафику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ТекущийПользователь</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.РольДоступнаАдминистратор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РазрешеноПереименованиеВСправочникеПредприятие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НавигационнаяСсылкаИнформационнойБазы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РазныеФормыЗадач</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.AsteriskNnov.Table.Блокировки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">298114df-8d36-4219-9f4b-3bcb1bb954f4</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">87e20260-b466-459c-b7a8-7368a6da784f</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Сообщения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">b51d37b0-be88-43c1-929c-5edb75046425</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">BusinessProcess.ОбратнаяСвязьЛояльностиПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЧтениеХранилищаОбщихНастроек</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ТаблицаXML_ПланПоЦелевомуТрафикуСОктября2020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПланПоЦелевомуТрафикуСОктября2020</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>АдмПредприятие</Subsystem>
+			<Subsystem>БизнесПроцессы</Subsystem>
+			<Subsystem>АдмНеотображать</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

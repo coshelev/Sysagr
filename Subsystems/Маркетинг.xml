@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Subsystem uuid="9f80e373-4033-4848-8307-e9de73c9c9e8">
+		<Properties>
+			<Name>Маркетинг</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маркетинг</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Отчеты маркетологам</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.Отчеты_MaterialDesign_16</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоОчередям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СвойстваИнтернетЗаявок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПрогнозЗадачПоИнтернетЗаявкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КонверсияСМСРассылок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЦелевыеВходящиеЗвонкиПоКлассифайдам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПрогнозЗадачПоИнтернетЗаявкамДинамикаПоДням</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПрогнозЗадачПоИнтернетЗаявкамДинамикаПоМесяцам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоЦелевомуТрафикуЧерезКонтактЦентрСИюня2020_ВыпПланаПоТрафику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗадачиПоИнтернетЗаявкамСРегионамиРеестр</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_ОтчетПоЦелевомуТрафику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЯндексДиректОтчетПоГруппам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДоступностьТелемаркетинг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КонверсияViberРассылок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДоступностьАвтосалонов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ИнтернетЗаявкиЖдановского</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗвонкиНаКартеРоссии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДоступностьЭксперт</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_ОтчетПоЦелевомуТрафику_Прочее</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_ОтчетПоЦелевомуТрафику_СервисБюро</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗвонкиЧерезЕКЦПоКлассифайдамИерархия1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоЦелевомуТрафикуЧерезКонтактЦентрСМая2020_АвтосалонСОктября2020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоЦелевомуТрафикуЧерезКонтактЦентрСОктября2020_ВыпПланаПоТрафику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗвонкиЧерезЕКЦПоКлассифайдамИерархия2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗвонкиЧерезЕКЦПоКлассифайдамИерархия3</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗвонкиЦелевыеАвтосалонЧерезЕКЦсИерархией2по_ОтчетПоЦТчерезЕКЦсОктября2020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗвонкиЦелевыеЭкспертЧерезЕКЦсИерархией2_по_ОтчетПоЦТчерезЕКЦсОктября2020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗвонкиЦелевыеСервисЧерезЕКЦсИерархией2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.JivoSite</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗвонкиЦелевыеСводныйЧерезЕКЦсИерархией2_по_ОтчетПоЦТчерезЕКЦсОктября2020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоЦелевомуТрафикуЧерезКонтактЦентрСМая2021_Втор_v3</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗвонкиЦелевыеАвтосалонЧерезЕКЦсИерархией1по_ОтчетПоЦТчерезЕКЦсОктября2020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗвонкиЦелевыеАвтосалонЧерезЕКЦсИерархией3по_ОтчетПоЦТчерезЕКЦсОктября2020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоЦелевомуТрафикуЧерезКонтактЦентрСОктября2020_ВыпПланаПоТрафику_Каналы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоЦелевомуТрафикуЧерезКонтактЦентрСМая2020_АвтосалонСОктября2021тест</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоЦелевомуТрафикуЧерезКонтактЦентрСМая2021_ВторСравнительнаяДинамика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИнтернетЗаявки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ИнтернетЗаявкиЗвонкиИДругиеСпособыЗакрытия</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>Настройки</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

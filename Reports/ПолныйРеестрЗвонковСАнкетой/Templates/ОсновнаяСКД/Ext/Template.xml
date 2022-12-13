@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оператор</dataPath>
+			<field>Оператор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответ</dataPath>
+			<field>Ответ</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Размещение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Cut</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Принят</dataPath>
+			<field>Принят</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сервер</dataPath>
+			<field>Сервер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Инициатор</dataPath>
+			<field>Инициатор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регион</dataPath>
+			<field>Регион</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АбонентВнешний</dataPath>
+			<field>АбонентВнешний</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сигнатура</dataPath>
+			<field>Сигнатура</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">25</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">25</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоВходящий</dataPath>
+			<field>ЭтоВходящий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Направление</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Исх; БИ=Вх</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТелефонИнициатора</dataPath>
+			<field>ТелефонИнициатора</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КЦРазговор</dataPath>
+			<field>КЦРазговор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТелефонОператора</dataPath>
+			<field>ТелефонОператора</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТочкаРазмещения</dataPath>
+			<field>ТочкаРазмещения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КЦСсылка</dataPath>
+			<field>КЦСсылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КЦАбонент</dataPath>
+			<field>КЦАбонент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОПСсылка</dataPath>
+			<field>ОПСсылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Исполнитель</dataPath>
+			<field>Исполнитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОПРазговор</dataPath>
+			<field>ОПРазговор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КЦОжидание</dataPath>
+			<field>КЦОжидание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОПОжидание</dataPath>
+			<field>ОПОжидание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодПричиныНепринят</dataPath>
+			<field>КодПричиныНепринят</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦелеваяТочкаОУ</dataPath>
+			<field>ЦелеваяТочкаОУ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СотрудникОУ</dataPath>
+			<field>СотрудникОУ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответ1</dataPath>
+			<field>Ответ1</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Размещение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Cut</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вопрос</dataPath>
+			<field>Вопрос</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответ2</dataPath>
+			<field>Ответ2</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Размещение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Cut</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вопрос1</dataPath>
+			<field>Вопрос1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответ3</dataPath>
+			<field>Ответ3</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Размещение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Cut</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вопрос2</dataPath>
+			<field>Вопрос2</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вопрос3</dataPath>
+			<field>Вопрос3</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТочкаЦелевая</dataPath>
+			<field>ТочкаЦелевая</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответ5</dataPath>
+			<field>Ответ5</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответ5</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Размещение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Cut</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вопрос4</dataPath>
+			<field>Вопрос4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вопрос4</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответ4</dataPath>
+			<field>Ответ4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответ4</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вопрос5</dataPath>
+			<field>Вопрос5</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вопрос5</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Звонки.АбонентВнешний КАК АбонентВнешний,
+	Звонки.Сигнатура КАК Сигнатура
+ПОМЕСТИТЬ ВТ00_Звонки
+ИЗ
+	РегистрСведений.Звонки КАК Звонки
+ГДЕ
+	Звонки.Дата МЕЖДУ &amp;Начало И &amp;Окончание
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ ПЕРВЫЕ 1
+	ИдентификаторыСтрок.Ссылка КАК ВопросСсылка
+ПОМЕСТИТЬ ВТ01_Вопрос
+ИЗ
+	РегистрСведений.УчетнаяПолитика КАК Учет
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыСтрок КАК ИдентификаторыСтрок
+		ПО (ВЫРАЗИТЬ(Учет.Значение КАК СТРОКА(100)) ПОДОБНО ИдентификаторыСтрок.Наименование)
+ГДЕ
+	Учет.Параметр = "Вопрос_Анкеты_Для_Полного_Реестра_Звонков"
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ ПЕРВЫЕ 1
+	ИдентификаторыСтрок.Ссылка КАК ВопросСсылка
+ПОМЕСТИТЬ ВТ02_Вопрос1
+ИЗ
+	РегистрСведений.УчетнаяПолитика КАК Учет
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыСтрок КАК ИдентификаторыСтрок
+		ПО (ВЫРАЗИТЬ(Учет.Значение КАК СТРОКА(100)) ПОДОБНО ИдентификаторыСтрок.Наименование)
+ГДЕ
+	Учет.Параметр = "Вопрос1_Анкеты_Для_Полного_Реестра_Звонков"
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ ПЕРВЫЕ 1
+	ИдентификаторыСтрок.Ссылка КАК ВопросСсылка
+ПОМЕСТИТЬ ВТ02_Вопрос2
+ИЗ
+	РегистрСведений.УчетнаяПолитика КАК Учет
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыСтрок КАК ИдентификаторыСтрок
+		ПО (ВЫРАЗИТЬ(Учет.Значение КАК СТРОКА(100)) ПОДОБНО ИдентификаторыСтрок.Наименование)
+ГДЕ
+	Учет.Параметр = "Вопрос2_Анкеты_Для_Полного_Реестра_Звонков"
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ ПЕРВЫЕ 1
+	ИдентификаторыСтрок.Ссылка КАК ВопросСсылка
+ПОМЕСТИТЬ ВТ02_Вопрос3
+ИЗ
+	РегистрСведений.УчетнаяПолитика КАК Учет
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыСтрок КАК ИдентификаторыСтрок
+		ПО (ВЫРАЗИТЬ(Учет.Значение КАК СТРОКА(100)) ПОДОБНО ИдентификаторыСтрок.Наименование)
+ГДЕ
+	Учет.Параметр = "Вопрос3_Анкеты_Для_Полного_Реестра_Звонков"
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ ПЕРВЫЕ 1
+	ИдентификаторыСтрок.Ссылка КАК ВопросСсылка
+ПОМЕСТИТЬ ВТ02_Вопрос4
+ИЗ
+	РегистрСведений.УчетнаяПолитика КАК Учет
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыСтрок КАК ИдентификаторыСтрок
+		ПО (ВЫРАЗИТЬ(Учет.Значение КАК СТРОКА(100)) ПОДОБНО ИдентификаторыСтрок.Наименование)
+ГДЕ
+	Учет.Параметр = "Вопрос4_Анкеты_Для_Полного_Реестра_Звонков"
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ ПЕРВЫЕ 1
+	ИдентификаторыСтрок.Ссылка КАК ВопросСсылка
+ПОМЕСТИТЬ ВТ02_Вопрос5
+ИЗ
+	РегистрСведений.УчетнаяПолитика КАК Учет
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыСтрок КАК ИдентификаторыСтрок
+		ПО (ВЫРАЗИТЬ(Учет.Значение КАК СТРОКА(100)) ПОДОБНО ИдентификаторыСтрок.Наименование)
+ГДЕ
+	Учет.Параметр = "Вопрос5_Анкеты_Для_Полного_Реестра_Звонков"
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Анкеты.Телефон КАК Телефон,
+	Анкеты.Вопрос КАК Вопрос,
+	Анкеты.Сигнатура КАК Сигнатура,
+	МАКСИМУМ(Анкеты.Период) КАК МаксПериод
+ПОМЕСТИТЬ ВТ10_КлючиАнкеты
+ИЗ
+	РегистрСведений.АнкетыРасширенные КАК Анкеты
+ГДЕ
+	(Анкеты.Телефон, Анкеты.Сигнатура) В
+			(ВЫБРАТЬ
+				ВТ00.АбонентВнешний,
+				ВТ00.Сигнатура
+			ИЗ
+				ВТ00_Звонки КАК ВТ00)
+	И Анкеты.Вопрос В
+			(ВЫБРАТЬ
+				ВТ01_Вопрос.ВопросСсылка
+			ИЗ
+				ВТ01_Вопрос
+		
+			ОБЪЕДИНИТЬ
+		
+			ВЫБРАТЬ
+				ВТ02_Вопрос1.ВопросСсылка
+			ИЗ
+				ВТ02_Вопрос1
+		
+			ОБЪЕДИНИТЬ
+		
+			ВЫБРАТЬ
+				ВТ02_Вопрос2.ВопросСсылка
+			ИЗ
+				ВТ02_Вопрос2
+		
+			ОБЪЕДИНИТЬ
+		
+			ВЫБРАТЬ
+				ВТ02_Вопрос3.ВопросСсылка
+			ИЗ
+				ВТ02_Вопрос3
+		
+			ОБЪЕДИНИТЬ
+		
+			ВЫБРАТЬ
+				ВТ02_Вопрос4.ВопросСсылка
+			ИЗ
+				ВТ02_Вопрос4
+		
+			ОБЪЕДИНИТЬ
+		
+			ВЫБРАТЬ
+				ВТ02_Вопрос5.ВопросСсылка
+			ИЗ
+				ВТ02_Вопрос5)
+
+СГРУППИРОВАТЬ ПО
+	Анкеты.Телефон,
+	Анкеты.Вопрос,
+	Анкеты.Сигнатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Анкеты.Телефон КАК Телефон,
+	Анкеты.Сигнатура КАК Сигнатура,
+	Анкеты.Вопрос КАК Вопрос,
+	Анкеты.Ответ КАК Ответ
+ПОМЕСТИТЬ ВТ15_ПоследняяАнкета
+ИЗ
+	РегистрСведений.АнкетыРасширенные КАК Анкеты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ10_КлючиАнкеты КАК ВТ10
+		ПО Анкеты.Телефон = ВТ10.Телефон
+			И Анкеты.Сигнатура = ВТ10.Сигнатура
+			И Анкеты.Вопрос = ВТ10.Вопрос
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Рег.Дата КАК Дата,
+	Рег.Сервер КАК Сервер,
+	Рег.Регион КАК Регион,
+	Рег.Принят КАК Принят,
+	Рег.Сигнатура КАК Сигнатура,
+	Рег.ЭтоВходящий КАК ЭтоВходящий,
+	Рег.АбонентВнешний КАК АбонентВнешний,
+	Стат.Исполнитель КАК Оператор,
+	Рег.Инициатор КАК ТелефонИнициатора,
+	Рег.АбонентВнутренний КАК ТелефонОператора,
+	Стат.Исполнитель.ТочкаРазмещения КАК ТочкаРазмещения,
+	ВЫБОР
+		КОГДА Рег.ЭтоВходящий
+			ТОГДА Рег.Инициатор.Назначение
+		ИНАЧЕ ВЫБОР
+				КОГДА Рег.Дата &lt; ДАТАВРЕМЯ(2018, 4, 4, 9, 0, 0)
+					ТОГДА Иниц.Владелец
+				ИНАЧЕ Стат.ИнициаторИсходящего
+			КОНЕЦ
+	КОНЕЦ КАК Инициатор,
+	Стат.КЦСсылка КАК КЦСсылка,
+	Стат.КЦАбонент КАК КЦАбонент,
+	Стат.ОПСсылка КАК ОПСсылка,
+	Стат.Контрагент КАК Контрагент,
+	Стат.Исполнитель КАК Исполнитель,
+	Стат.КЦРазговор КАК КЦРазговор,
+	Стат.ОПРазговор КАК ОПРазговор,
+	Стат.КЦОжидание КАК КЦОжидание,
+	Стат.ОПОжидание КАК ОПОжидание,
+	Стат.КодПричиныНепринят КАК КодПричиныНепринят,
+	ЗвонкиДоп.ЦелеваяТочка КАК ЦелеваяТочкаОУ,
+	ЗвонкиДоп.СотрудникОУ КАК СотрудникОУ,
+	ЕСТЬNULL(АнкетыРасширенные.Вопрос, "") КАК Вопрос,
+	ЕСТЬNULL(АнкетыРасширенные.Ответ, "") КАК Ответ,
+	ЕСТЬNULL(АнкетыРасширенные1.Вопрос, "") КАК Вопрос1,
+	ЕСТЬNULL(АнкетыРасширенные1.Ответ, "") КАК Ответ1,
+	ЕСТЬNULL(АнкетыРасширенные2.Вопрос, "") КАК Вопрос2,
+	ЕСТЬNULL(АнкетыРасширенные2.Ответ, "") КАК Ответ2,
+	ЕСТЬNULL(АнкетыРасширенные3.Вопрос, "") КАК Вопрос3,
+	ЕСТЬNULL(АнкетыРасширенные3.Ответ, "") КАК Ответ3,
+	ЕСТЬNULL(АнкетыРасширенные4.Вопрос, "") КАК Вопрос4,
+	ЕСТЬNULL(АнкетыРасширенные4.Ответ, "") КАК Ответ4,
+	ЕСТЬNULL(АнкетыРасширенные5.Вопрос, "") КАК Вопрос5,
+	ЕСТЬNULL(АнкетыРасширенные5.Ответ, "") КАК Ответ5,
+	ЕСТЬNULL(Целевые.ТочкаЦелевая, ЗНАЧЕНИЕ(Справочник.ТочкиЦелевые.ПустаяСсылка)) КАК ТочкаЦелевая
+ИЗ
+	ВТ00_Звонки КАК ВТ00
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.Звонки КАК Рег
+		ПО ВТ00.Сигнатура = Рег.Сигнатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОбъектыПривязка КАК Иниц
+		ПО (Иниц.Объект = Рег.Инициатор)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗвонкиСтатОбщая КАК Стат
+		ПО (Стат.Сигнатура = Рег.Сигнатура)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗвонкиЦелевые КАК Целевые
+		ПО (Рег.Сигнатура = Целевые.Сигнатура)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗвонкиДоп КАК ЗвонкиДоп
+		ПО (Рег.Сигнатура = ЗвонкиДоп.Сигнатура)
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ15_ПоследняяАнкета КАК АнкетыРасширенные
+		ПО (Рег.Сигнатура = АнкетыРасширенные.Сигнатура)
+			И (Рег.АбонентВнешний = АнкетыРасширенные.Телефон)
+			И (АнкетыРасширенные.Вопрос В
+				(ВЫБРАТЬ
+					ВТ01.ВопросСсылка
+				ИЗ
+					ВТ01_Вопрос КАК ВТ01))
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ15_ПоследняяАнкета КАК АнкетыРасширенные1
+		ПО (Рег.Сигнатура = АнкетыРасширенные1.Сигнатура)
+			И (Рег.АбонентВнешний = АнкетыРасширенные1.Телефон)
+			И (АнкетыРасширенные1.Вопрос В
+				(ВЫБРАТЬ
+					ВТ02.ВопросСсылка
+				ИЗ
+					ВТ02_Вопрос1 КАК ВТ02))
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ15_ПоследняяАнкета КАК АнкетыРасширенные2
+		ПО (Рег.Сигнатура = АнкетыРасширенные2.Сигнатура)
+			И (Рег.АбонентВнешний = АнкетыРасширенные2.Телефон)
+			И (АнкетыРасширенные2.Вопрос В
+				(ВЫБРАТЬ
+					ВТ02.ВопросСсылка
+				ИЗ
+					ВТ02_Вопрос2 КАК ВТ02))
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ15_ПоследняяАнкета КАК АнкетыРасширенные3
+		ПО (Рег.Сигнатура = АнкетыРасширенные3.Сигнатура)
+			И (Рег.АбонентВнешний = АнкетыРасширенные3.Телефон)
+			И (АнкетыРасширенные3.Вопрос В
+				(ВЫБРАТЬ
+					ВТ02.ВопросСсылка
+				ИЗ
+					ВТ02_Вопрос3 КАК ВТ02))
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ15_ПоследняяАнкета КАК АнкетыРасширенные4
+		ПО (Рег.Сигнатура = АнкетыРасширенные4.Сигнатура)
+			И (Рег.АбонентВнешний = АнкетыРасширенные4.Телефон)
+			И (АнкетыРасширенные4.Вопрос В
+				(ВЫБРАТЬ
+					ВТ02.ВопросСсылка
+				ИЗ
+					ВТ02_Вопрос4 КАК ВТ02))
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ15_ПоследняяАнкета КАК АнкетыРасширенные5
+		ПО (Рег.Сигнатура = АнкетыРасширенные5.Сигнатура)
+			И (Рег.АбонентВнешний = АнкетыРасширенные5.Телефон)
+			И (АнкетыРасширенные5.Вопрос В
+				(ВЫБРАТЬ
+					ВТ02.ВопросСсылка
+				ИЗ
+					ВТ02_Вопрос5 КАК ВТ02))</query>
+	</dataSet>
+	<parameter>
+		<name>Начало</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Окончание</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Окончание</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Сигнатура</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">РасшСигнатура</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Сигнатура</dcsat:name>
+			<dcsat:expression>Сигнатура</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>РасшСигнатура</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>Сигнатура</dcsat:field>
+				<dcsat:expression>Сигнатура</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+	</template>
+	<fieldTemplate>
+		<field>Сигнатура</field>
+		<template>Макет1</template>
+	</fieldTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЭтоВходящий</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Направление</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сигнатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дата</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодПричиныНепринят</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>*</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инициатор</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТелефонИнициатора</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Телефон</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Инициатор</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Владелец</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внешний абонент</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>АбонентВнешний</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Телефон</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Регион</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Регион</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контакт-центр</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КЦСсылка</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Контакт-центр</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КЦАбонент</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Оператор</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КЦОжидание</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ожидание</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КЦРазговор</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Разговор</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Последний оператор (ОП)</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТелефонОператора</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Телефон</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Оператор</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Владелец</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТочкаРазмещения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОПОжидание</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ожидание</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОПРазговор</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Разговор</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Анкета</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>Вопрос</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>Вопрос1</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>Вопрос2</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>Вопрос3</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ответ</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Что планирует? (Для ЭКСПЕРТА)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ответ1</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тип обращения СТО</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ответ2</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тип обращения по направлению деятельности</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ответ3</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Причина отсутствия перевода</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ответ4</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Результат звонка Эксперт</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ответ5</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Результат звонка по Автосалонам</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ОУ</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЦелеваяТочкаОУ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СотрудникОУ</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Дата</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Принят</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

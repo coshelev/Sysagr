@@ -1,0 +1,57 @@
+﻿<Array xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Array">
+	<Value xsi:type="Structure">
+		<Property name="Месяц">
+			<Value xsi:type="xs:dateTime">2018-01-01T00:00:00</Value>
+		</Property>
+		<Property name="ТочкаЦелевая">
+			<Value xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d4p1:CatalogRef.ТочкиЦелевые">8b06a603-349c-11e6-80bd-00155d010e38</Value>
+		</Property>
+		<Property name="Количество">
+			<Value xsi:type="xs:decimal">1</Value>
+		</Property>
+	</Value>
+	<Value xsi:type="Structure">
+		<Property name="Месяц">
+			<Value xsi:type="xs:dateTime">2018-01-01T00:00:00</Value>
+		</Property>
+		<Property name="ТочкаЦелевая">
+			<Value xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d4p1:CatalogRef.ТочкиЦелевые">3345b37a-7123-11e6-80c3-00155d301103</Value>
+		</Property>
+		<Property name="Количество">
+			<Value xsi:type="xs:decimal">3</Value>
+		</Property>
+	</Value>
+	<Value xsi:type="Structure">
+		<Property name="Месяц">
+			<Value xsi:type="xs:dateTime">2018-01-01T00:00:00</Value>
+		</Property>
+		<Property name="ТочкаЦелевая">
+			<Value xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d4p1:CatalogRef.ТочкиЦелевые">8b06a603-349c-11e6-80bd-00155d010e38</Value>
+		</Property>
+		<Property name="Количество">
+			<Value xsi:type="xs:decimal">6</Value>
+		</Property>
+	</Value>
+	<Value xsi:type="Structure">
+		<Property name="Месяц">
+			<Value xsi:type="xs:dateTime">2018-02-01T00:00:00</Value>
+		</Property>
+		<Property name="ТочкаЦелевая">
+			<Value xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d4p1:CatalogRef.ТочкиЦелевые">8b06a603-349c-11e6-80bd-00155d010e38</Value>
+		</Property>
+		<Property name="Количество">
+			<Value xsi:type="xs:decimal">7</Value>
+		</Property>
+	</Value>
+	<Value xsi:type="Structure">
+		<Property name="Месяц">
+			<Value xsi:type="xs:dateTime">2018-02-01T00:00:00</Value>
+		</Property>
+		<Property name="ТочкаЦелевая">
+			<Value xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d4p1:CatalogRef.ТочкиЦелевые">53d242ca-c361-11e6-80cc-00155d301103</Value>
+		</Property>
+		<Property name="Количество">
+			<Value xsi:type="xs:decimal">7</Value>
+		</Property>
+	</Value>
+</Array>

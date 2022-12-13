@@ -1,0 +1,1178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ОстаткиНаНачало</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процесс</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">40</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Свойство</dataPath>
+			<field>Свойство</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Завершен</dataPath>
+			<field>Завершен</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЗакрыто</dataPath>
+			<field>КоличествоЗакрыто</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество закрытых задач</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНеТребуетОбработки</dataPath>
+			<field>КоличествоНеТребуетОбработки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество поставленных задач без обязательной обработки</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Стартован</dataPath>
+			<field>Стартован</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсполнительОбратнойСвязи</dataPath>
+			<field>ИсполнительОбратнойСвязи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаЗавершения</dataPath>
+			<field>ДатаЗавершения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусСправочно</dataPath>
+			<field>СтатусСправочно</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус справочно</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СигнатураПродажи</dataPath>
+			<field>СигнатураПродажи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОжидаетОбработки</dataPath>
+			<field>КоличествоОжидаетОбработки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество задач со статусом ожидает обработки</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоВозвращеноВРаботу</dataPath>
+			<field>КоличествоВозвращеноВРаботу</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество задач со статусом возвращено в работу</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСтарта</dataPath>
+			<field>ДатаСтарта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Телефон</dataPath>
+			<field>Телефон</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество поставленных задач оператору КС региона</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказНарядАвтомобиль</dataPath>
+			<field>ЗаказНарядАвтомобиль</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ-наряд: автомобиль</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">40</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">60</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказНарядДата</dataPath>
+			<field>ЗаказНарядДата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ-наряд: дата</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказНарядНомер</dataPath>
+			<field>ЗаказНарядНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ-наряд: номер</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымБылиВозвраты</dataPath>
+			<field>КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымБылиВозвраты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество закрытых позже нормативного срока, по которым были возвраты</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымНеБылоВозвратов</dataPath>
+			<field>КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымНеБылоВозвратов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество закрытых позже нормативного срока, по которым не было возвратов</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЗакрытоПозжеНормативногоСрока</dataPath>
+			<field>КоличествоЗакрытоПозжеНормативногоСрока</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество закрытых позже нормативного срока</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Точка</dataPath>
+			<field>Точка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Процесс</dataPath>
+			<field>Процесс</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоВозвращеноВРаботуДоработка</dataPath>
+			<field>КоличествоВозвращеноВРаботуДоработка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество возвращено в работу доработка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоВозвращеноВРаботуВедение</dataPath>
+			<field>КоличествоВозвращеноВРаботуВедение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество возвращено в работу ведение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Процесс.Ссылка КАК Ссылка,
+	Процесс.Завершен КАК Завершен,
+	Процесс.Стартован КАК Стартован,
+	Процесс.СигнатураПродажи КАК СигнатураПродажи,
+	Процесс.Телефон КАК Телефон,
+	Процесс.ДатаСтарта КАК ДатаСтарта,
+	Процесс.Точка КАК Точка,
+	Процесс.ИсполнительОбратнойСвязи КАК ИсполнительОбратнойСвязи,
+	Процесс.ДатаЗавершения КАК ДатаЗавершения,
+	1 КАК Количество,
+	ВЫБОР
+		КОГДА Процесс.Завершен = ИСТИНА
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоЗакрыто,
+	Продажи.Номер КАК ЗаказНарядНомер,
+	Продажи.Дата КАК ЗаказНарядДата,
+	Продажи.Объект КАК ЗаказНарядАвтомобиль
+ПОМЕСТИТЬ ВТ00_Процессы
+ИЗ
+	БизнесПроцесс.ОбратнаяСвязьЛояльности КАК Процесс
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.Продажи КАК Продажи
+		ПО Процесс.СигнатураПродажи = Продажи.Сигнатура
+ГДЕ
+	Процесс.ДатаСтарта МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+	И Процесс.ПометкаУдаления = ЛОЖЬ
+	И Процесс.Стартован = ИСТИНА
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВЫРАЗИТЬ(СвойстваСрезПоследних.Процесс КАК БизнесПроцесс.ОбратнаяСвязьЛояльности) КАК Процесс,
+	СвойстваСрезПоследних.Значение КАК Значение,
+	ВЫБОР
+		КОГДА СвойстваСрезПоследних.Значение = &amp;ОжидаетОбработки
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоОжидаетОбработки,
+	ВЫБОР
+		КОГДА СвойстваСрезПоследних.Значение = &amp;ВозвращеноВРаботу
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоВозвращеноВРаботу
+ПОМЕСТИТЬ ВТ000_СвойстваСрез
+ИЗ
+	РегистрСведений.БизнесПроцессыЗначенияСвойств.СрезПоследних(
+			&amp;Период,
+			(Процесс, Свойство) В
+				(ВЫБРАТЬ РАЗЛИЧНЫЕ
+					ВТ00.Ссылка,
+					&amp;СвойствоСтатус
+				ИЗ
+					ВТ00_Процессы КАК ВТ00)) КАК СвойстваСрезПоследних
+ГДЕ
+	(СвойстваСрезПоследних.Значение = &amp;ОжидаетОбработки
+			ИЛИ СвойстваСрезПоследних.Значение = &amp;ВозвращеноВРаботу)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВЫРАЗИТЬ(СвойстваСрезПоследних.Процесс КАК БизнесПроцесс.ОбратнаяСвязьЛояльности) КАК Процесс,
+	СвойстваСрезПоследних.Значение КАК Значение,
+	ВЫБОР
+		КОГДА СвойстваСрезПоследних.Значение = "1"
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоВозвращеноВРаботуДоработка,
+	ВЫБОР
+		КОГДА СвойстваСрезПоследних.Значение = "2"
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоВозвращеноВРаботуВедение
+ПОМЕСТИТЬ ВТ001_СвойстваВозвращеноНаДоработкуИлиВедение
+ИЗ
+	РегистрСведений.БизнесПроцессыЗначенияСвойств.СрезПоследних(
+			&amp;Период,
+			(Процесс, Свойство) В
+				(ВЫБРАТЬ РАЗЛИЧНЫЕ
+					ВТ00.Ссылка,
+					&amp;СвойствоОценкаВыполненияПредыдущейЗадачи
+				ИЗ
+					ВТ00_Процессы КАК ВТ00)) КАК СвойстваСрезПоследних
+ГДЕ
+	(СвойстваСрезПоследних.Значение = "1"
+			ИЛИ СвойстваСрезПоследних.Значение = "2")
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ000.Процесс КАК Процесс,
+	ВТ000.Значение КАК Значение,
+	ВТ000.КоличествоОжидаетОбработки КАК КоличествоОжидаетОбработки,
+	ВТ000.КоличествоВозвращеноВРаботу КАК КоличествоВозвращеноВРаботу,
+	ЕСТЬNULL(ВТ001.КоличествоВозвращеноВРаботуДоработка, 0) КАК КоличествоВозвращеноВРаботуДоработка,
+	ЕСТЬNULL(ВТ001.КоличествоВозвращеноВРаботуВедение, 0) КАК КоличествоВозвращеноВРаботуВедение
+ПОМЕСТИТЬ ВТ002_Свойства
+ИЗ
+	ВТ000_СвойстваСрез КАК ВТ000
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ001_СвойстваВозвращеноНаДоработкуИлиВедение КАК ВТ001
+		ПО ВТ000.Процесс = ВТ001.Процесс
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Проц.Ссылка КАК Ссылка,
+	Проц.Завершен КАК Завершен,
+	Проц.Стартован КАК Стартован,
+	Проц.СигнатураПродажи КАК СигнатураПродажи,
+	Проц.Телефон КАК Телефон,
+	Проц.ДатаСтарта КАК ДатаСтарта,
+	Проц.Точка КАК Точка,
+	Проц.ИсполнительОбратнойСвязи КАК ИсполнительОбратнойСвязи,
+	Проц.Количество КАК Количество,
+	Проц.КоличествоЗакрыто КАК КоличествоЗакрыто,
+	Проц.ЗаказНарядНомер КАК ЗаказНарядНомер,
+	Проц.ЗаказНарядДата КАК ЗаказНарядДата,
+	Проц.ЗаказНарядАвтомобиль КАК ЗаказНарядАвтомобиль,
+	Проц.ДатаЗавершения КАК ДатаЗавершения,
+	СвойстваСрез.Значение КАК СтатусСправочно,
+	СвойстваСрез.КоличествоОжидаетОбработки КАК КоличествоОжидаетОбработки,
+	СвойстваСрез.КоличествоВозвращеноВРаботу КАК КоличествоВозвращеноВРаботу,
+	СвойстваСрез.КоличествоВозвращеноВРаботуДоработка КАК КоличествоВозвращеноВРаботуДоработка,
+	СвойстваСрез.КоличествоВозвращеноВРаботуВедение КАК КоличествоВозвращеноВРаботуВедение
+ПОМЕСТИТЬ ВТ01_Процессы
+ИЗ
+	ВТ00_Процессы КАК Проц
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ002_Свойства КАК СвойстваСрез
+		ПО (СвойстваСрез.Процесс = Проц.Ссылка)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ01_Процессы.Ссылка КАК Ссылка,
+	ВТ01_Процессы.СигнатураПродажи КАК СигнатураПродажи
+ПОМЕСТИТЬ ВТ02_ПроцессыСОтветомДа
+ИЗ
+	ВТ01_Процессы КАК ВТ01_Процессы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АнкетыРасширенные КАК АнкетыРасширенные
+		ПО ВТ01_Процессы.СигнатураПродажи = АнкетыРасширенные.СигнатураЗадачи
+ГДЕ
+	АнкетыРасширенные.Вопрос = &amp;ВопросДовольныЛиВыКачествомОбслуживанияПриПоследнемПосещенииСтанции
+	И АнкетыРасширенные.Ответ = &amp;ОтветДа
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ01_Процессы.Ссылка КАК Ссылка,
+	ВТ01_Процессы.СигнатураПродажи КАК СигнатураПродажи
+ПОМЕСТИТЬ ВТ03_ПроцессыСОтветом4
+ИЗ
+	ВТ01_Процессы КАК ВТ01_Процессы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АнкетыРасширенные КАК АнкетыРасширенные
+		ПО ВТ01_Процессы.СигнатураПродажи = АнкетыРасширенные.СигнатураЗадачи
+ГДЕ
+	АнкетыРасширенные.Вопрос = &amp;ДостоинЛиНашСервисВашейРекомендации
+	И АнкетыРасширенные.Ответ = &amp;Ответ4
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ02.Ссылка КАК Ссылка
+ПОМЕСТИТЬ ВТ04_ПроцессыБезОбязательнойОтработки
+ИЗ
+	ВТ02_ПроцессыСОтветомДа КАК ВТ02
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ03_ПроцессыСОтветом4 КАК ВТ03
+		ПО ВТ02.СигнатураПродажи = ВТ03.СигнатураПродажи
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ01.Ссылка КАК Ссылка,
+	ВТ01.Завершен КАК Завершен,
+	ВТ01.Стартован КАК Стартован,
+	ВТ01.СигнатураПродажи КАК СигнатураПродажи,
+	ВТ01.Телефон КАК Телефон,
+	ВТ01.ДатаСтарта КАК ДатаСтарта,
+	ВТ01.ДатаЗавершения КАК ДатаЗавершения,
+	ВТ01.Точка КАК Точка,
+	ВТ01.ИсполнительОбратнойСвязи КАК ИсполнительОбратнойСвязи,
+	ВТ01.СтатусСправочно КАК СтатусСправочно,
+	ВТ01.Количество КАК Количество,
+	ВТ01.КоличествоОжидаетОбработки КАК КоличествоОжидаетОбработки,
+	ВТ01.КоличествоВозвращеноВРаботу КАК КоличествоВозвращеноВРаботу,
+	ВТ01.КоличествоВозвращеноВРаботуДоработка КАК КоличествоВозвращеноВРаботуДоработка,
+	ВТ01.КоличествоВозвращеноВРаботуВедение КАК КоличествоВозвращеноВРаботуВедение,
+	ВТ01.КоличествоЗакрыто КАК КоличествоЗакрыто,
+	ВЫБОР
+		КОГДА ВТ04.Ссылка ЕСТЬ NULL
+			ТОГДА 0
+		ИНАЧЕ 1
+	КОНЕЦ КАК КоличествоНеТребуетОбработки,
+	ВЫБОР
+		КОГДА ВТ01.Завершен
+				И РАЗНОСТЬДАТ(ВТ01.ДатаСтарта, ВТ01.ДатаЗавершения, ДЕНЬ) &gt; &amp;НормативныйСрокЗакрытия
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоЗакрытоПозжеНормативногоСрока,
+	ВТ01.ЗаказНарядНомер КАК ЗаказНарядНомер,
+	ВТ01.ЗаказНарядДата КАК ЗаказНарядДата,
+	ВТ01.ЗаказНарядАвтомобиль КАК ЗаказНарядАвтомобиль
+ПОМЕСТИТЬ ВТ05_БезУчетаНеЗакрытыхВНормативныйСрокБылиВозвраты
+ИЗ
+	ВТ01_Процессы КАК ВТ01
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ04_ПроцессыБезОбязательнойОтработки КАК ВТ04
+		ПО ВТ01.Ссылка = ВТ04.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВТ05.Ссылка КАК Ссылка
+ПОМЕСТИТЬ ВТ06_ВозвратыВТеченииНормативногоСрока
+ИЗ
+	ВТ05_БезУчетаНеЗакрытыхВНормативныйСрокБылиВозвраты КАК ВТ05
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.БизнесПроцессыЗначенияСвойств КАК Свойства
+		ПО ВТ05.Ссылка = Свойства.Процесс
+			И (Свойства.Свойство.Код = "000000001")
+			И (Свойства.Значение = &amp;ВозвращеноВРаботу)
+			И (ВТ05.КоличествоЗакрытоПозжеНормативногоСрока = 1)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ05.Ссылка КАК Ссылка,
+	ВТ05.Завершен КАК Завершен,
+	ВТ05.Стартован КАК Стартован,
+	ВТ05.СигнатураПродажи КАК СигнатураПродажи,
+	ВТ05.Телефон КАК Телефон,
+	ВТ05.ДатаСтарта КАК ДатаСтарта,
+	ВТ05.ДатаЗавершения КАК ДатаЗавершения,
+	ЕСТЬNULL(ПродажиСоответствиеТочек.ТочкаОформления, ВТ05.Точка) КАК Точка,
+	ВТ05.ИсполнительОбратнойСвязи КАК ИсполнительОбратнойСвязи,
+	ВТ05.СтатусСправочно КАК СтатусСправочно,
+	ВТ05.Количество КАК Количество,
+	ВТ05.КоличествоОжидаетОбработки КАК КоличествоОжидаетОбработки,
+	ВТ05.КоличествоВозвращеноВРаботу КАК КоличествоВозвращеноВРаботу,
+	ВТ05.КоличествоВозвращеноВРаботуДоработка КАК КоличествоВозвращеноВРаботуДоработка,
+	ВТ05.КоличествоВозвращеноВРаботуВедение КАК КоличествоВозвращеноВРаботуВедение,
+	ВТ05.КоличествоЗакрыто КАК КоличествоЗакрыто,
+	ВТ05.КоличествоНеТребуетОбработки КАК КоличествоНеТребуетОбработки,
+	ВТ05.КоличествоЗакрытоПозжеНормативногоСрока КАК КоличествоЗакрытоПозжеНормативногоСрока,
+	ВЫБОР
+		КОГДА ВТ05.КоличествоЗакрытоПозжеНормативногоСрока = 1
+				И НЕ ВТ06.Ссылка ЕСТЬ NULL
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымБылиВозвраты,
+	ВЫБОР
+		КОГДА ВТ05.КоличествоЗакрытоПозжеНормативногоСрока = 1
+				И ВТ06.Ссылка ЕСТЬ NULL
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымНеБылоВозвратов,
+	ВТ05.ЗаказНарядНомер КАК ЗаказНарядНомер,
+	ВТ05.ЗаказНарядДата КАК ЗаказНарядДата,
+	ВТ05.ЗаказНарядАвтомобиль КАК ЗаказНарядАвтомобиль
+ИЗ
+	ВТ05_БезУчетаНеЗакрытыхВНормативныйСрокБылиВозвраты КАК ВТ05
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ06_ВозвратыВТеченииНормативногоСрока КАК ВТ06
+		ПО ВТ05.Ссылка = ВТ06.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПродажиСоответствиеТочек КАК ПродажиСоответствиеТочек
+		ПО ВТ05.Точка = ПродажиСоответствиеТочек.Точка</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоВозвращеноВРаботу</dataPath>
+		<expression>Сумма(КоличествоВозвращеноВРаботу)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЗакрыто</dataPath>
+		<expression>Сумма(КоличествоЗакрыто)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНеТребуетОбработки</dataPath>
+		<expression>Сумма(КоличествоНеТребуетОбработки)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоОжидаетОбработки</dataPath>
+		<expression>Сумма(КоличествоОжидаетОбработки)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЗакрытоПозжеНормативногоСрока</dataPath>
+		<expression>Сумма(КоличествоЗакрытоПозжеНормативногоСрока)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымБылиВозвраты</dataPath>
+		<expression>Сумма(КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымБылиВозвраты)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымНеБылоВозвратов</dataPath>
+		<expression>Сумма(КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымНеБылоВозвратов)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоВозвращеноВРаботуДоработка</dataPath>
+		<expression>Сумма(КоличествоВозвращеноВРаботуДоработка)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоВозвращеноВРаботуВедение</dataPath>
+		<expression>Сумма(КоличествоВозвращеноВРаботуВедение)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период1.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период1.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>Период1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период дат постановки задач перед КС Регион</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВозвращеноВРаботу</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Возвращено в работу</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>256</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОжидаетОбработки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ожидает обработки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>256</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОтветДа</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ответ да</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ИдентификаторыСтрок</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДостоинЛиНашСервисВашейРекомендации</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Достоин ли наш сервис вашей рекомендации</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ИдентификаторыСтрок</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Ответ4</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ответ4</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ИдентификаторыСтрок</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НормативныйСрокЗакрытия</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Нормативный срок закрытия в днях</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>12</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВопросДовольныЛиВыКачествомОбслуживанияПриПоследнемПосещенииСтанции</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вопрос довольны ли вы качеством обслуживания при последнем посещении станции</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ИдентификаторыСтрок</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СвойствоСтатус</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Свойство статус</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Закрыто</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Закрыто</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>256</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СвойствоОценкаВыполненияПредыдущейЗадачи</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Свойство оценка выполнения предыдущей задачи</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:userFields>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле1</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДоляНезакрытых</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression/>
+					<dcsset:detailExpressionPresentation/>
+					<dcsset:totalExpression>Выбор
+	Когда Количество &gt; 0
+		Тогда Выразить(КоличествоЗакрытоПозжеНормативногоСрока / Количество, "Число(5,2)") * 100
+	Иначе 0
+Конец</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Выбор
+	Когда [Количество поставленных задач оператору КС региона] &gt; 0
+		Тогда Выразить([Количество закрытых позже нормативного срока] / [Количество поставленных задач оператору КС региона], "Число(5,2)") * 100
+	Иначе 0
+Конец</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+			</dcsset:userFields>
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПодразделениеИсполнитель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоНеТребуетОбработки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоОжидаетОбработки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоВозвращеноВРаботу</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоВозвращеноВРаботуДоработка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоВозвращеноВРаботуВедение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЗакрыто</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЗакрытоПозжеНормативногоСрока</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДатаЗавершения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДатаСтарта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ИсполнительОбратнойСвязи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>СигнатураПродажи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>СтатусСправочно</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Телефон</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>в т. ч.</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымБылиВозвраты</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымНеБылоВозвратов</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПользовательскиеПоля.Поле1</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доля задач, закрытых позже нормативного срока, %</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаказНарядНомер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаказНарядДата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаказНарядАвтомобиль</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Стартован</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Завершен</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле1</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Точка</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Точка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Количество</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоНеТребуетОбработки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоОжидаетОбработки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоВозвращеноВРаботу</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоВозвращеноВРаботуДоработка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоВозвращеноВРаботуВедение</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоЗакрыто</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоЗакрытоПозжеНормативногоСрока</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>в т.ч.</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымБылиВозвраты</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымНеБылоВозвратов</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Auto</dcsset:placement>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПользовательскиеПоля.Поле1</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Доля задач, закрытых позже нормативного срока, %</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Количество</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоНеТребуетОбработки</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоОжидаетОбработки</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоВозвращеноВРаботу</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоВозвращеноВРаботуДоработка</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоВозвращеноВРаботуВедение</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоЗакрыто</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоЗакрытоПозжеНормативногоСрока</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ДатаЗавершения</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ДатаСтарта</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ИсполнительОбратнойСвязи</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>СигнатураПродажи</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Ссылка</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>СтатусСправочно</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>Телефон</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>в т.ч.</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымБылиВозвраты</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КоличествоЗакрытоПозжеНормативногоСрокаПоКоторымНеБылоВозвратов</dcsset:field>
+							</dcsset:item>
+							<dcsset:placement>Auto</dcsset:placement>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЗаказНарядНомер</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЗаказНарядДата</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЗаказНарядАвтомобиль</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>Стартован</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>Завершен</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

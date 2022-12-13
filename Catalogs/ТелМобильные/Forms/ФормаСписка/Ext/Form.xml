@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Customizable>false</Customizable>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ДействияФормы" id="63">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Действия формы</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Действия формы</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ДействияФормыРасширеннаяПодсказка" id="64"/>
+				<ChildItems>
+					<Button name="НомернойПланОбновитьМТС" id="65">
+						<Type>CommandBarButton</Type>
+						<CommandName>Catalog.ТелМобильные.Command.НомернойПланОбновитьМТС</CommandName>
+						<ExtendedTooltip name="НомернойПланОбновитьМТСРасширеннаяПодсказка" id="66"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>Top</SearchStringLocation>
+			<ViewStatusLocation>Bottom</ViewStatusLocation>
+			<SearchControlLocation>CommandBar</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>1:02023637-7868-4a5f-8576-835a76e0c9ba</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="28">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<BackColor>0:c72c8033-6710-469b-a295-5071548c0f7f</BackColor>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="30"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="31">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="33"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="34">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="36"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Код" id="37">
+					<DataPath>Список.Code</DataPath>
+					<ContextMenu name="КодКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="НомерКарты" id="49">
+					<DataPath>Список.НомерКарты</DataPath>
+					<ContextMenu name="НомерКартыКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="НомерКартыРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="Провайдер" id="43">
+					<DataPath>Список.Провайдер</DataPath>
+					<ContextMenu name="ПровайдерКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ПровайдерРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="ТипФМС" id="46">
+					<DataPath>Список.ТипФМС</DataPath>
+					<ContextMenu name="ТипФМСКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ТипФМСРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="ПараФМС" id="40">
+					<DataPath>Список.ПараФМС</DataPath>
+					<ContextMenu name="ПараФМСКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ПараФМСРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаПринадлежность" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа принадлежность</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа принадлежность</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаПринадлежностьРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<LabelField name="Холдер" id="54">
+							<DataPath>Список.Холдер</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Принадлежность</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ХолдерКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="ХолдерРасширеннаяПодсказка" id="56"/>
+						</LabelField>
+						<LabelField name="ТочкаРазмещения" id="57">
+							<DataPath>Список.ТочкаРазмещения</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ТочкаРазмещенияКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ТочкаРазмещенияРасширеннаяПодсказка" id="59"/>
+						</LabelField>
+						<LabelField name="Владелец" id="60">
+							<DataPath>Список.Владелец</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ВладелецКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="62"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>SELECT	Спр.Ссылка,Спр.Код,Спр.Провайдер,Спр.ТипФМС,Спр.НомерКарты,
+		CASE WHEN (Прив.Владелец IS NULL) THEN "" ELSE Прив.Владелец END AS Владелец,
+		CASE WHEN (Прив.Владелец IS NULL) THEN "" ELSE Прив.Владелец.Холдер END AS Холдер,
+		CASE WHEN (Прив.Владелец IS NULL) THEN "" ELSE Прив.Владелец.ТочкаРазмещения END AS ТочкаРазмещения,
+		CASE WHEN (Конв.ТелВнутренний IS NULL) THEN "" ELSE Конв.ТелВнутренний.Код END AS ПараФМС
+FROM	Справочник.ТелМобильные Спр
+LEFT	JOIN РегистрСведений.ОбъектыПривязка Прив ON (Прив.Объект = Спр.Ссылка)
+LEFT	JOIN РегистрСведений.ТелКонвергенция Конв ON (Конв.ТелМобильный = Спр.Ссылка)</QueryText>
+				<MainTable>Catalog.ТелМобильные</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Код</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

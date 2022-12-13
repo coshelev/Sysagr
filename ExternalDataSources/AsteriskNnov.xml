@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<ExternalDataSource uuid="b4a99975-6fd9-45cb-ab5c-9532bb043d04">
+		<InternalInfo>
+			<xr:GeneratedType name="ExternalDataSourceManager.AsteriskNnov" category="Manager">
+				<xr:TypeId>abc5eb39-ef3f-47cd-8ae7-a48031cbbe34</xr:TypeId>
+				<xr:ValueId>73d553ef-3b3c-45ed-86a2-d41498dbe49a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExternalDataSourceTablesManager.AsteriskNnov" category="TablesManager">
+				<xr:TypeId>fecbfad7-9f5f-4dcd-bd06-72ac7ca2344d</xr:TypeId>
+				<xr:ValueId>70ade36a-96de-4652-bdbe-9e94d3ddeef6</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExternalDataSourceCubesManager.AsteriskNnov" category="CubesManager">
+				<xr:TypeId>20d26745-8ca3-4f3b-b41e-8ea35416ce7a</xr:TypeId>
+				<xr:ValueId>7f3d58dd-47bc-48bc-88bd-2694d7bdeb72</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>AsteriskNnov</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Asterisk - Нижний Новгород</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Asterisk - Нижний Новгород</Comment>
+			<DataLockControlMode>Automatic</DataLockControlMode>
+		</Properties>
+		<ChildObjects>
+			<Table>Агенты</Table>
+			<Table>АгентыИстория</Table>
+			<Table>Очереди</Table>
+			<Table>ТелОбъекты</Table>
+			<Table>ТелАбоненты</Table>
+			<Table>КаналыВнешние</Table>
+			<Table>ЗвонкиВходящие</Table>
+			<Table>ЗвонкиИсходящие</Table>
+			<Table>РегДиапазоны</Table>
+			<Table>Блокировки</Table>
+			<Table>Провайдеры</Table>
+			<Table>ОчередиЛогические</Table>
+			<Table>history_sms</Table>
+		</ChildObjects>
+	</ExternalDataSource>
+</MetaDataObject>

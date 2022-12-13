@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.15">
+	<Item id="329dcbcd-a456-4bcb-aad1-fb810d017aaf">
+		<Name>Россия</Name>
+		<Code>000</Code>
+		<Description>Российская Федерация</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+</PredefinedData>

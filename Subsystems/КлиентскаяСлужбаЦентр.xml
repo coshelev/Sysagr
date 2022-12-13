@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Subsystem uuid="fc7553bb-c49f-4b22-9b7c-e7df3d1941de">
+		<Properties>
+			<Name>КлиентскаяСлужбаЦентр</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Клиент.служба Центр</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущее название - "Продажи"</v8:content>
+				</v8:item>
+			</Explanation>
+			<Picture>
+				<xr:Ref>CommonPicture.КлиентскаяСлужба_MaterialDesign_16</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Продажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Продажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗначокКасса32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТОиПродажи_РеестрДокументовРеализации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ПродажиАвтоЗагрузить_5ч00м</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.Ремонты_ОУСТО_Загрузить_5ч25м</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗадачиЛояльностиПакеты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольИсходящихЗвонковПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_БазовыеРеестрНегативныхОтзывов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольИсходящихЗвонковРемонты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗадачиЗвонокЛояльности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АнкетыРасширенные</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НеПерезванивать</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АнкетыОбратнойСвязи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.УправлениеКСструктураЗакрытыхЗадачСотрудникамиБезПакетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольОбработкиНегативныхОтзывовРемонтов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.WebКонсольИсходящихЗвонковРемонты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.WebКонсольИсходящихЗвонковПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Продажи_БазовыйРеестрЗадачЛояльностиПоДатеЗакрытияЗадачи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Продажи_БазовыйРеестрЗадачЛояльностиПоДатеРеализации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ГАЗЗаявки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольИсходящихГАЗЗаявки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РеестрГазЗаявок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПродажиМашинозаезды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗвонкиСделки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольПрослушиванияЗвонковПоСделкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_СводныйОтчетПричиныРучногоЗакрытияПоДатеМашинозаезда</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЛояльностьДетальный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольОбработкиНегативныхОтзывовПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_БазовыйРеестрНегативныхОтзывовИОтветыРегионов_v122020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольИсходящихЗвонковРемонтыВладимир</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_БазовыйРеестрЗадачЛояльностиПоДатеЗакрытияМашинозаезда_v122020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_БазовыйРеестрЗадачЛояльностиПоДатеЗакрытияЗадачи_v122020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_ПолныйРеестрНегативныхОтзывовРекомендацийПоДатеЗакрытияЗадачи_v122020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_Сводный_СферыИСвязанныеКатегорииПоДатеЗакрытияЗадачи_v122020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_Сводный_ОснПоказателиОбзвонаПоДатеЗакрытияЗадачи_v122020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_Сводный_ОснПоказателиОбзвонаПоДатеЗакрытияЗадачиПоСотр_v122020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_БазовыйРеестрЗадачЛояльностиПоДатеЗакрытияЗадачи_v042021</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_БазовыйРеестрЗадачЛояльностиПоДатеЗакрытияМашинозаезда_v042021</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_Сводный_ОснПоказателиОбзвонаПоДатеЗакрытияЗадачи_v042021</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_Сводный_ОснПоказателиОбзвонаПоДатеЗакрытияЗадачиПоСотр_v042021</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_Сводный_ОснПоказателиОбзвонаПоДатеЗакрытияЗадачи_v42021_ПМЗ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Продажи_Сводный_ОснПоказателиОбзвонаПоДатеЗакрытияЗадачи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_БазовыйРеестрНегативныхОтзывовИОтветыРегионов_v042021</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Продажи_БазовыйРеестрНегативныхОтзывовИОтветыРегионов_v042021</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Продажи_БазовыйРеестрНегативныхОтзывовИОтветыРегионов_v042021_Временный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольИсходящихЗвонковПродажиАдминистратора</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольИсходящихЗвонковРемонтыАдминистратора</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Продажи_ПолныйРеестрНегативныхОтзывовРекомендацийПоДатеЗакрытияЗадачи_v122021</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_Продажи_СкоростьОбработкиЖалоб</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>Настройки</Subsystem>
+			<Subsystem>ПродажиАвтомобилей</Subsystem>
+			<Subsystem>ПродажиСТО</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

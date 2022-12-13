@@ -1,0 +1,774 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Customizable>false</Customizable>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="Архивный" id="95">
+			<DataPath>Объект.Архивный</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="АрхивныйКонтекстноеМеню" id="96"/>
+			<ExtendedTooltip name="АрхивныйРасширеннаяПодсказка" id="97"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаВладелец" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа владелец</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа владелец</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВладелецРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<LabelDecoration name="НадписьВладелец" id="3">
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>#993300</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Владелец</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="НадписьВладелецКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НадписьВладелецРасширеннаяПодсказка" id="5"/>
+					<Events>
+						<Event name="Click">НадписьВладелецНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<InputField name="Код" id="6">
+					<DataPath>Объект.Code</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полный номер телефона (8 + Код города + Номер телефона) 11 цифр</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<BackColor>#CCFFCC</BackColor>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>8 + Код города + Номер телефона</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="КодКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="8"/>
+				</InputField>
+				<UsualGroup name="ГруппаВарианты" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа варианты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа варианты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВариантыРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<InputField name="СписокВариантов" id="11">
+							<DataPath>СписокВариантов</DataPath>
+							<ChooseType>false</ChooseType>
+							<TextEdit>false</TextEdit>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Варианты написания номера телефона</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="СписокВариантовКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="СписокВариантовРасширеннаяПодсказка" id="13"/>
+							<Events>
+								<Event name="OnChange">СписокВариантовПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДляНастройкиРасписания" id="87">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для настройки расписания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа для настройки расписания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<BackColor>web:Gainsboro</BackColor>
+			<ExtendedTooltip name="ГруппаДляНастройкиРасписанияРасширеннаяПодсказка" id="88"/>
+			<ChildItems>
+				<InputField name="Регион" id="89">
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChooseType>false</ChooseType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Владимир</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Владимир</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Казань</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Казань</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Москва</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Москва</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Н.Новгород</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Н.Новгород</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Общий</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Общий</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Саранск</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Саранск</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Тамбов</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Тамбов</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Уфа</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Уфа</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Чебоксары</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Чебоксары</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Челябинск</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Челябинск</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="РегионКонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="РегионРасширеннаяПодсказка" id="91"/>
+				</InputField>
+				<InputField name="ВидДеятельности" id="92">
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChooseType>false</ChooseType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Продажа</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Продажа</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Продажа авто с пробегом</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ПродажаАвтоСПробегом</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ПродажаСТО</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ПродажаСТО</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Производство</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Производство</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Служебный</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Служебный</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>СТО</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">СТО</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВидДеятельностиКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="ВидДеятельностиРасширеннаяПодсказка" id="94"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРодитель" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа родитель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа родитель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРодительРасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<InputField name="Родитель" id="16">
+					<DataPath>Объект.Parent</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пилотирующий номер (если телефон в серии)</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<TextEdit>false</TextEdit>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заполняется только если текущий номер включен в серию</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="РодительКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="18"/>
+					<Events>
+						<Event name="OnChange">ОбновлениеОтображения</Event>
+						<Event name="StartChoice">РодительНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЭлПочта" id="85">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа эл почта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа эл почта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>web:Beige</BackColor>
+			<ExtendedTooltip name="ГруппаЭлПочтаРасширеннаяПодсказка" id="86"/>
+			<ChildItems>
+				<InputField name="Почта" id="82">
+					<DataPath>Объект.Почта</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Эл. почта для отправки уведомлений о пропущенном звонке</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПочтаКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="ПочтаРасширеннаяПодсказка" id="84"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПараметры" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры для номера не включенного в серию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПровайдер" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа провайдер</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа провайдер</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПровайдерРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<InputField name="Провайдер" id="28">
+							<DataPath>Объект.Провайдер</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПровайдерКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ПровайдерРасширеннаяПодсказка" id="30"/>
+						</InputField>
+						<InputField name="КодГорода" id="34">
+							<DataPath>Объект.КодГорода</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код города</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="КодГородаКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="КодГородаРасширеннаяПодсказка" id="36"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСервер" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сервер</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сервер</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСерверРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<InputField name="Сервер" id="31">
+							<DataPath>Объект.Сервер</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сервер</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СерверКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="СерверРасширеннаяПодсказка" id="33"/>
+						</InputField>
+						<InputField name="ЕстьИсходящие" id="76">
+							<DataPath>Объект.ЕстьИсходящие</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Направления вызовов</v8:content>
+								</v8:item>
+							</Title>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ЕстьИсходящиеКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="ЕстьИсходящиеРасширеннаяПодсказка" id="78"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНазначение" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа назначение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа назначение</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНазначениеРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<InputField name="Назначение" id="23">
+							<DataPath>Объект.Назначение</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предназначение телефонного номера</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="НазначениеКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="НазначениеРасширеннаяПодсказка" id="25"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПодчиненные" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подчиненные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подчиненные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПодчиненныеРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<InputField name="СписокПодчиненных" id="37">
+							<DataPath>СписокПодчиненных</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список внешних телефонов, которые подчинены текущему номеру (включены в серию)</v8:content>
+								</v8:item>
+							</ToolTip>
+							<TextEdit>false</TextEdit>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подчиненных номеров нет</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="СписокПодчиненныхКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="СписокПодчиненныхРасширеннаяПодсказка" id="39"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКонтактЦентр" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа контакт центр</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа контакт центр</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКонтактЦентрРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<InputField name="КонтактЦентр" id="46">
+							<DataPath>Объект.КонтактЦентр</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Контакт-центр для обработки звонков, непринятых ОП</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КонтактЦентрКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="КонтактЦентрРасширеннаяПодсказка" id="48"/>
+						</InputField>
+						<CheckBoxField name="ВсегдаИспользовать" id="79">
+							<DataPath>Объект.ВсегдаИспользоватьЭтотКЦ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Этот же КЦ обрабатывает непринятый звонок, поступивший на другой КЦ</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВсегдаИспользоватьКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ВсегдаИспользоватьРасширеннаяПодсказка" id="81"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="Распределение" id="51">
+					<Representation>List</Representation>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.Распределение</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Copy</ExcludedCommand>
+					</CommandSet>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="РаспределениеКонтекстноеМеню" id="52"/>
+					<AutoCommandBar name="РаспределениеКоманднаяПанель" id="53"/>
+					<ExtendedTooltip name="РаспределениеРасширеннаяПодсказка" id="54"/>
+					<SearchStringAddition name="РаспределениеСтрокаПоиска" id="55">
+						<AdditionSource>
+							<Item>Распределение</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РаспределениеСтрокаПоискаКонтекстноеМеню" id="56"/>
+						<ExtendedTooltip name="РаспределениеСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="РаспределениеСостояниеПросмотра" id="58">
+						<AdditionSource>
+							<Item>Распределение</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РаспределениеСостояниеПросмотраКонтекстноеМеню" id="59"/>
+						<ExtendedTooltip name="РаспределениеСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="РаспределениеУправлениеПоиском" id="61">
+						<AdditionSource>
+							<Item>Распределение</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="РаспределениеУправлениеПоискомКонтекстноеМеню" id="62"/>
+						<ExtendedTooltip name="РаспределениеУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="РаспределениеКонтактЦентр" id="70">
+							<DataPath>Объект.Распределение.КонтактЦентр</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="РаспределениеКонтактЦентрКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="РаспределениеКонтактЦентрРасширеннаяПодсказка" id="72"/>
+						</InputField>
+						<InputField name="РаспределениеОчередь" id="73">
+							<DataPath>Объект.Распределение.Очередь</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Рекомендуемая очередь</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="РаспределениеОчередьКонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="РаспределениеОчередьРасширеннаяПодсказка" id="75"/>
+							<Events>
+								<Event name="StartChoice">РаспределениеОчередьНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ТелВнешние</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СписокВариантов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Варианты написания номера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СписокПодчиненных" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подчиненные номера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РаспределениеОчередь</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Распределение.КонтактЦентр</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

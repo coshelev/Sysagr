@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<ExternalDataSource uuid="f7b4b301-f552-42ef-9fb9-39af360850aa">
+		<InternalInfo>
+			<xr:GeneratedType name="ExternalDataSourceManager.AsteriskEdge" category="Manager">
+				<xr:TypeId>e02b6dd3-fb0e-4072-babe-0e607cd4f46a</xr:TypeId>
+				<xr:ValueId>5459176f-37d7-4ae2-b2cd-4edb2439a0d9</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExternalDataSourceTablesManager.AsteriskEdge" category="TablesManager">
+				<xr:TypeId>97e8fcab-8c51-40e1-9f7f-aac786feffa7</xr:TypeId>
+				<xr:ValueId>7b799f96-ba2f-4ee9-8ad8-4c975c9536d8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExternalDataSourceCubesManager.AsteriskEdge" category="CubesManager">
+				<xr:TypeId>0d19bfd1-176f-4ba1-9113-52a40c264d26</xr:TypeId>
+				<xr:ValueId>94747e45-e30b-4946-a0dc-f7af035d30e0</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>AsteriskEdge</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Asterisk edge</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DataLockControlMode>Automatic</DataLockControlMode>
+		</Properties>
+		<ChildObjects>
+			<Table>incoming_routes</Table>
+			<Table>schedules_custom</Table>
+			<Table>schedules_default</Table>
+			<Table>schedules_names</Table>
+		</ChildObjects>
+	</ExternalDataSource>
+</MetaDataObject>

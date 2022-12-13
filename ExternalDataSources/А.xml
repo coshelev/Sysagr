@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<ExternalDataSource uuid="adf2eccd-b248-4ee0-a7a5-cdf5784330e5">
+		<InternalInfo>
+			<xr:GeneratedType name="ExternalDataSourceManager.А" category="Manager">
+				<xr:TypeId>5658e4db-3d7e-45f3-bf23-6486a27bcfe1</xr:TypeId>
+				<xr:ValueId>ad2204fd-ffb5-4b00-91c7-0969ef206562</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExternalDataSourceTablesManager.А" category="TablesManager">
+				<xr:TypeId>133ad535-fe91-4709-8d9d-356393d31b80</xr:TypeId>
+				<xr:ValueId>55d01029-cfba-460f-94cb-3fc21034aff6</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ExternalDataSourceCubesManager.А" category="CubesManager">
+				<xr:TypeId>891d54ad-897f-46ea-b24c-e4626d4dc1f6</xr:TypeId>
+				<xr:ValueId>1db50d39-c109-42d8-a41b-ea7ebb9a5819</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>А</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>А</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DataLockControlMode>Automatic</DataLockControlMode>
+		</Properties>
+		<ChildObjects>
+			<Table>vehicle</Table>
+		</ChildObjects>
+	</ExternalDataSource>
+</MetaDataObject>

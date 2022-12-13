@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Customizable>false</Customizable>
+	<CommandSet>
+		<ExcludedCommand>Help</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаФМС" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры конвергенции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры конвергенции</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаФМСРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<InputField name="СерверФМС" id="1">
+					<DataPath>НаборКонстант.СерверФМС</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СерверФМСКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="СерверФМСРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКоммуникатор" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа коммуникатор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа коммуникатор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоммуникаторРасширеннаяПодсказка" id="7"/>
+		</UsualGroup>
+		<InputField name="НавигационнаяСсылкаИнформационнойБазы" id="32">
+			<DataPath>НаборКонстант.НавигационнаяСсылкаИнформационнойБазы</DataPath>
+			<ContextMenu name="НавигационнаяСсылкаИнформационнойБазыКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="НавигационнаяСсылкаИнформационнойБазыРасширеннаяПодсказка" id="34"/>
+		</InputField>
+		<InputField name="БиблиотекаФайловПуть" id="20">
+			<DataPath>НаборКонстант.БиблиотекаФайловПуть</DataPath>
+			<ContextMenu name="БиблиотекаФайловПутьКонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="БиблиотекаФайловПутьРасширеннаяПодсказка" id="22"/>
+		</InputField>
+		<CheckBoxField name="ОбрабатыватьИнтернетЗаявки" id="14">
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОбрабатыватьИнтернетЗаявкиКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="ОбрабатыватьИнтернетЗаявкиРасширеннаяПодсказка" id="16"/>
+		</CheckBoxField>
+		<InputField name="Отладка" id="11">
+			<DataPath>НаборКонстант.Отладка</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ОтладкаКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ОтладкаРасширеннаяПодсказка" id="13"/>
+		</InputField>
+		<CheckBoxField name="ЗамерПроизводительности" id="17">
+			<DataPath>НаборКонстант.ЗамерПроизводительности</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗамерПроизводительностиКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ЗамерПроизводительностиРасширеннаяПодсказка" id="19"/>
+		</CheckBoxField>
+		<CheckBoxField name="RLSпоЦелевымТочкам" id="23">
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="RLSпоЦелевымТочкамКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="RLSпоЦелевымТочкамРасширеннаяПодсказка" id="25"/>
+		</CheckBoxField>
+		<CheckBoxField name="RLSпоСправочникПредприятие" id="26">
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="RLSпоСправочникПредприятиеКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="RLSпоСправочникПредприятиеРасширеннаяПодсказка" id="28"/>
+		</CheckBoxField>
+		<CheckBoxField name="РазрешеноПереименованиеВСправочникеПредприятие" id="29">
+			<DataPath>НаборКонстант.РазрешеноПереименованиеВСправочникеПредприятие</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РазрешеноПереименованиеВСправочникеПредприятиеКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="РазрешеноПереименованиеВСправочникеПредприятиеРасширеннаяПодсказка" id="31"/>
+		</CheckBoxField>
+		<CheckBoxField name="РазныеФормыЗадач" id="35">
+			<DataPath>НаборКонстант.РазныеФормыЗадач</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РазныеФормыЗадачКонтекстноеМеню" id="36"/>
+			<ExtendedTooltip name="РазныеФормыЗадачРасширеннаяПодсказка" id="37"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

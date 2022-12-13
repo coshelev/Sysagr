@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<CommandBarLocation>None</CommandBarLocation>
+	<ReportFormType>Main</ReportFormType>
+	<AutoShowState>Auto</AutoShowState>
+	<ReportResultViewMode>Auto</ReportResultViewMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа4" id="60">
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<UsualGroup name="ГрОснНастройки" id="65">
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ГрОснНастройкиРасширеннаяПодсказка" id="66"/>
+					<ChildItems>
+						<InputField name="ДатаНачалаПериодаЗакрытияЗадач" id="62">
+							<DataPath>Отчет.ДатаНачалаПериодаЗакрытияЗадач</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период дат закрытия задач с</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДатаНачалаПериодаЗакрытияЗадачКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ДатаНачалаПериодаЗакрытияЗадачРасширеннаяПодсказка" id="64"/>
+						</InputField>
+						<InputField name="ДатаКонцаПериодаЗакрытияЗадач1" id="67">
+							<DataPath>Отчет.ДатаКонцаПериодаЗакрытияЗадач</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>по</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДатаКонцаПериодаЗакрытияЗадач1КонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ДатаКонцаПериодаЗакрытияЗадач1РасширеннаяПодсказка" id="69"/>
+						</InputField>
+						<Button name="Настройки" id="70">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Настройки</CommandName>
+							<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="71"/>
+						</Button>
+						<Button name="Команда1" id="44">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Сформировать</CommandName>
+							<ExtendedTooltip name="Команда1РасширеннаяПодсказка" id="45"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа1" id="54">
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<SpreadSheetDocumentField name="ТаблДок1" id="51">
+							<DataPath>ТаблДок</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ТаблДок1КонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ТаблДок1РасширеннаяПодсказка" id="53"/>
+						</SpreadSheetDocumentField>
+						<UsualGroup name="ГрНастройки" id="58">
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГрНастройкиРасширеннаяПодсказка" id="59"/>
+							<ChildItems>
+								<Pages name="Группа2" id="75">
+									<PagesRepresentation>TabsOnTop</PagesRepresentation>
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="76"/>
+									<ChildItems>
+										<Page name="Отборы" id="77">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по Точкам</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отборы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ОтборыРасширеннаяПодсказка" id="78"/>
+											<ChildItems>
+												<Table name="ТочкиОформления" id="7">
+													<Representation>List</Representation>
+													<CommandBarLocation>None</CommandBarLocation>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>Отчет.ТочкиОформления</DataPath>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ТочкиОформленияКонтекстноеМеню" id="8"/>
+													<AutoCommandBar name="ТочкиОформленияКоманднаяПанель" id="9"/>
+													<ExtendedTooltip name="ТочкиОформленияРасширеннаяПодсказка" id="10"/>
+													<SearchStringAddition name="ТочкиОформленияСтрокаПоиска" id="11">
+														<AdditionSource>
+															<Item>ТочкиОформления</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ТочкиОформленияСтрокаПоискаКонтекстноеМеню" id="12"/>
+														<ExtendedTooltip name="ТочкиОформленияСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ТочкиОформленияСостояниеПросмотра" id="14">
+														<AdditionSource>
+															<Item>ТочкиОформления</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ТочкиОформленияСостояниеПросмотраКонтекстноеМеню" id="15"/>
+														<ExtendedTooltip name="ТочкиОформленияСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ТочкиОформленияУправлениеПоиском" id="17">
+														<AdditionSource>
+															<Item>ТочкиОформления</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ТочкиОформленияУправлениеПоискомКонтекстноеМеню" id="18"/>
+														<ExtendedTooltip name="ТочкиОформленияУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<CheckBoxField name="ТочкиОформленияОтбор" id="72">
+															<DataPath>Отчет.ТочкиОформления.Отбор</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТочкиОформленияОтборКонтекстноеМеню" id="73"/>
+															<ExtendedTooltip name="ТочкиОформленияОтборРасширеннаяПодсказка" id="74"/>
+														</CheckBoxField>
+														<InputField name="ТочкиОформленияТочкаОформления" id="23">
+															<DataPath>Отчет.ТочкиОформления.ТочкаОформления</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ТочкиОформленияТочкаОформленияКонтекстноеМеню" id="24"/>
+															<ExtendedTooltip name="ТочкиОформленияТочкаОформленияРасширеннаяПодсказка" id="25"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</Page>
+										<Page name="ОтборВидРемонта" id="79">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по Виду ремонта</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор вид ремонта</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ОтборВидРемонтаРасширеннаяПодсказка" id="80"/>
+											<ChildItems>
+												<Table name="ВидыРемонта" id="81">
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>Отчет.ВидыРемонта</DataPath>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ВидыРемонтаКонтекстноеМеню" id="82"/>
+													<AutoCommandBar name="ВидыРемонтаКоманднаяПанель" id="83"/>
+													<ExtendedTooltip name="ВидыРемонтаРасширеннаяПодсказка" id="84"/>
+													<SearchStringAddition name="ВидыРемонтаСтрокаПоиска" id="85">
+														<AdditionSource>
+															<Item>ВидыРемонта</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ВидыРемонтаСтрокаПоискаКонтекстноеМеню" id="86"/>
+														<ExtendedTooltip name="ВидыРемонтаСтрокаПоискаРасширеннаяПодсказка" id="87"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ВидыРемонтаСостояниеПросмотра" id="88">
+														<AdditionSource>
+															<Item>ВидыРемонта</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ВидыРемонтаСостояниеПросмотраКонтекстноеМеню" id="89"/>
+														<ExtendedTooltip name="ВидыРемонтаСостояниеПросмотраРасширеннаяПодсказка" id="90"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ВидыРемонтаУправлениеПоиском" id="91">
+														<AdditionSource>
+															<Item>ВидыРемонта</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ВидыРемонтаУправлениеПоискомКонтекстноеМеню" id="92"/>
+														<ExtendedTooltip name="ВидыРемонтаУправлениеПоискомРасширеннаяПодсказка" id="93"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<CheckBoxField name="ВидыРемонтаОтбор" id="97">
+															<DataPath>Отчет.ВидыРемонта.Отбор</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ВидыРемонтаОтборКонтекстноеМеню" id="98"/>
+															<ExtendedTooltip name="ВидыРемонтаОтборРасширеннаяПодсказка" id="99"/>
+														</CheckBoxField>
+														<InputField name="ВидыРемонтаВидРемонта" id="100">
+															<DataPath>Отчет.ВидыРемонта.ВидРемонта</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ВидыРемонтаВидРемонтаКонтекстноеМеню" id="101"/>
+															<ExtendedTooltip name="ВидыРемонтаВидРемонтаРасширеннаяПодсказка" id="102"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Отчет" id="1">
+			<Type>
+				<v8:Type>cfg:ReportObject.СТО_ПолныйРеестрНегативныхОтзывовРекомендацийПоДатеЗакрытияЗадачи_v122020</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаблДок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табл док</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сформировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Команда1</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Настройки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Ремонт</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Настройки</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

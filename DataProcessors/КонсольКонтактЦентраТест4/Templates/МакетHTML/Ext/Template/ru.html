@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta http-equiv="X-UA-Compatible" content="IE=11"></meta><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body style="MARGIN: 35px">
+<form><input id="messageField" type="text"></input><input id="sendButton" onclick="sendMsg();" type="button" value="send"></input></form>
+<div id="msg-box" style="OVERFLOW: auto; HEIGHT: 400px; WIDTH: 500px; BACKGROUND: rgb(238,238,238)"></div><input id="btn1" onclick="a=1" type="button"></input><input id="btn2" type="button"></input><script>
+	function clickBtn2(){
+		//alert("btn2");
+		var el = document.getElementById('btn1');
+		el.value= "click me";
+		el.click();
+	}
+	btn2.addEventListener("click", clickBtn2); 
+</script><input id="btn3" type="button"></input><script>
+	function clickBtn3(){
+		var xmlHttp = new XMLHttpRequest();
+		alert("hello");
+		Url="http://192.168.0.137:8085";    
+		
+    	xmlHttp.open("GET", Url);
+    	xmlHttp.send();
+    	
+    	//alert(xmlHttp.responseText);
+	}
+	btn3.addEventListener("click", clickBtn3); 
+</script><script>
+    //var webSocket = new WebSocket("ws://localhost:8080/events/");
+    var webSocket = new WebSocket("ws://192.168.0.137:8085/events/");
+
+    var msgField = document.getElementById("messageField");
+    var divMsg = document.getElementById("msg-box");
+    
+    function sendMsg() {
+        //var msgField = document.getElementById("messageField");
+        var msgToSend = msgField.value;
+        webSocket.send(msgToSend);
+        divMsg.innerHTML += "<div style='color:red'>Client> " + msgToSend +"</div>"
+        msgField.value = "";
+    }
+    
+    webSocket.onmessage = function(message) {
+       // divMsg.innerHTML += "Server> : " + message.data;
+		console.log(message.data);
+		divMsg.innerHTML = message.data;
+		 
+		el = document.getElementById('btn1');
+		el.value = message.data;
+		el.click();
+            }
+
+    webSocket.onopen = function() {
+        console.log("connection opened");
+    };
+
+    webSocket.onclose = function() {
+        console.log("connection closed");
+    };
+
+    webSocket.onerror = function wserror(message) {
+        console.log("error: " + message);
+    }
+    
+    function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+</script></body></html>

@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Width>80</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandSet>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНаименование" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеРасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<InputField name="Наименование" id="64">
+					<DataPath>Объект.Description</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование панели</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="66"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСостав" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопки  быстрого вызова</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопки  быстрого вызова</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаСоставРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Table name="ПанельСостав" id="27">
+					<Representation>List</Representation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.ПанельСостав</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Copy</ExcludedCommand>
+					</CommandSet>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПанельСоставКонтекстноеМеню" id="28"/>
+					<AutoCommandBar name="ПанельСоставКоманднаяПанель" id="29">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="СоставДобавитьОчередь" id="54">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СоставДобавитьОчередь</CommandName>
+								<ExtendedTooltip name="СоставДобавитьОчередьРасширеннаяПодсказка" id="55"/>
+							</Button>
+							<Button name="СоставДобавитьТелефон" id="52">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СоставДобавитьТелефон</CommandName>
+								<ExtendedTooltip name="СоставДобавитьТелефонРасширеннаяПодсказка" id="53"/>
+							</Button>
+							<Button name="СоставПереместитьВверх" id="56">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ПанельСостав.StandardCommand.MoveUp</CommandName>
+								<ExtendedTooltip name="СоставПереместитьВверхРасширеннаяПодсказка" id="57"/>
+							</Button>
+							<Button name="СоставПереместитьВниз" id="58">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ПанельСостав.StandardCommand.MoveDown</CommandName>
+								<ExtendedTooltip name="СоставПереместитьВнизРасширеннаяПодсказка" id="59"/>
+							</Button>
+							<Button name="СоставУдалить" id="60">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ПанельСостав.StandardCommand.Delete</CommandName>
+								<ExtendedTooltip name="СоставУдалитьРасширеннаяПодсказка" id="61"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ПанельСоставРасширеннаяПодсказка" id="30"/>
+					<SearchStringAddition name="ПанельСоставСтрокаПоиска" id="31">
+						<AdditionSource>
+							<Item>ПанельСостав</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПанельСоставСтрокаПоискаКонтекстноеМеню" id="32"/>
+						<ExtendedTooltip name="ПанельСоставСтрокаПоискаРасширеннаяПодсказка" id="33"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПанельСоставСостояниеПросмотра" id="34">
+						<AdditionSource>
+							<Item>ПанельСостав</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПанельСоставСостояниеПросмотраКонтекстноеМеню" id="35"/>
+						<ExtendedTooltip name="ПанельСоставСостояниеПросмотраРасширеннаяПодсказка" id="36"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПанельСоставУправлениеПоиском" id="37">
+						<AdditionSource>
+							<Item>ПанельСостав</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПанельСоставУправлениеПоискомКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ПанельСоставУправлениеПоискомРасширеннаяПодсказка" id="39"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeAddRow">СоставПередНачаломДобавления</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="ПанельСоставТелефон" id="46">
+							<DataPath>Объект.ПанельСостав.Телефон</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Телефон или очередь</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПанельСоставТелефонКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ПанельСоставТелефонРасширеннаяПодсказка" id="48"/>
+						</LabelField>
+						<InputField name="ПанельСоставНаименование" id="43">
+							<DataPath>Объект.ПанельСостав.Наименование</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПанельСоставНаименованиеКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ПанельСоставНаименованиеРасширеннаяПодсказка" id="45"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.КонтактЦентры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоставДобавитьТелефон" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить телефон</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить внутренний телефон</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоставДобавить</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоставДобавитьОчередь" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить очередь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить системную очередь</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateFolder</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоставДобавить</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

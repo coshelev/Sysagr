@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Реестр исходящих звонков</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Help</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<SearchStringLocation>CommandBar</SearchStringLocation>
+			<ViewStatusLocation>Bottom</ViewStatusLocation>
+			<SearchControlLocation>CommandBar</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Дата" id="14">
+					<DataPath>Список.Дата</DataPath>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаАбонентВнешний" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Абонент</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа абонент внешний</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаАбонентВнешнийРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<LabelField name="ТелефонАбонента" id="41">
+							<DataPath>Список.ТелефонАбонента</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Телефон</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТелефонАбонентаКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ТелефонАбонентаРасширеннаяПодсказка" id="43"/>
+						</LabelField>
+						<LabelField name="Регион" id="32">
+							<DataPath>Список.Регион</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регион</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="РегионКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="РегионРасширеннаяПодсказка" id="34"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаИнициатор" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инициатор звонка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа инициатор</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаИнициаторРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<LabelField name="ТелефонИнициатора" id="68">
+							<DataPath>Список.ТелефонИнициатора</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Телефон</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТелефонИнициатораКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="ТелефонИнициатораРасширеннаяПодсказка" id="70"/>
+						</LabelField>
+						<LabelField name="Инициатор" id="65">
+							<DataPath>Список.Инициатор</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Владелец</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИнициаторКонтекстноеМеню" id="66"/>
+							<ExtendedTooltip name="ИнициаторРасширеннаяПодсказка" id="67"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="КонтактЦентр" id="71">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контакт-центр</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контакт центр</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="КонтактЦентрРасширеннаяПодсказка" id="72"/>
+					<ChildItems>
+						<LabelField name="КЦСсылка" id="73">
+							<DataPath>Список.КЦСсылка</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Контакт-центр</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КЦСсылкаКонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="КЦСсылкаРасширеннаяПодсказка" id="75"/>
+						</LabelField>
+						<LabelField name="КЦСсылкаТочкаРазмещения" id="79">
+							<DataPath>Список.КЦСсылка.ТочкаРазмещения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Принадлежность</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КЦСсылкаТочкаРазмещенияКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="КЦСсылкаТочкаРазмещенияРасширеннаяПодсказка" id="81"/>
+						</LabelField>
+						<LabelField name="КЦАбонент" id="96">
+							<DataPath>Список.КЦАбонент</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оператор</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КЦАбонентКонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="КЦАбонентРасширеннаяПодсказка" id="98"/>
+						</LabelField>
+						<LabelField name="КЦОжидание" id="99">
+							<DataPath>Список.КЦОжидание</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ожидание</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КЦОжиданиеКонтекстноеМеню" id="100"/>
+							<ExtendedTooltip name="КЦОжиданиеРасширеннаяПодсказка" id="101"/>
+						</LabelField>
+						<LabelField name="КЦРазговор" id="102">
+							<DataPath>Список.КЦРазговор</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разговор</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КЦРазговорКонтекстноеМеню" id="103"/>
+							<ExtendedTooltip name="КЦРазговорРасширеннаяПодсказка" id="104"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаАбонентВнутренний" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оператор</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа абонент внутренний</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаАбонентВнутреннийРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<LabelField name="ОПСсылка" id="76">
+							<DataPath>Список.ОПСсылка</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подразделение звонка</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОПСсылкаКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="ОПСсылкаРасширеннаяПодсказка" id="78"/>
+						</LabelField>
+						<LabelField name="ТелефонОператора" id="44">
+							<DataPath>Список.ТелефонОператора</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Телефон</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТелефонОператораКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ТелефонОператораРасширеннаяПодсказка" id="46"/>
+						</LabelField>
+						<LabelField name="Оператор" id="23">
+							<DataPath>Список.Оператор</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Владелец</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОператорКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ОператорРасширеннаяПодсказка" id="25"/>
+						</LabelField>
+						<LabelField name="ТочкаРазмещения" id="47">
+							<DataPath>Список.ТочкаРазмещения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Точка разм.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТочкаРазмещенияКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="ТочкаРазмещенияРасширеннаяПодсказка" id="49"/>
+						</LabelField>
+						<LabelField name="ТочкаЦелевая" id="111">
+							<DataPath>Список.ТочкаЦелевая</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Точка целевая</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТочкаЦелеваяКонтекстноеМеню" id="112"/>
+							<ExtendedTooltip name="ТочкаЦелеваяРасширеннаяПодсказка" id="113"/>
+						</LabelField>
+						<LabelField name="ОПОжидание" id="105">
+							<DataPath>Список.ОПОжидание</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ожидание</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОПОжиданиеКонтекстноеМеню" id="106"/>
+							<ExtendedTooltip name="ОПОжиданиеРасширеннаяПодсказка" id="107"/>
+						</LabelField>
+						<LabelField name="ОПРазговор" id="108">
+							<DataPath>Список.ОПРазговор</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разговор</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОПРазговорКонтекстноеМеню" id="109"/>
+							<ExtendedTooltip name="ОПРазговорРасширеннаяПодсказка" id="110"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="Прочее" id="82">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочее</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочее</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ПрочееРасширеннаяПодсказка" id="83"/>
+					<ChildItems>
+						<LabelField name="Исполнитель" id="93">
+							<DataPath>Список.Исполнитель</DataPath>
+							<ContextMenu name="ИсполнительКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="ИсполнительРасширеннаяПодсказка" id="95"/>
+						</LabelField>
+						<LabelField name="Сотрудник" id="84">
+							<DataPath>~Список.Сотрудник</DataPath>
+							<ContextMenu name="СотрудникКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="86"/>
+						</LabelField>
+						<LabelField name="Руководитель" id="87">
+							<DataPath>~Список.Руководитель</DataPath>
+							<ContextMenu name="РуководительКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="РуководительРасширеннаяПодсказка" id="89"/>
+						</LabelField>
+						<LabelField name="Контрагент" id="90">
+							<DataPath>Список.Контрагент</DataPath>
+							<ContextMenu name="КонтрагентКонтекстноеМеню" id="91"/>
+							<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="92"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>~Список.Ожидание</Field>
+				<Field>~Список.Разговор</Field>
+				<Field>~Список.Сервер</Field>
+				<Field>Список.Дата</Field>
+				<Field>Список.Инициатор</Field>
+				<Field>Список.Оператор</Field>
+				<Field>Список.Принят</Field>
+				<Field>Список.Регион</Field>
+				<Field>Список.Сигнатура</Field>
+				<Field>Список.ТелефонАбонента</Field>
+				<Field>Список.ТелефонИнициатора</Field>
+				<Field>Список.ТелефонОператора</Field>
+				<Field>Список.ТочкаРазмещения</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	"idq_OutgoingCallsListForm" КАК Поле1,
+	Рег.Дата КАК Дата,
+	Рег.Регион КАК Регион,
+	Рег.Принят КАК Принят,
+	Рег.Сигнатура КАК Сигнатура,
+	Рег.АбонентВнутренний КАК ТелефонОператора,
+	Рег.Инициатор КАК ТелефонИнициатора,
+	Рег.АбонентВнешний КАК ТелефонАбонента,
+	Стат.ИнициаторИсходящего КАК Инициатор,
+	Стат.Исполнитель КАК Оператор,
+	Стат.ОПСсылка.ТочкаРазмещения КАК ТочкаРазмещения,
+	Стат.КЦСсылка КАК КЦСсылка,
+	Стат.ОПСсылка КАК ОПСсылка,
+	Стат.Контрагент КАК Контрагент,
+	Стат.Исполнитель КАК Исполнитель,
+	Стат.КЦАбонент КАК КЦАбонент,
+	Стат.КЦОжидание КАК КЦОжидание,
+	Стат.КЦРазговор КАК КЦРазговор,
+	Стат.ОПОжидание КАК ОПОжидание,
+	Стат.ОПРазговор КАК ОПРазговор,
+	ЕСТЬNULL(Целевые.ТочкаЦелевая, ЗНАЧЕНИЕ(Справочник.ТочкиЦелевые.ПустаяСсылка)) КАК ТочкаЦелевая
+ИЗ
+	РегистрСведений.Звонки КАК Рег
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗвонкиСтатОбщая КАК Стат
+		ПО (Стат.Сигнатура = Рег.Сигнатура)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗвонкиЦелевые КАК Целевые
+		ПО Рег.Сигнатура = Целевые.Сигнатура
+ГДЕ
+	Рег.ЭтоВходящий = ЛОЖЬ</QueryText>
+				<MainTable>InformationRegister.Звонки</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Принят</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Parameters>
+		<Parameter name="НачалоПериода">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="КонецПериода">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Сигнатуры">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

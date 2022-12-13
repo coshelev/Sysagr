@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ОтветственныеЗаКонтрагента" id="1">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ОтветственныеЗаКонтрагента</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОтветственныеЗаКонтрагентаКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ОтветственныеЗаКонтрагентаКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ОтветственныеЗаКонтрагентаРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ОтветственныеЗаКонтрагентаСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ОтветственныеЗаКонтрагента</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОтветственныеЗаКонтрагентаСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ОтветственныеЗаКонтрагентаСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОтветственныеЗаКонтрагентаСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>ОтветственныеЗаКонтрагента</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОтветственныеЗаКонтрагентаСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ОтветственныеЗаКонтрагентаСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОтветственныеЗаКонтрагентаУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>ОтветственныеЗаКонтрагента</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОтветственныеЗаКонтрагентаУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ОтветственныеЗаКонтрагентаУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ОтветственныеЗаКонтрагентаВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ОтветственныеЗаКонтрагентаНомерСтроки" id="14">
+					<DataPath>Объект.ОтветственныеЗаКонтрагента.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОтветственныеЗаКонтрагентаНомерСтрокиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ОтветственныеЗаКонтрагентаНомерСтрокиРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<InputField name="ОтветственныеЗаКонтрагентаСотрудник" id="17">
+					<DataPath>Объект.ОтветственныеЗаКонтрагента.Сотрудник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОтветственныеЗаКонтрагентаСотрудникКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ОтветственныеЗаКонтрагентаСотрудникРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ОтветственныеЗаКонтрагентаСотрудникТелВнутр" id="20">
+					<DataPath>Объект.ОтветственныеЗаКонтрагента.СотрудникТел</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CellHyperlink>true</CellHyperlink>
+					<ContextMenu name="ОтветственныеЗаКонтрагентаСотрудникТелВнутрКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ОтветственныеЗаКонтрагентаСотрудникТелВнутрРасширеннаяПодсказка" id="22"/>
+					<Events>
+						<Event name="ChoiceProcessing">ОтветственныеЗаКонтрагентаСотрудникТелВнутрОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОтветственныеЗаКонтрагентаСотрудник1" id="23">
+					<DataPath>Объект.ОтветственныеЗаКонтрагента.Сотрудник1</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОтветственныеЗаКонтрагентаСотрудник1КонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ОтветственныеЗаКонтрагентаСотрудник1РасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ОтветственныеЗаКонтрагентаСотрудник1ТелВнутр" id="26">
+					<DataPath>Объект.ОтветственныеЗаКонтрагента.Сотрудник1Тел</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОтветственныеЗаКонтрагентаСотрудник1ТелВнутрКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ОтветственныеЗаКонтрагентаСотрудник1ТелВнутрРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ОтветственныеЗаКонтрагентаСотрудник2" id="29">
+					<DataPath>Объект.ОтветственныеЗаКонтрагента.Сотрудник2</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОтветственныеЗаКонтрагентаСотрудник2КонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ОтветственныеЗаКонтрагентаСотрудник2РасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ОтветственныеЗаКонтрагентаСотрудник2ТелВнутр" id="32">
+					<DataPath>Объект.ОтветственныеЗаКонтрагента.Сотрудник2Тел</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОтветственныеЗаКонтрагентаСотрудник2ТелВнутрКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ОтветственныеЗаКонтрагентаСотрудник2ТелВнутрРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонсольКонтактЦентраТест4</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="Телефон">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Сигнатура">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>30</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="КаналСистемный">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="КаналИнициатор">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:Type>cfg:CatalogRef.ТелВнешние</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

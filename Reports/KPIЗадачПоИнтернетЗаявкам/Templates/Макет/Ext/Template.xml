@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяПоказателя</dataPath>
+			<field>ИмяПоказателя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя показателя*</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Значение</dataPath>
+			<field>Значение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПорядковыйНомер</dataPath>
+			<field>ПорядковыйНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядковый номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ЗадачиОбратныйЗвонок.Телефон КАК Телефон,
+	ЗадачиОбратныйЗвонок.ЗвонокЗакрытия КАК ЗвонокЗакрытия,
+	ЗадачиОбратныйЗвонок.ПричинаЗакрытия КАК ПричинаЗакрытия,
+	1 КАК КоличествоЗадач,
+	ВЫБОР
+		КОГДА ПОДСТРОКА(ЗадачиОбратныйЗвонок.ЗвонокЗакрытия, 1, 2) = "0#"
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоУспешныхПереключений,
+	ВЫБОР
+		КОГДА ПОДСТРОКА(ЗадачиОбратныйЗвонок.ЗвонокЗакрытия, 1, 2) = ""
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоЗакрытыхВручную,
+	ВЫБОР
+		КОГДА РАЗНОСТЬДАТ(ЗадачиОбратныйЗвонок.ДатаПостановки, ВЫБОР
+					КОГДА ЗадачиОбратныйЗвонок.ДатаПервогоПерезвона = ДАТАВРЕМЯ(1, 1, 1)
+						ТОГДА ЗадачиОбратныйЗвонок.ДатаЗакрытия
+					ИНАЧЕ ЗадачиОбратныйЗвонок.ДатаПервогоПерезвона
+				КОНЕЦ, МИНУТА) &gt; &amp;НормаВМинутах
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоУспешныхПереключенийНеОбработанныхВСрок,
+	ЗадачиОбратныйЗвонок.ДатаЗакрытия КАК ДатаЗакрытия,
+	ВЫБОР
+		КОГДА ЗадачиОбратныйЗвонок.ДатаПервогоПерезвона = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ЗадачиОбратныйЗвонок.ДатаЗакрытия
+		ИНАЧЕ ЗадачиОбратныйЗвонок.ДатаПервогоПерезвона
+	КОНЕЦ КАК ДатаПервогоПерезвона,
+	ЗадачиОбратныйЗвонок.ДатаПостановки,
+	ВЫБОР
+		КОГДА ПОДСТРОКА(ЗадачиОбратныйЗвонок.ЗвонокЗакрытия, 1, 2) = ""
+				И ЗадачиОбратныйЗвонок.ПричинаЗакрытия ПОДОБНО &amp;Спам
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоЗакрытыхВручнуюПоПричинеСПАМ
+ПОМЕСТИТЬ ВТ01
+ИЗ
+	РегистрСведений.ЗадачиОбратныйЗвонок КАК ЗадачиОбратныйЗвонок
+ГДЕ
+	ЗадачиОбратныйЗвонок.Тип &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.Непринятый)
+	И ЗадачиОбратныйЗвонок.ДатаПостановки МЕЖДУ &amp;ДатаПостановкиНачало И &amp;ДатаПостановкиКонец
+	И ЗадачиОбратныйЗвонок.ДатаЗакрытия &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(ВТ01.КоличествоЗадач) КАК КоличествоЗадач,
+	СУММА(ВТ01.КоличествоУспешныхПереключений) КАК КоличествоУспешныхПереключений,
+	СУММА(ВТ01.КоличествоЗакрытыхВручную) КАК КоличествоЗакрытыхВручную,
+	ВЫБОР
+		КОГДА СУММА(ВТ01.КоличествоЗадач) &gt; 0
+			ТОГДА (СУММА(ВТ01.КоличествоУспешныхПереключений) + СУММА(ВТ01.КоличествоЗакрытыхВручную)) / СУММА(ВТ01.КоличествоЗадач)
+		ИНАЧЕ 0
+	КОНЕЦ КАК ДоляУспешныхЗакрытий,
+	СУММА(ВТ01.КоличествоУспешныхПереключенийНеОбработанныхВСрок) КАК КоличествоУспешныхПереключенийНеОбработанныхВСрок,
+	СУММА(ВТ01.КоличествоЗакрытыхВручнуюПоПричинеСПАМ) КАК КоличествоЗакрытыхВручнуюПоПричинеСПАМ
+ПОМЕСТИТЬ ВТ02
+ИЗ
+	ВТ01 КАК ВТ01
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	"Количество задач всего" КАК ИмяПоказателя,
+	ВТ02.КоличествоЗадач КАК Значение,
+	10 КАК ПорядковыйНомер
+ИЗ
+	ВТ02 КАК ВТ02
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Количество успешных переключений",
+	ВТ02.КоличествоУспешныхПереключений,
+	20
+ИЗ
+	ВТ02 КАК ВТ02
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Количество закрытых вручную",
+	ВТ02.КоличествоЗакрытыхВручную,
+	30
+ИЗ
+	ВТ02 КАК ВТ02
+	
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Количество закрытых вручную по причине СПАМ",
+	ВТ02.КоличествоЗакрытыхВручнуюПоПричинеСПАМ,
+	35
+ИЗ
+	ВТ02 КАК ВТ02
+	
+	
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Доля успешных закрытий",
+	ВТ02.ДоляУспешныхЗакрытий,
+	40
+ИЗ
+	ВТ02 КАК ВТ02
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Количество успешных переключений не обработанных в срок",
+	ВТ02.КоличествоУспешныхПереключенийНеОбработанныхВСрок,
+	50
+ИЗ
+	ВТ02 КАК ВТ02</query>
+	</dataSet>
+	<parameter>
+		<name>ДатаПостановкиКонец</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата постановки конец</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаПостановкиНачало</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата постановки начало</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НормаВМинутах</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Норма времени на обработку заявки, мин</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>12</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">20</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Спам</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Спам</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">%Спам%</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИмяПоказателя</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Значение</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НормаВМинутах</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Спам</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">%Спам%</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПорядковыйНомер</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ИмяПоказателя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Значение</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

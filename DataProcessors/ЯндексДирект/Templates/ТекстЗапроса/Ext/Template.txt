@@ -1,0 +1,18 @@
+﻿{
+    "params": {
+      "SelectionCriteria": {
+            "DateFrom": "2018-02-01",
+            "DateTo": "2018-02-18"
+      },
+      "FieldNames": [ "Date","CampaignId", "Clicks", "Cost" ], 
+      "OrderBy": [{
+        "Field": "Date"
+      }],
+      "ReportName": "Actual Data",
+      "ReportType": "CAMPAIGN_PERFORMANCE_REPORT",
+      "DateRangeType": "CUSTOM_DATE",
+      "Format": "TSV",
+      "IncludeVAT": "YES",
+      "IncludeDiscount": "YES"
+    }
+  }

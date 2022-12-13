@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="content-type" content="text/html;charset=utf-8"></meta><meta http-equiv="X-UA-Compatible" content="IE=11"></meta><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body style="MARGIN: 35px">                     
+
+<p>Введи телефон оператора <input id="txt1" type="text" value="phone"></input></p><input id="btn1" onclick="sendMsg();" type="button" value="Click to start"></input><div id="msg-box" style="OVERFLOW: auto; HEIGHT: 100px; WIDTH: 800px; BACKGROUND: rgb(238,238,238)"></div>
+
+<script> 
+var myvar1 = 1;     
+function sendMsg(){
+	//alert('start');
+ 	if (!window.EventSource) {
+    	alert('No EventSource'); 
+    	return;
+    } 
+    
+   //var eventSrc = new EventSource("/event?name=" + name);	//saved for example       
+   //name = "https://motor-luidor.ru/leads/whatsapp/sse/index.php";   //не работает или работает крайне медленно     
+   //const  eventSrc = new EventSource(name, { withCredentials: true } ); 
+ 
+   var phone = document.getElementById("txt1").value;
+
+   //name = "http://192.168.2.199:3000/countdown";  //common case 
+   // name = "http://192.168.0.205:3000/"+phone;  
+   // name = "http://mainiis:8680/en/";
+   name = "http://195.234.208.105:8680/talk/";
+ 
+
+   //alert(name);
+    
+   //Main - create Event Source Object
+   //---------------------------------- 
+   const  eventSrc = new EventSource(name, { withCredentials: false } ); 
+    
+   alert(eventSrc.readyState);  
+    
+   eventSrc.onerror = function(err) {
+    									//alert("error"); 
+    									alert(err);
+    									console.log("error");
+    					};
+    eventSrc.onmessage = function(e) {
+    						//alert("message"); 
+    						alert(e.data);             
+    						
+    						//Render SSE event
+    						//-----------------
+    						var divMsg = document.getElementById("msg-box");
+    						divMsg.innerHTML += "Client> " + e.data;                
+    							
+    						//Just render myva1 variable
+    						//---------------------------
+    						document.getElementById("p1").innerHTML = myvar1;
+    						
+    						//Click button programmatically to transfer event to 1C
+    						//------------------------------------------------------   
+    						document.getElementById("btn2").value = e.data;   
+    						document.getElementById("btn2").click();   
+    						
+    						myvar1 = myvar1 + 1;
+    						};
+
+    
+    // Слушаем событие EventSource - "ping"
+    //eventSrc.addEventListener("ping", 
+    //	function(event) {
+    //		alert("ping");
+    //		//var data = JSON.parse(event.data); 
+    //		//alert(data.time);
+    //		var divMsg = document.getElementById("msg-box");
+	//		//divMsg.innerHTML += "Client> " + data.time;
+	//		divMsg.innerHTML += "Client> ";
+    //	}, false);
+        
+    return;
+  }
+ </script><p><input id="btn2" type="button" value="button to click programmatically to trasfer to 1C"></input></p>
+<p id="p1">Hello World!</p> 
+ 
+ 
+ </body></html>

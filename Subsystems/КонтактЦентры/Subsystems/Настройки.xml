@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Subsystem uuid="f8b8f133-5ce6-447e-84f7-c7014fdae4e0">
+		<Properties>
+			<Name>Настройки</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки и администрирование</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посистема только для роли "КонтактЦентр_Администратор", обеспечивает для этой роли видимость в интерфейсе справочника "Анкеты" и регистра сведений "КонтрагентыВСотрудники"</v8:content>
+				</v8:item>
+			</Explanation>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Анкеты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КонтрагентыВСотрудники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Сотрудники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВиртуальныеОчереди</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПереводыЗвонков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗвонкиДоп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Праздники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЗадачиВнутреннихТелефонов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗвонкиСбросы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.НастройкаРасписанияРаботыКаналов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.НастройкаРасписанияРаботыКаналов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Сайты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ГрафикиРаботы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ГрафикиОтклонения</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

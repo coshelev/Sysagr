@@ -1,0 +1,39 @@
+﻿#! /bin/bash
+
+# The approx. time to run this script is 145 ms.
+
+# First we extract the private PEM key from the .p12 file:
+# openssl pkcs12 -nocerts -passin 'notasecret' -in file.p12 -out ~/google/google.privatekey.pem 
+KEY='privatekey.pem'
+
+# The fields are ordered by their hash values.
+# In Google Client for Java HashMap is used to stack all JSON fields, so String.hashCode() is used for ordering.
+header='{"alg":"RS256","typ":"JWT"}'
+
+aud='https://www.googleapis.com/oauth2/v4/token'
+exp=$(date --date='+1 hour' +%s)
+echo $exp
+
+iat=$(date +%s)
+echo $iat
+
+# Put your Service Account's Email address
+iss='notifyme348-419@sysagr1-196811.iam.gserviceaccount.com' 
+scope='https://www.googleapis.com/auth/spreadsheets'
+
+# The fields are ordered by their hash values.
+# In Google Client for Java HashMap is used to stack all JSON fields, so String.hashCode() is used for ordering.
+claim="{\"aud\":\"$aud\",\"exp\":$exp,\"iat\":$iat,\"iss\":\"$iss\",\"scope\":\"$scope\"}"
+echo $claim
+
+header_b64=$(echo -n "$header" | base64 -w 0 | sed 's/+/-/g;s/\//_/g;s/=//g') # base64url
+echo $header_b64
+
+claim_b64=$(echo -n "$claim" | base64 -w 0 | sed 's/+/-/g;s/\//_/g;s/=//g') # base64url
+echo $claim_b64
+
+signature_b64=$(echo -n "$header_b64.$claim_b64" | openssl dgst -sha256 -sign $KEY | base64 -w 0 | sed 's/+/-/g;s/\//_/g;s/=//g')
+
+jwt=$(echo -n "$header_b64.$claim_b64.$signature_b64")
+echo $jwt
+echo 'end'

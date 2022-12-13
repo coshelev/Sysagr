@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<ChildItems>
+					<Button name="СписокПокажиКартуМаршрутаБизнесПроцесса" id="66">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПокажиКартуМаршрутаБизнесПроцесса</CommandName>
+						<ExtendedTooltip name="СписокПокажиКартуМаршрутаБизнесПроцессаРасширеннаяПодсказка" id="67"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Ссылка" id="43">
+					<DataPath>~Список.Ссылка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процесс</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="Точка" id="52">
+					<DataPath>~Список.Точка</DataPath>
+					<ContextMenu name="ТочкаКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ТочкаРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="ПодразделениеИсполнитель" id="37">
+					<DataPath>~Список.ПодразделениеИсполнитель</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПодразделениеИсполнительКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ПодразделениеИсполнительРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<CheckBoxField name="Стартован" id="46">
+					<DataPath>~Список.Стартован</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СтартованКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="СтартованРасширеннаяПодсказка" id="48"/>
+				</CheckBoxField>
+				<CheckBoxField name="Завершен" id="25">
+					<DataPath>~Список.Завершен</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗавершенКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ЗавершенРасширеннаяПодсказка" id="27"/>
+				</CheckBoxField>
+				<LabelField name="Значение" id="28">
+					<DataPath>~Список.Значение</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий статус</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗначениеКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ЗначениеРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="ДатаСтарта" id="22">
+					<DataPath>~Список.ДатаСтарта</DataPath>
+					<ContextMenu name="ДатаСтартаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДатаСтартаРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="ДатаЗавершения" id="19">
+					<DataPath>~Список.ДатаЗавершения</DataPath>
+					<ContextMenu name="ДатаЗавершенияКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДатаЗавершенияРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="Номер" id="34">
+					<DataPath>~Список.Номер</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="ЗаказНарядНомер" id="57">
+					<DataPath>~Список.ЗаказНарядНомер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ-наряд: Номер</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказНарядНомерКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ЗаказНарядНомерРасширеннаяПодсказка" id="59"/>
+				</LabelField>
+				<LabelField name="ЗаказНарядДата" id="60">
+					<DataPath>~Список.ЗаказНарядДата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ-наряд: Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ЗаказНарядДатаКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ЗаказНарядДатаРасширеннаяПодсказка" id="62"/>
+				</LabelField>
+				<LabelField name="Автомобиль" id="63">
+					<DataPath>~Список.Автомобиль</DataPath>
+					<ContextMenu name="АвтомобильКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="АвтомобильРасширеннаяПодсказка" id="65"/>
+				</LabelField>
+				<LabelField name="Телефон" id="49">
+					<DataPath>~Список.Телефон</DataPath>
+					<ContextMenu name="ТелефонКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="ИсполнительОбратнойСвязи" id="31">
+					<DataPath>~Список.ИсполнительОбратнойСвязи</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнитель план</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИсполнительОбратнойСвязиКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ИсполнительОбратнойСвязиРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="СигнатураПродажи" id="40">
+					<DataPath>~Список.СигнатураПродажи</DataPath>
+					<ContextMenu name="СигнатураПродажиКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="СигнатураПродажиРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	БП.Ссылка КАК Ссылка,
+	БП.Завершен КАК Завершен,
+	БП.Стартован КАК Стартован,
+	БП.СигнатураПродажи КАК СигнатураПродажи,
+	БП.Телефон КАК Телефон,
+	БП.ДатаСтарта КАК ДатаСтарта,
+	БП.ДатаЗавершения КАК ДатаЗавершения,
+	БП.ПодразделениеИсполнитель КАК ПодразделениеИсполнитель,
+	БП.Точка КАК Точка,
+	БизнесПроцессыЗначенияСвойствСрезПоследних.Значение КАК Значение,
+	Продажи.Документ КАК Документ,
+	Продажи.Дата КАК ЗаказНарядДата,
+	Продажи.Номер КАК ЗаказНарядНомер,
+	Продажи.Объект КАК Автомобиль
+ИЗ
+	БизнесПроцесс.ОбратнаяСвязьЛояльности КАК БП
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.БизнесПроцессыЗначенияСвойств.СрезПоследних КАК БизнесПроцессыЗначенияСвойствСрезПоследних
+		ПО ((ВЫРАЗИТЬ(БизнесПроцессыЗначенияСвойствСрезПоследних.Процесс КАК БизнесПроцесс.ОбратнаяСвязьЛояльности)) = БП.Ссылка)
+			И (БизнесПроцессыЗначенияСвойствСрезПоследних.Свойство.Код = "000000001")
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Продажи КАК Продажи
+		ПО (Продажи.Сигнатура = БП.СигнатураПродажи)
+ГДЕ
+	1 = 1</QueryText>
+				<MainTable>BusinessProcess.ОбратнаяСвязьЛояльности</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПокажиКартуМаршрутаБизнесПроцесса" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Карта маршрута</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Покажи карту маршрута бизнес процесса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.BusinessProcess</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПокажиКартуМаршрутаБизнесПроцесса</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

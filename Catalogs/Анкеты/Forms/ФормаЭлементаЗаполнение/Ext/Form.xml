@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="КодРодитель" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код родитель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код родитель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="КодРодительРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<InputField name="Родитель" id="35">
+					<DataPath>Объект.Parent</DataPath>
+					<ContextMenu name="РодительКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Порядок" id="29">
+			<DataPath>Объект.Порядок</DataPath>
+			<ContextMenu name="ПорядокКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ПорядокРасширеннаяПодсказка" id="31"/>
+		</InputField>
+		<CheckBoxField name="Автоответ" id="40">
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="АвтоответКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="АвтоответРасширеннаяПодсказка" id="42"/>
+		</CheckBoxField>
+		<CheckBoxField name="ЗаписыватьОтвет" id="32">
+			<DataPath>Объект.ЗаписыватьОтвет</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗаписыватьОтветКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="ЗаписыватьОтветРасширеннаяПодсказка" id="34"/>
+		</CheckBoxField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вопрос</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<LabelField name="МодифицированнаяСтрока" id="43">
+			<DataPath>Объект.МодифицированнаяСтрока</DataPath>
+			<ContextMenu name="МодифицированнаяСтрокаКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="МодифицированнаяСтрокаРасширеннаяПодсказка" id="45"/>
+		</LabelField>
+		<Pages name="ГруппаСтраниц" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<Page name="грВарианты" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Варианты ответов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гр варианты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="грВариантыРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<Table name="ВариантыОтветов" id="7">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ВариантыОтветов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВариантыОтветовКонтекстноеМеню" id="8"/>
+							<AutoCommandBar name="ВариантыОтветовКоманднаяПанель" id="9"/>
+							<ExtendedTooltip name="ВариантыОтветовРасширеннаяПодсказка" id="10"/>
+							<SearchStringAddition name="ВариантыОтветовСтрокаПоиска" id="11">
+								<AdditionSource>
+									<Item>ВариантыОтветов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВариантыОтветовСтрокаПоискаКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ВариантыОтветовСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВариантыОтветовСостояниеПросмотра" id="14">
+								<AdditionSource>
+									<Item>ВариантыОтветов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВариантыОтветовСостояниеПросмотраКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="ВариантыОтветовСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВариантыОтветовУправлениеПоиском" id="17">
+								<AdditionSource>
+									<Item>ВариантыОтветов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВариантыОтветовУправлениеПоискомКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="ВариантыОтветовУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ВариантыОтветовВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ВариантыОтветовНомерСтроки" id="20">
+									<DataPath>Объект.ВариантыОтветов.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВариантыОтветовНомерСтрокиКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ВариантыОтветовНомерСтрокиРасширеннаяПодсказка" id="22"/>
+								</LabelField>
+								<InputField name="ВариантыОтветовОтвет" id="23">
+									<DataPath>Объект.ВариантыОтветов.Ответ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВариантыОтветовОтветКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ВариантыОтветовОтветРасширеннаяПодсказка" id="25"/>
+								</InputField>
+								<InputField name="ВариантыОтветовСледующийВопросИлиТелНомер" id="26">
+									<DataPath>Объект.ВариантыОтветов.СледующийВопросИлиТелНомер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВариантыОтветовСледующийВопросИлиТелНомерКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ВариантыОтветовСледующийВопросИлиТелНомерРасширеннаяПодсказка" id="28"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="грИстория" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>История вопроса</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гр история</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="грИсторияРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<Table name="История" id="52">
+							<CommandBarLocation>None</CommandBarLocation>
+							<Enabled>false</Enabled>
+							<ReadOnly>true</ReadOnly>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ИсторияВопроса</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИсторияКонтекстноеМеню" id="53"/>
+							<AutoCommandBar name="ИсторияКоманднаяПанель" id="54"/>
+							<ExtendedTooltip name="ИсторияРасширеннаяПодсказка" id="55"/>
+							<SearchStringAddition name="ИсторияСтрокаПоиска" id="56">
+								<AdditionSource>
+									<Item>История</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияСтрокаПоискаКонтекстноеМеню" id="57"/>
+								<ExtendedTooltip name="ИсторияСтрокаПоискаРасширеннаяПодсказка" id="58"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИсторияСостояниеПросмотра" id="59">
+								<AdditionSource>
+									<Item>История</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияСостояниеПросмотраКонтекстноеМеню" id="60"/>
+								<ExtendedTooltip name="ИсторияСостояниеПросмотраРасширеннаяПодсказка" id="61"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИсторияУправлениеПоиском" id="62">
+								<AdditionSource>
+									<Item>История</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияУправлениеПоискомКонтекстноеМеню" id="63"/>
+								<ExtendedTooltip name="ИсторияУправлениеПоискомРасширеннаяПодсказка" id="64"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ИсторияНомерСтроки" id="65">
+									<DataPath>Объект.ИсторияВопроса.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсторияНомерСтрокиКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ИсторияНомерСтрокиРасширеннаяПодсказка" id="67"/>
+								</LabelField>
+								<InputField name="ИсторияПериод" id="68">
+									<DataPath>Объект.ИсторияВопроса.Период</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсторияПериодКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ИсторияПериодРасширеннаяПодсказка" id="70"/>
+								</InputField>
+								<InputField name="ИсторияТекстВопроса" id="71">
+									<DataPath>Объект.ИсторияВопроса.ТекстВопроса</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсторияТекстВопросаКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ИсторияТекстВопросаРасширеннаяПодсказка" id="73"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Анкеты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

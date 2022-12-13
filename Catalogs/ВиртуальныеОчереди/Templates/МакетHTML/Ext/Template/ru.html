@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script><script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+		
+      	var arr= [['Task', 'Hours per Day'], ['Work', 11], ['Eat', 2], ['Commute', 2], ['Watch TV', 2], ['Sleep', 7]];
+        
+        var data = google.visualization.arrayToDataTable(arr);
+      
+        var options = {
+          title: 'График планового распределения звонков по агентам'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<div id="piechart" style="HEIGHT: 500px; WIDTH: 900px"></div></body></html>

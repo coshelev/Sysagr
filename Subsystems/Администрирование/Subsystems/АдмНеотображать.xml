@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Subsystem uuid="49054513-1b8a-490c-b377-8160cb64a3a9">
+		<Properties>
+			<Name>АдмНеотображать</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адм неотображать</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АгентыЦелевые</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗвонкиДоп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ОУ_Сотрудники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АгентыЦелевыеИст</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.НTMLПредставление</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">10068694-6c8d-42fd-bb88-4c357e2906db</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">cfc6c4b9-2e36-4934-870b-09f7f33f377f</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.РедактированиеАнкетыИзКарточкиЗвонка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">e946e1e3-3b35-47b3-a3d5-3b39a595bf4d</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольКонтактЦентраWebsoket_8085_v1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗвонкиОжидаемые</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">19f2e4dc-3d0c-4b92-9991-e4fa54f8cfbe</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">1d3f433f-08e4-41da-96d0-e3d8c25082f3</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">8c1bb0bd-b27b-4d4b-aab8-bb1651467c2a</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.JivoSite</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

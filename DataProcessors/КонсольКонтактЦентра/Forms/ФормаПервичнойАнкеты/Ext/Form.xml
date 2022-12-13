@@ -1,0 +1,649 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Анкета опроса при входящем звонке</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandSet>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ОтказАбонента" id="78">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>true</SkipOnInput>
+				<CommandName>Form.Command.ОтказАбонента</CommandName>
+				<ExtendedTooltip name="ОтказАбонентаРасширеннаяПодсказка" id="79"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Электронные" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронные ресурсы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронные ресурсы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ЭлектронныеРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИнтернет" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ресурсы сети Интернет</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Интернет</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаИнтернетРасширеннаяПодсказка" id="2"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="11">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Корпоративный сайт</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Корпоративный сайт</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="13"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация2" id="14">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Поисковые системы (Yandex, Google и т.п.)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Поисковики</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="16"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация19" id="69">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сайт GAZ.RU</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сайт ГАЗ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация19КонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="Декорация19РасширеннаяПодсказка" id="71"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация3" id="17">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доска электронных объявлений Авито</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Авито</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация3КонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="19"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация4" id="20">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Автомобильный портал АвтоРУ</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>АвтоРУ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация4КонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="22"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация5" id="23">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Интернет (без уточнения)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прочее</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация5КонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="25"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРассылки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Массовые рассылки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рассылки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаРассылкиРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация6" id="30">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Рассылка через SMS</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>SMS</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация6КонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="32"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация7" id="33">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Рассылка по электронной почте</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>E-Mail</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация7КонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="35"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация8" id="36">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Раздача печатных листовок</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Листовки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация8КонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="38"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Неэлектронные" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неэлектронные ресурсы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неэлектронные ресурсы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НеэлектронныеРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНаружная" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наружная реклама</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наружная</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаНаружнаяРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация9" id="39">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Рекламные щиты, растяжки и банеры</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Щитовая</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация9КонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="Декорация9РасширеннаяПодсказка" id="41"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация10" id="42">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Реклама на автомобилях (бортах, тентах)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Бортовая</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация10КонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="Декорация10РасширеннаяПодсказка" id="44"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация11" id="45">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проезжали мимо автосалона</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проезжали мимо</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация11КонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="Декорация11РасширеннаяПодсказка" id="47"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСМИ" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Средства массовой информации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СМИ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаСМИРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация12" id="48">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Печатные издания (газеты, журналы и т.п.)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Печатные</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация12КонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="Декорация12РасширеннаяПодсказка" id="50"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация13" id="51">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Реклама на телевидении</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Телевидение</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация13КонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="Декорация13РасширеннаяПодсказка" id="53"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация14" id="54">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Реклама на радио</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Радио</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Декорация14КонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="Декорация14РасширеннаяПодсказка" id="56"/>
+							<Events>
+								<Event name="Click">СтрокаНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПрочие" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие источники</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаПрочиеРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация20" id="72">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Долгосрочный договор (постоянный клиент)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контракт</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="Декорация20КонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="Декорация20РасширеннаяПодсказка" id="74"/>
+					<Events>
+						<Event name="Click">СтрокаНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="Декорация15" id="57">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Покупали ранее (непостоянный клиент)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Повторный</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="Декорация15КонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="Декорация15РасширеннаяПодсказка" id="59"/>
+					<Events>
+						<Event name="Click">СтрокаНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="Декорация16" id="60">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По совету друзей, знакомых</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Совет</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="Декорация16КонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="Декорация16РасширеннаяПодсказка" id="62"/>
+					<Events>
+						<Event name="Click">СтрокаНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="Декорация17" id="63">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник 2-GIS (Дубль-ГИС)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>2Gis</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="Декорация17КонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="Декорация17РасширеннаяПодсказка" id="65"/>
+					<Events>
+						<Event name="Click">СтрокаНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="Декорация18" id="66">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Видео-клипы в Интернет (вирусная реклама)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вирусная</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="Декорация18КонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="Декорация18РасширеннаяПодсказка" id="68"/>
+					<Events>
+						<Event name="Click">СтрокаНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="Декорация21" id="75">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Направление от организаций-партнеров (страховых и пр.)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Партнеры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="Декорация21КонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="Декорация21РасширеннаяПодсказка" id="77"/>
+					<Events>
+						<Event name="Click">СтрокаНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонсольКонтактЦентра</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОтказАбонента" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонент отказался от анкетирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонент отказался от анкетирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтказАбонента</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Телефон">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="Канал">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ТелВнешние</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

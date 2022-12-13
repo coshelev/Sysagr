@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.15">
+	<Item id="12849244-6bc2-4e4b-8953-65aa353add6b">
+		<Name>КлиентскаяСлужбаРегионы_Оператор</Name>
+		<Code>000000002</Code>
+		<Description>Клиентская служба регионы оператор</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8ae795aa-a374-478b-9522-988042f6e7d7">
+		<Name>КлиентскаяСлужбаЦентр_Администратор</Name>
+		<Code>000000001</Code>
+		<Description>Клиентская служба центр администратор</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="e42fc164-a9a9-4b55-ab35-e55238a5b078">
+		<Name>МастерПриемщик</Name>
+		<Code>000000003</Code>
+		<Description>Мастер-приемщик</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="250a2e65-93c8-4468-a410-bef5eefa1ea8">
+		<Name>ОператорКонтактЦентра</Name>
+		<Code>000000004</Code>
+		<Description>Оператор контакт центра</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

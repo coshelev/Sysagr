@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регион</dataPath>
+			<field>Регион</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регион</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаЗакрытия</dataPath>
+			<field>ДатаЗакрытия</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПисьмоИнициатор</dataPath>
+			<field>ПисьмоИнициатор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТелИсполнителяПерезвонаКЦ</dataPath>
+			<field>ТелИсполнителяПерезвонаКЦ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефон исполнителя КЦ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодПричиныНепринят</dataPath>
+			<field>КодПричиныНепринят</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип пропущенного звонка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Канал</dataPath>
+			<field>Канал</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Канал</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗвонокЗакрытияСигнатура</dataPath>
+			<field>ЗвонокЗакрытияСигнатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сигнатура звонка закрытия*</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НапоминаниеПерезвонить</dataPath>
+			<field>НапоминаниеПерезвонить</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Выполнена</dataPath>
+			<field>Выполнена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнена</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПостановки</dataPath>
+			<field>ДатаПостановки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПричинаЗакрытияЗадачи</dataPath>
+			<field>ПричинаЗакрытияЗадачи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причина закрытия задачи</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЗадачи</dataPath>
+			<field>ТипЗадачи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип задачи</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПервогоПерезвона</dataPath>
+			<field>ДатаПервогоПерезвона</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаАктуальности</dataPath>
+			<field>ДатаАктуальности</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗвонокИнициатор</dataPath>
+			<field>ЗвонокИнициатор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сигнатура звонка-инициатора задачи*</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Исполнитель</dataPath>
+			<field>Исполнитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнитель, фактически закрывший задачу: пользователь или телефон</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Телефон</dataPath>
+			<field>Телефон</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОтправки</dataPath>
+			<field>ДатаОтправки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата отправки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПричинаРучногоЗакрытия</dataPath>
+			<field>ПричинаРучногоЗакрытия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причина ручного закрытия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДлительностьОбработкиМин</dataPath>
+			<field>ДлительностьОбработкиМин</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительность обработки в мин.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение (справочник Предприятие)</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТочкаРазмещения</dataPath>
+			<field>ТочкаРазмещения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Точка размещения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсполнительПлан</dataPath>
+			<field>ИсполнительПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнитель плановый</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Задачи.Телефон КАК Телефон,
+	Задачи.Тип КАК ТипЗадачи,
+	Задачи.ДатаПостановки КАК ДатаПостановки,
+	Задачи.ДатаАктуальности КАК ДатаАктуальности,
+	Задачи.ДатаЗакрытия КАК ДатаЗакрытия,
+	Задачи.Исполнитель КАК Исполнитель,
+	Задачи.ИсполнительПлан КАК ИсполнительПлан,
+	ВЫБОР
+		КОГДА Задачи.ДатаЗакрытия = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК Выполнена,
+	Задачи.ПричинаЗакрытия КАК ПричинаРучногоЗакрытия,
+	Задачи.ПисьмоИнициатор КАК ПисьмоИнициатор,
+	Задачи.ЗвонокИнициатор КАК ЗвонокИнициатор,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ПОДСТРОКА(ЗвонкиЗакрытия.Сигнатура, 1, 2), "") = "0#"
+			ТОГДА ВЫБОР
+					КОГДА Задачи.ДатаПервогоПерезвона = ДАТАВРЕМЯ(1, 1, 1)
+						ТОГДА Задачи.ДатаЗакрытия
+					ИНАЧЕ Задачи.ДатаПервогоПерезвона
+				КОНЕЦ
+	КОНЕЦ КАК ДатаПервогоПерезвона,
+	Задачи.НапоминаниеПерезвонить КАК НапоминаниеПерезвонить,
+	"" КАК ДатаОтправки,
+	Звонки.Инициатор КАК Канал,
+	Звонки.Регион КАК Регион,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ЗвонкиСтатОбщая.КодПричиныНепринят, 3) = 1
+			ТОГДА "Не принят на уровне КЦ оператором"
+		КОГДА ЕСТЬNULL(ЗвонкиСтатОбщая.КодПричиныНепринят, 3) = 2
+			ТОГДА "Второй в очереди"
+		КОГДА ЕСТЬNULL(ЗвонкиСтатОбщая.КодПричиныНепринят, 3) = 3
+			ТОГДА "Не принят ОП"
+		КОГДА ЕСТЬNULL(ЗвонкиСтатОбщая.КодПричиныНепринят, 3) = 5
+			ТОГДА "Принят, но длился не более 5 сек."
+		КОГДА ЕСТЬNULL(ЗвонкиСтатОбщая.КодПричиныНепринят, 3) = 4
+			ТОГДА "Не принят на уровне КЦ не оператором"
+	КОНЕЦ КАК КодПричиныНепринят,
+	ЕСТЬNULL(ЗвонкиЗакрытия.Сигнатура, "") КАК ЗвонокЗакрытияСигнатура,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ПОДСТРОКА(ЗвонкиЗакрытия.Сигнатура, 1, 2), "") = "0#"
+			ТОГДА "Закрыта исходящим"
+		КОГДА ЕСТЬNULL(ПОДСТРОКА(ЗвонкиЗакрытия.Сигнатура, 1, 2), "") = "1#"
+			ТОГДА "Закрыта повторным входящим"
+		КОГДА ЕСТЬNULL(ПОДСТРОКА(ЗвонкиЗакрытия.Сигнатура, 1, 2), "") = ""
+			ТОГДА "Закрыта вручную (нет звонка закрытия)"
+	КОНЕЦ КАК ПричинаЗакрытияЗадачи,
+	ВЫБОР
+		КОГДА ТИПЗНАЧЕНИЯ(ЗвонкиЗакрытия.Инициатор) = ТИП(Справочник.ТелВнутренние)
+			ТОГДА ЗвонкиЗакрытия.Инициатор
+	КОНЕЦ КАК ТелИсполнителяПерезвонаКЦ,
+	ВЫБОР
+		КОГДА Задачи.ДатаПервогоПерезвона = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ТОГДА ВЫБОР
+					КОГДА РАЗНОСТЬДАТ(Задачи.ДатаПостановки, Задачи.ДатаЗакрытия, МИНУТА) &gt; 0
+						ТОГДА РАЗНОСТЬДАТ(Задачи.ДатаПостановки, Задачи.ДатаЗакрытия, МИНУТА)
+					ИНАЧЕ 0
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА РАЗНОСТЬДАТ(Задачи.ДатаПостановки, Задачи.ДатаПервогоПерезвона, МИНУТА) &gt; 0
+					ТОГДА РАЗНОСТЬДАТ(Задачи.ДатаПостановки, Задачи.ДатаПервогоПерезвона, МИНУТА)
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ КАК ДлительностьОбработкиМин,
+	ЕСТЬNULL(ОбъектыПривязка.Владелец, ЗНАЧЕНИЕ(Справочник.Предприятие.ПустаяСсылка)) КАК Подразделение,
+	ЕСТЬNULL(ОбъектыПривязка.Владелец.ТочкаРазмещения, ЗНАЧЕНИЕ(Справочник.ТочкиРазмещения.ПустаяСсылка)) КАК ТочкаРазмещения
+ИЗ
+	РегистрСведений.ЗадачиОбратныйЗвонок КАК Задачи
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.Звонки КАК Звонки
+		ПО Задачи.ЗвонокИнициатор = Звонки.Сигнатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗвонкиСтатОбщая КАК ЗвонкиСтатОбщая
+		ПО (Звонки.Сигнатура = ЗвонкиСтатОбщая.Сигнатура)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Звонки КАК ЗвонкиЗакрытия
+		ПО Задачи.ЗвонокЗакрытия = ЗвонкиЗакрытия.Сигнатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОбъектыПривязка КАК ОбъектыПривязка
+		ПО Задачи.Исполнитель = ОбъектыПривязка.Объект
+ГДЕ
+	Задачи.ДатаПостановки МЕЖДУ &amp;ДатаПостановкиНачало И &amp;ДатаПостановкиКонец
+	И Задачи.ДатаЗакрытия &gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+	И Задачи.Тип В (ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.Непринятый), ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.НепринятыйИсходящий))</query>
+	</dataSet>
+	<parameter>
+		<name>ДатаПостановкиКонец</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата постановки конец</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>ДатаПостановкиНачало</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата постановки начало</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период постановки задач</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">LastMonth</v8:variant>
+		</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КонтактЦентр</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПостановки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Канал</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Телефон</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регион</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПервогоПерезвона</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаЗакрытия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДлительностьОбработкиМин</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаОтправки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Выполнена</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПричинаЗакрытияЗадачи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПричинаРучногоЗакрытия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Исполнитель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТелИсполнителяПерезвонаКЦ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗвонокЗакрытияСигнатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодПричиныНепринят</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаАктуальности</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НапоминаниеПерезвонить</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПисьмоИнициатор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипЗадачи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Подразделение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТочкаРазмещения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИсполнительПлан</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					<dcsset:item xsi:type="dcsset:OrderItemField">
+						<dcsset:field>ДатаПостановки</dcsset:field>
+						<dcsset:orderType>Asc</dcsset:orderType>
+					</dcsset:item>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ИсполнительПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КодПричиныНепринят</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДатаПостановки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Канал</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Телефон</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Регион</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДатаПервогоПерезвона</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДатаЗакрытия</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДлительностьОбработкиМин</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПричинаЗакрытияЗадачи</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПричинаРучногоЗакрытия</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Исполнитель</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТелИсполнителяПерезвонаКЦ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Подразделение</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТочкаРазмещения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>Выполнена</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>НапоминаниеПерезвонить</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ТипЗадачи</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ДатаАктуальности</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗвонокИнициатор</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗвонокЗакрытияСигнатура</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

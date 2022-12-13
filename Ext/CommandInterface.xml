@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<SubsystemsVisibility>
+		<Subsystem name="Subsystem.Задачи">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Subsystem>
+		<Subsystem name="Subsystem.УправлениеПроцессами">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Subsystem>
+	</SubsystemsVisibility>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.Коммуникации</Subsystem>
+		<Subsystem>Subsystem.Интеграция</Subsystem>
+		<Subsystem>Subsystem.КонтактЦентры</Subsystem>
+		<Subsystem>Subsystem.Телефония</Subsystem>
+		<Subsystem>Subsystem.Архив_УслугиОИТ</Subsystem>
+		<Subsystem>Subsystem.Администрирование</Subsystem>
+		<Subsystem>Subsystem.КлиентскаяСлужбаРегионы</Subsystem>
+		<Subsystem>Subsystem.КлиентскаяСлужбаЦентр</Subsystem>
+		<Subsystem>Subsystem.Маркетинг</Subsystem>
+		<Subsystem>Subsystem.Прослушивание</Subsystem>
+		<Subsystem>Subsystem.ГАЗЗаявки</Subsystem>
+		<Subsystem>Subsystem.яПомощь</Subsystem>
+		<Subsystem>Subsystem.Задачи</Subsystem>
+		<Subsystem>Subsystem.УправлениеПроцессами</Subsystem>
+	</SubsystemsOrder>
+</CommandInterface>

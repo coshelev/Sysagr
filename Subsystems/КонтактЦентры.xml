@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Subsystem uuid="b3379c53-d7a9-4d0f-ad20-3aae76281df3">
+		<Properties>
+			<Name>КонтактЦентры</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контакт-центры</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Инструментарий для управления функциями контакт-центров</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструментарий для управления функциями контакт-центров</v8:content>
+				</v8:item>
+			</Explanation>
+			<Picture>
+				<xr:Ref>CommonPicture.Звонок_MaterialDesign_16</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КонтактЦентры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.АнкетыВходящие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольКонтактЦентра</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗадачиОбратныйЗвонок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ИдентификаторыСтрок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АнкетыРасширенные</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗадачиПоЭлПочте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.KPI_КЦ_Упрощенный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ЭлПисьмо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.НепринятыеВызовы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗадачиПоПропушеннымЗвонкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗадачиПоИнтернетЗаявкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.KPIЗадачПоИнтернетЗаявкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.KPIЗадачПоПропущеннымЗвонкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">HTTPService.Вэбхуки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоОчередям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПерейтиВНачало</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.КонтактЦентр</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.КонтактЦентрСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">WebService.CallFromSite</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЗадачиСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.РазблокируйОткрытуюЗадачуИнтернетЗаявки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.КонтактЦентр_Администратор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НеПерезванивать</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипЗадачи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИнтернетЗаявки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИнтернетЗаявкиСвойства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Письма</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗадачиИнтернетЗаявки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПисьмаСпаммеры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">5c8875dd-e7e8-436d-9678-d3d576aeb000</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СвойстваИнтернетЗаявок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АнкетыОбратнойСвязи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СостояниеАгентовТелефонииРасширенный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольКонтактЦентраТест4</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗадачиГАЗЗаявки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗадачиПоИнтернетЗаявкамСРегионамиРеестр</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">e69afed4-9672-43c5-b5be-eedae277599a</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.НагрузкаНаЕКЦ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЕКЦ_СтруктураВходящегоТрафика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЕКЦ_РеестрОшибокЗаполненияАнкет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_ОтчетПоЦелевомуТрафику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольПрослушиванияЗвонковПоСделкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЕКЦ_СтруктураИсходящегоТрафика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольКонтактЦентраWebsoket_8085</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДоступностьСТО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДоступностьЭксперт</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДоступностьТелемаркетинг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДоступностьАвтосалонов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СбросыЗвонков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДоступностьСТОПрочее</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_ОтчетПоЦелевомуТрафику_Прочее</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СТО_ОтчетПоЦелевомуТрафику_СервисБюро</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоЦелевомуТрафикуЧерезКонтактЦентрСМая2020_АвтосалонСОктября2020</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоЦелевомуТрафикуЧерезКонтактЦентрСМая2021_Втор_v3</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">6e7437ce-dc30-4a73-892e-f38f1413782a</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ОтправкаПочтовогоСообщения4</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоЦелевомуТрафикуЧерезКонтактЦентрСМая2020_АвтосалонСОктября2021тест</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДоступностьАвтосалонов_тест_с17012022</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПочтовыеСообщения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонсольКонтактЦентраSSE</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>Настройки</Subsystem>
+			<Subsystem>Техподдержка</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

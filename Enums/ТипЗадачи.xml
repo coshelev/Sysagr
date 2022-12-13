@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Enum uuid="01277624-e3be-418d-bb58-124b6774d867">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ТипЗадачи" category="Ref">
+				<xr:TypeId>2342835b-1347-47e6-a1fa-9c1b621c8150</xr:TypeId>
+				<xr:ValueId>b5fa8037-4d4a-4c1d-b5e3-d51845f63d25</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ТипЗадачи" category="Manager">
+				<xr:TypeId>4046dd34-bba9-42ea-a5c2-b9e43875bf28</xr:TypeId>
+				<xr:ValueId>05f628ed-3f46-4183-8e6e-c6f1f634792f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ТипЗадачи" category="List">
+				<xr:TypeId>187b39ce-308b-4a81-b5b3-31236069e664</xr:TypeId>
+				<xr:ValueId>3cb7003e-266f-41eb-bdf9-eef7ef74e76d</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ТипЗадачи</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип задачи</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Тип задачи</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы задач</v8:content>
+				</v8:item>
+			</ListPresentation>
+			<ExtendedListPresentation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы задач</v8:content>
+				</v8:item>
+			</ExtendedListPresentation>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип задачи</v8:content>
+				</v8:item>
+			</Explanation>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="ac8ac4cc-fc3c-4a17-8efe-6cb487d27b7f">
+				<Properties>
+					<Name>Непринятый</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Непринятый</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Перезвонить абоненту непринятого звонка</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c000557f-406a-490a-9be2-7e3d87d0aa05">
+				<Properties>
+					<Name>ЛояльностьПродажАвто</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лояльность продаж автомобилей</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="f8466371-3315-4de7-bc13-6bb9b81c1bfc">
+				<Properties>
+					<Name>ЛояльностьРемонтаАвто</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лояльность ремонта автомобилей</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="cff1b1eb-e73a-42e9-95d6-eb14a9f155ec">
+				<Properties>
+					<Name>ПрочаяПочта</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочая почта</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3cfddd97-0fd2-4c72-b440-c47771e827df">
+				<Properties>
+					<Name>НепринятыйИсходящий</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Непринятый исходящий</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Относится к автозвонку (был исходящий со стороны КЦ, но он не принят абонентом)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="ed6dbf7c-0e68-4e1f-ad61-5b3eabf82c6c">
+				<Properties>
+					<Name>Сброс</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сброс</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Задача создана вручную операторм контакт-центра из консоли, т.к. он посчитал, что произошел сброс</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="http://tempuri.org/"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+		xmlns:xsd2="http://schemas.xmlsoap.org/soap/encoding/"
+		xmlns:xsd3="http://tempuri.org/"
+		name="asterisk_ws"
+		targetNamespace="http://tempuri.org/">
+	<types>
+		<schema xmlns="http://www.w3.org/2001/XMLSchema"
+				xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/"
+				xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+				xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+				xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/"
+				xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+				xmlns:ns1="urn:asterisk_ws"
+				xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				elementFormDefault="qualified"
+				targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+			<import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</schema>
+		<schema xmlns="http://www.w3.org/2001/XMLSchema"
+				xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/"
+				xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+				xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+				xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/"
+				xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+				xmlns:ns1="urn:asterisk_ws"
+				xmlns:ns2="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				elementFormDefault="qualified"
+				targetNamespace="http://tempuri.org/">
+			<import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+			<element name="abonent_lock">
+				<complexType>
+					<sequence>
+						<element name="agentnum"
+								type="xsd:string"/>
+						<element name="end-date"
+								type="xsd:string"/>
+						<element name="author"
+								type="xsd:string"/>
+						<element name="reason"
+								type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<default:element xmlns:default="http://www.w3.org/2001/XMLSchema"
+					name="abonent_lockResponse">
+				<default:complexType>
+					<default:sequence>
+						<default:element name="result"
+								type="default:string"/>
+					</default:sequence>
+				</default:complexType>
+			</default:element>
+			<element name="add_agent">
+				<complexType>
+					<sequence>
+						<element name="agentnum"
+								type="xsd:string"/>
+						<element name="queuename"
+								type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<default:element xmlns:default="http://www.w3.org/2001/XMLSchema"
+					name="add_agentResponse">
+				<default:complexType>
+					<default:sequence>
+						<default:element name="result"
+								type="default:string"/>
+					</default:sequence>
+				</default:complexType>
+			</default:element>
+			<element name="agent_unlock">
+				<complexType>
+					<sequence>
+						<element name="agentnum"
+								type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<default:element xmlns:default="http://www.w3.org/2001/XMLSchema"
+					name="agent_unlockResponse">
+				<default:complexType>
+					<default:sequence>
+						<default:element name="result"
+								type="default:string"/>
+					</default:sequence>
+				</default:complexType>
+			</default:element>
+			<element name="change_agent_state">
+				<complexType>
+					<sequence>
+						<element name="queuename"
+								type="xsd:string"/>
+						<element name="agentnum"
+								type="xsd:string"/>
+						<element name="active"
+								type="xsd:boolean"/>
+						<element name="min-agents"
+								type="xsd:long"/>
+					</sequence>
+				</complexType>
+			</element>
+			<default:element xmlns:default="http://www.w3.org/2001/XMLSchema"
+					name="change_agent_stateResponse">
+				<default:complexType>
+					<default:sequence>
+						<default:element name="result"
+								type="default:string"/>
+					</default:sequence>
+				</default:complexType>
+			</default:element>
+			<element name="get_agent_lock">
+				<complexType>
+					<sequence>
+						<element name="agentnum"
+								type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<default:element xmlns:default="http://www.w3.org/2001/XMLSchema"
+					name="get_agent_lockResponse">
+				<default:complexType>
+					<default:sequence>
+						<default:element name="result"
+								type="default:string"/>
+					</default:sequence>
+				</default:complexType>
+			</default:element>
+			<element name="get_agent_state">
+				<complexType>
+					<sequence>
+						<element name="agentnum"
+								type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<default:element xmlns:default="http://www.w3.org/2001/XMLSchema"
+					name="get_agent_stateResponse">
+				<default:complexType>
+					<default:sequence>
+						<default:element name="result"
+								type="default:string"/>
+					</default:sequence>
+				</default:complexType>
+			</default:element>
+			<element name="make_call">
+				<complexType>
+					<sequence>
+						<element name="src-num"
+								type="xsd:string"/>
+						<element name="dst-num"
+								type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<default:element xmlns:default="http://www.w3.org/2001/XMLSchema"
+					name="make_callResponse">
+				<default:complexType>
+					<default:sequence>
+						<default:element name="result"
+								type="default:string"/>
+					</default:sequence>
+				</default:complexType>
+			</default:element>
+			<element name="mts_api">
+				<complexType>
+					<sequence>
+						<element name="query-type"
+								type="xsd:string"/>
+						<element name="query-url"
+								type="xsd:string"/>
+						<element name="query-headers"
+								type="xsd:string"/>
+						<element name="query-data"
+								type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<default:element xmlns:default="http://www.w3.org/2001/XMLSchema"
+					name="mts_apiResponse">
+				<default:complexType>
+					<default:sequence>
+						<default:element name="result"
+								type="default:string"/>
+					</default:sequence>
+				</default:complexType>
+			</default:element>
+			<element name="oper_console_agent">
+				<complexType>
+					<sequence>
+						<element name="agentnum"
+								type="xsd:string"/>
+						<element name="event"
+								type="xsd:string"/>
+						<element name="agentchan"
+								type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<default:element xmlns:default="http://www.w3.org/2001/XMLSchema"
+					name="oper_console_agentResponse">
+				<default:complexType>
+					<default:sequence>
+						<default:element name="result"
+								type="default:string"/>
+					</default:sequence>
+				</default:complexType>
+			</default:element>
+			<element name="remove_agent">
+				<complexType>
+					<sequence>
+						<element name="agentnum"
+								type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<default:element xmlns:default="http://www.w3.org/2001/XMLSchema"
+					name="remove_agentResponse">
+				<default:complexType>
+					<default:sequence>
+						<default:element name="result"
+								type="default:string"/>
+					</default:sequence>
+				</default:complexType>
+			</default:element>
+			<element name="send_message">
+				<complexType>
+					<sequence>
+						<element name="message-dst"
+								type="xsd:string"/>
+						<element name="message-text"
+								type="xsd:string"/>
+						<element name="message-author"
+								type="xsd:string"/>
+						<element name="message-naming"
+								type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<default:element xmlns:default="http://www.w3.org/2001/XMLSchema"
+					name="send_messageResponse">
+				<default:complexType>
+					<default:sequence>
+						<default:element name="result"
+								type="default:string"/>
+					</default:sequence>
+				</default:complexType>
+			</default:element>
+		</schema>
+	</types>
+	<message name="abonent_lock">
+		<part name="parameters"
+				element="tns:abonent_lock"/>
+	</message>
+	<message name="abonent_lockResponse">
+		<part name="parameters"
+				element="tns:abonent_lockResponse"/>
+	</message>
+	<message name="add_agent">
+		<part name="parameters"
+				element="tns:add_agent"/>
+	</message>
+	<message name="add_agentResponse">
+		<part name="parameters"
+				element="tns:add_agentResponse"/>
+	</message>
+	<message name="agent_unlock">
+		<part name="parameters"
+				element="tns:agent_unlock"/>
+	</message>
+	<message name="agent_unlockResponse">
+		<part name="parameters"
+				element="tns:agent_unlockResponse"/>
+	</message>
+	<message name="change_agent_state">
+		<part name="parameters"
+				element="tns:change_agent_state"/>
+	</message>
+	<message name="change_agent_stateResponse">
+		<part name="parameters"
+				element="tns:change_agent_stateResponse"/>
+	</message>
+	<message name="get_agent_lock">
+		<part name="parameters"
+				element="tns:get_agent_lock"/>
+	</message>
+	<message name="get_agent_lockResponse">
+		<part name="parameters"
+				element="tns:get_agent_lockResponse"/>
+	</message>
+	<message name="get_agent_state">
+		<part name="parameters"
+				element="tns:get_agent_state"/>
+	</message>
+	<message name="get_agent_stateResponse">
+		<part name="parameters"
+				element="tns:get_agent_stateResponse"/>
+	</message>
+	<message name="make_call">
+		<part name="parameters"
+				element="tns:make_call"/>
+	</message>
+	<message name="make_callResponse">
+		<part name="parameters"
+				element="tns:make_callResponse"/>
+	</message>
+	<message name="mts_api">
+		<part name="parameters"
+				element="tns:mts_api"/>
+	</message>
+	<message name="mts_apiResponse">
+		<part name="parameters"
+				element="tns:mts_apiResponse"/>
+	</message>
+	<message name="oper_console_agent">
+		<part name="parameters"
+				element="tns:oper_console_agent"/>
+	</message>
+	<message name="oper_console_agentResponse">
+		<part name="parameters"
+				element="tns:oper_console_agentResponse"/>
+	</message>
+	<message name="remove_agent">
+		<part name="parameters"
+				element="tns:remove_agent"/>
+	</message>
+	<message name="remove_agentResponse">
+		<part name="parameters"
+				element="tns:remove_agentResponse"/>
+	</message>
+	<message name="send_message">
+		<part name="parameters"
+				element="tns:send_message"/>
+	</message>
+	<message name="send_messageResponse">
+		<part name="parameters"
+				element="tns:send_messageResponse"/>
+	</message>
+	<portType name="asterisk_wsPortType">
+		<operation name="abonent_lock">
+			<documentation>:param agentnum:    agent phone number (string)
+:param end_date:    date and time for remove block from agent (string) format: YYYY-MM-DD HH:MM:SS
+:param author:      who block (string)
+:param reason:      why agent was blocked (string)</documentation>
+			<input name="abonent_lockRequest"
+					message="tns:abonent_lock"/>
+			<output name="abonent_lockResponse"
+					message="tns:abonent_lockResponse"/>
+		</operation>
+		<operation name="add_agent">
+			<documentation>:param agentnum: agent phone number (string)
+:param queuename: queue name (string)</documentation>
+			<input name="add_agentRequest"
+					message="tns:add_agent"/>
+			<output name="add_agentResponse"
+					message="tns:add_agentResponse"/>
+		</operation>
+		<operation name="agent_unlock">
+			<documentation>:param agentnum:    agent phone number (string)</documentation>
+			<input name="agent_unlockRequest"
+					message="tns:agent_unlock"/>
+			<output name="agent_unlockResponse"
+					message="tns:agent_unlockResponse"/>
+		</operation>
+		<operation name="change_agent_state">
+			<documentation>:param queuename: queue name (string)
+:param agentnum: agent phone number (string)
+:param active: False - set pause, True - set active (bool)
+:param min_agents: minimum count of agents (int)</documentation>
+			<input name="change_agent_stateRequest"
+					message="tns:change_agent_state"/>
+			<output name="change_agent_stateResponse"
+					message="tns:change_agent_stateResponse"/>
+		</operation>
+		<operation name="get_agent_lock">
+			<documentation>:param agentnum: agent phone number (string)</documentation>
+			<input name="get_agent_lockRequest"
+					message="tns:get_agent_lock"/>
+			<output name="get_agent_lockResponse"
+					message="tns:get_agent_lockResponse"/>
+		</operation>
+		<operation name="get_agent_state">
+			<documentation>:param agentnum: agent phone number (string)</documentation>
+			<input name="get_agent_stateRequest"
+					message="tns:get_agent_state"/>
+			<output name="get_agent_stateResponse"
+					message="tns:get_agent_stateResponse"/>
+		</operation>
+		<operation name="make_call">
+			<documentation>:param src_num: source phone number (string)
+:param dst_num: destination phone number (string)</documentation>
+			<input name="make_callRequest"
+					message="tns:make_call"/>
+			<output name="make_callResponse"
+					message="tns:make_callResponse"/>
+		</operation>
+		<operation name="mts_api">
+			<documentation>:param query_type: type of query: (xml|json)
+:param query_url: query url (string)
+:param query_headers: query headers (string) 'key:value###'
+:param query_data: query data (string)</documentation>
+			<input name="mts_apiRequest"
+					message="tns:mts_api"/>
+			<output name="mts_apiResponse"
+					message="tns:mts_apiResponse"/>
+		</operation>
+		<operation name="oper_console_agent">
+			<documentation>:param agentnum: agent phone number (string)
+:param event:    add|del|status (string)</documentation>
+			<input name="oper_console_agentRequest"
+					message="tns:oper_console_agent"/>
+			<output name="oper_console_agentResponse"
+					message="tns:oper_console_agentResponse"/>
+		</operation>
+		<operation name="remove_agent">
+			<documentation>:param agentnum: agent phone number (string)</documentation>
+			<input name="remove_agentRequest"
+					message="tns:remove_agent"/>
+			<output name="remove_agentResponse"
+					message="tns:remove_agentResponse"/>
+		</operation>
+		<operation name="send_message">
+			<documentation>:param message_dst: recipient phone number: (string(10))
+:param message_text: message text (text)
+:param message_author: message author (string)
+:param message_naming: naming in MTS (Luidor, VladAvto, Azimut-GAZ) (string)</documentation>
+			<input name="send_messageRequest"
+					message="tns:send_message"/>
+			<output name="send_messageResponse"
+					message="tns:send_messageResponse"/>
+		</operation>
+	</portType>
+	<binding name="asterisk_ws"
+			type="tns:asterisk_wsPortType">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="abonent_lock">
+			<soapbind:operation style="document"
+					soapAction="http://astws.main.luidorauto.ru:8081/asterisk_ws/soap/abonent_lock"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="add_agent">
+			<soapbind:operation style="document"
+					soapAction="http://astws.main.luidorauto.ru:8081/asterisk_ws/soap/add_agent"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="agent_unlock">
+			<soapbind:operation style="document"
+					soapAction="http://astws.main.luidorauto.ru:8081/asterisk_ws/soap/agent_unlock"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="change_agent_state">
+			<soapbind:operation style="document"
+					soapAction="http://astws.main.luidorauto.ru:8081/asterisk_ws/soap/change_agent_state"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="get_agent_lock">
+			<soapbind:operation style="document"
+					soapAction="http://astws.main.luidorauto.ru:8081/asterisk_ws/soap/get_agent_lock"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="get_agent_state">
+			<soapbind:operation style="document"
+					soapAction="http://astws.main.luidorauto.ru:8081/asterisk_ws/soap/get_agent_state"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="make_call">
+			<soapbind:operation style="document"
+					soapAction="http://astws.main.luidorauto.ru:8081/asterisk_ws/soap/make_call"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="mts_api">
+			<soapbind:operation style="document"
+					soapAction="http://astws.main.luidorauto.ru:8081/asterisk_ws/soap/mts_api"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="oper_console_agent">
+			<soapbind:operation style="document"
+					soapAction="http://astws.main.luidorauto.ru:8081/asterisk_ws/soap/oper_console_agent"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="remove_agent">
+			<soapbind:operation style="document"
+					soapAction="http://astws.main.luidorauto.ru:8081/asterisk_ws/soap/remove_agent"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="send_message">
+			<soapbind:operation style="document"
+					soapAction="http://astws.main.luidorauto.ru:8081/asterisk_ws/soap/send_message"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="asterisk_ws">
+		<documentation>Ladon generated service definition</documentation>
+		<port name="asterisk_ws"
+				binding="tns:asterisk_ws">
+			<soapbind:address location="http://astws.main.luidorauto.ru:8081/asterisk_ws/soap"/>
+		</port>
+	</service>
+</definitions>

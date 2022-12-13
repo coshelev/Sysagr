@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Телефон" id="1">
+			<DataPath>Запись.Телефон</DataPath>
+			<ContextMenu name="ТелефонКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ДатаЗакрытия" id="4">
+			<DataPath>Запись.ДатаЗакрытия</DataPath>
+			<ContextMenu name="ДатаЗакрытияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаЗакрытияРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Тип" id="7">
+			<DataPath>Запись.Тип</DataPath>
+			<ContextMenu name="ТипКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ТипРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Исполнитель" id="10">
+			<DataPath>Запись.Исполнитель</DataPath>
+			<ContextMenu name="ИсполнительКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ИсполнительРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ИсполнительПлан" id="40">
+			<DataPath>Запись.ИсполнительПлан</DataPath>
+			<ContextMenu name="ИсполнительПланКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="ИсполнительПланРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<InputField name="Комментарий" id="13">
+			<DataPath>Запись.Комментарий</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ДатаПостановки" id="16">
+			<DataPath>Запись.ДатаПостановки</DataPath>
+			<ContextMenu name="ДатаПостановкиКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ДатаПостановкиРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ЗвонокЗакрытия" id="19">
+			<DataPath>Запись.ЗвонокЗакрытия</DataPath>
+			<ContextMenu name="ЗвонокЗакрытияКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ЗвонокЗакрытияРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ЗвонокИнициатор" id="22">
+			<DataPath>Запись.ЗвонокИнициатор</DataPath>
+			<ContextMenu name="ЗвонокИнициаторКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ЗвонокИнициаторРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ДатаАктуальности" id="25">
+			<DataPath>Запись.ДатаАктуальности</DataPath>
+			<ContextMenu name="ДатаАктуальностиКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ДатаАктуальностиРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ПисьмоИнициатор" id="28">
+			<DataPath>Запись.ПисьмоИнициатор</DataPath>
+			<ContextMenu name="ПисьмоИнициаторКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ПисьмоИнициаторРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="ПричинаЗакрытия" id="31">
+			<DataPath>Запись.ПричинаЗакрытия</DataPath>
+			<ContextMenu name="ПричинаЗакрытияКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ПричинаЗакрытияРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="НапоминаниеПерезвонить" id="34">
+			<DataPath>Запись.НапоминаниеПерезвонить</DataPath>
+			<ContextMenu name="НапоминаниеПерезвонитьКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="НапоминаниеПерезвонитьРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="ДатаПервогоПерезвона" id="37">
+			<DataPath>Запись.ДатаПервогоПерезвона</DataPath>
+			<ContextMenu name="ДатаПервогоПерезвонаКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ДатаПервогоПерезвонаРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<InputField name="СоИсполнительПлан" id="43">
+			<DataPath>Запись.СоИсполнительПлан</DataPath>
+			<ContextMenu name="СоИсполнительПланКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="СоИсполнительПланРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<InputField name="Основание" id="46">
+			<DataPath>Запись.Основание</DataPath>
+			<ContextMenu name="ОснованиеКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="ОснованиеРасширеннаяПодсказка" id="48"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ЗадачиОбратныйЗвонок</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

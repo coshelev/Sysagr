@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Расписание</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГрСистемные" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общее</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>web:Black</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гр системные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Collapsed>true</Collapsed>
+			<BackColor>web:Gainsboro</BackColor>
+			<ExtendedTooltip name="ГрСистемныеРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<InputField name="РасписаниеСсылка" id="169">
+					<DataPath>Расписание</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расписание</v8:content>
+						</v8:item>
+					</Title>
+					<OpenButton>true</OpenButton>
+					<ContextMenu name="РасписаниеСсылкаКонтекстноеМеню" id="170"/>
+					<ExtendedTooltip name="РасписаниеСсылкаРасширеннаяПодсказка" id="171"/>
+					<Events>
+						<Event name="OnChange">РасписаниеСсылкаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГрСДаты" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настраиваемое расписание</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>web:Black</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гр с даты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<BackColor>web:Gainsboro</BackColor>
+			<ExtendedTooltip name="ГрСДатыРасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<InputField name="from_date" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>С</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="from_dateКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="from_dateРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="to_date" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="to_dateКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="to_dateРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="start_time" id="13">
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="start_timeКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="start_timeРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<InputField name="end_time" id="16">
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="end_timeКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="end_timeРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<CheckBoxField name="holiday" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выходной</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="holidayКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="holidayРасширеннаяПодсказка" id="21"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="235">
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="236"/>
+			<ChildItems>
+				<UsualGroup name="ГрНастраиваемыеРасписани" id="233">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настраиваемые расписания</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>web:Black</TitleTextColor>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гр настраиваемые расписани</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<BackColor>web:Gainsboro</BackColor>
+					<ExtendedTooltip name="ГрНастраиваемыеРасписаниРасширеннаяПодсказка" id="234"/>
+					<ChildItems>
+						<Table name="НастраиваемыеРасписания" id="196">
+							<HeightInTableRows>2</HeightInTableRows>
+							<AutoMaxRowsCount>false</AutoMaxRowsCount>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>НастраиваемыеРасписания</DataPath>
+							<RowPictureDataPath>НастраиваемыеРасписания.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>с даты</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="НастраиваемыеРасписанияКонтекстноеМеню" id="197"/>
+							<AutoCommandBar name="НастраиваемыеРасписанияКоманднаяПанель" id="198"/>
+							<ExtendedTooltip name="НастраиваемыеРасписанияРасширеннаяПодсказка" id="199"/>
+							<SearchStringAddition name="НастраиваемыеРасписанияСтрокаПоиска" id="200">
+								<AdditionSource>
+									<Item>НастраиваемыеРасписания</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастраиваемыеРасписанияСтрокаПоискаКонтекстноеМеню" id="201"/>
+								<ExtendedTooltip name="НастраиваемыеРасписанияСтрокаПоискаРасширеннаяПодсказка" id="202"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НастраиваемыеРасписанияСостояниеПросмотра" id="203">
+								<AdditionSource>
+									<Item>НастраиваемыеРасписания</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастраиваемыеРасписанияСостояниеПросмотраКонтекстноеМеню" id="204"/>
+								<ExtendedTooltip name="НастраиваемыеРасписанияСостояниеПросмотраРасширеннаяПодсказка" id="205"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НастраиваемыеРасписанияУправлениеПоиском" id="206">
+								<AdditionSource>
+									<Item>НастраиваемыеРасписания</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НастраиваемыеРасписанияУправлениеПоискомКонтекстноеМеню" id="207"/>
+								<ExtendedTooltip name="НастраиваемыеРасписанияУправлениеПоискомРасширеннаяПодсказка" id="208"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">НастраиваемыеРасписанияПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="НастраиваемыеРасписанияfrom_date" id="212">
+									<DataPath>НастраиваемыеРасписания.from_date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>с даты</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НастраиваемыеРасписанияfrom_dateКонтекстноеМеню" id="213"/>
+									<ExtendedTooltip name="НастраиваемыеРасписанияfrom_dateРасширеннаяПодсказка" id="214"/>
+								</LabelField>
+								<LabelField name="НастраиваемыеРасписанияto_date" id="227">
+									<DataPath>НастраиваемыеРасписания.to_date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по дату</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НастраиваемыеРасписанияto_dateКонтекстноеМеню" id="228"/>
+									<ExtendedTooltip name="НастраиваемыеРасписанияto_dateРасширеннаяПодсказка" id="229"/>
+								</LabelField>
+								<LabelField name="НастраиваемыеРасписанияstart_time" id="224">
+									<DataPath>НастраиваемыеРасписания.start_time</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>со времени</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НастраиваемыеРасписанияstart_timeКонтекстноеМеню" id="225"/>
+									<ExtendedTooltip name="НастраиваемыеРасписанияstart_timeРасширеннаяПодсказка" id="226"/>
+								</LabelField>
+								<LabelField name="НастраиваемыеРасписанияend_time" id="209">
+									<DataPath>НастраиваемыеРасписания.end_time</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по время</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НастраиваемыеРасписанияend_timeКонтекстноеМеню" id="210"/>
+									<ExtendedTooltip name="НастраиваемыеРасписанияend_timeРасширеннаяПодсказка" id="211"/>
+								</LabelField>
+								<LabelField name="НастраиваемыеРасписанияholiday" id="215">
+									<DataPath>НастраиваемыеРасписания.holiday</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выходной</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НастраиваемыеРасписанияholidayКонтекстноеМеню" id="216"/>
+									<ExtendedTooltip name="НастраиваемыеРасписанияholidayРасширеннаяПодсказка" id="217"/>
+								</LabelField>
+								<LabelField name="НастраиваемыеРасписанияid" id="218">
+									<DataPath>НастраиваемыеРасписания.id</DataPath>
+									<ContextMenu name="НастраиваемыеРасписанияidКонтекстноеМеню" id="219"/>
+									<ExtendedTooltip name="НастраиваемыеРасписанияidРасширеннаяПодсказка" id="220"/>
+								</LabelField>
+								<LabelField name="НастраиваемыеРасписанияid_name" id="221">
+									<DataPath>НастраиваемыеРасписания.id_name</DataPath>
+									<ContextMenu name="НастраиваемыеРасписанияid_nameКонтекстноеМеню" id="222"/>
+									<ExtendedTooltip name="НастраиваемыеРасписанияid_nameРасширеннаяПодсказка" id="223"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГрРасписаниеПоУмолчанию" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расписание по умолчанию</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>web:Black</TitleTextColor>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гр расписание по умолчанию</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Collapsed>true</Collapsed>
+					<BackColor>web:Gainsboro</BackColor>
+					<ExtendedTooltip name="ГрРасписаниеПоУмолчаниюРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<Table name="РасписаниеПоУмолчанию" id="138">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<HeightInTableRows>7</HeightInTableRows>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>РасписаниеПоУмолчанию</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РасписаниеПоУмолчаниюКонтекстноеМеню" id="139"/>
+							<AutoCommandBar name="РасписаниеПоУмолчаниюКоманднаяПанель" id="140"/>
+							<ExtendedTooltip name="РасписаниеПоУмолчаниюРасширеннаяПодсказка" id="141"/>
+							<SearchStringAddition name="РасписаниеПоУмолчаниюСтрокаПоиска" id="142">
+								<AdditionSource>
+									<Item>РасписаниеПоУмолчанию</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасписаниеПоУмолчаниюСтрокаПоискаКонтекстноеМеню" id="143"/>
+								<ExtendedTooltip name="РасписаниеПоУмолчаниюСтрокаПоискаРасширеннаяПодсказка" id="144"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РасписаниеПоУмолчаниюСостояниеПросмотра" id="145">
+								<AdditionSource>
+									<Item>РасписаниеПоУмолчанию</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасписаниеПоУмолчаниюСостояниеПросмотраКонтекстноеМеню" id="146"/>
+								<ExtendedTooltip name="РасписаниеПоУмолчаниюСостояниеПросмотраРасширеннаяПодсказка" id="147"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РасписаниеПоУмолчаниюУправлениеПоиском" id="148">
+								<AdditionSource>
+									<Item>РасписаниеПоУмолчанию</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РасписаниеПоУмолчаниюУправлениеПоискомКонтекстноеМеню" id="149"/>
+								<ExtendedTooltip name="РасписаниеПоУмолчаниюУправлениеПоискомРасширеннаяПодсказка" id="150"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="РасписаниеПоУмолчаниюdow" id="151">
+									<DataPath>РасписаниеПоУмолчанию.dow</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>День недели</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасписаниеПоУмолчаниюdowКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="РасписаниеПоУмолчаниюdowРасширеннаяПодсказка" id="153"/>
+								</InputField>
+								<InputField name="РасписаниеПоУмолчаниюstart_time" id="154">
+									<DataPath>РасписаниеПоУмолчанию.start_time</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>С</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасписаниеПоУмолчаниюstart_timeКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="РасписаниеПоУмолчаниюstart_timeРасширеннаяПодсказка" id="156"/>
+								</InputField>
+								<InputField name="РасписаниеПоУмолчаниюend_time" id="157">
+									<DataPath>РасписаниеПоУмолчанию.end_time</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>По</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасписаниеПоУмолчаниюend_timeКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="РасписаниеПоУмолчаниюend_timeРасширеннаяПодсказка" id="159"/>
+								</InputField>
+								<CheckBoxField name="РасписаниеПоУмолчаниюholyday" id="160">
+									<DataPath>РасписаниеПоУмолчанию.holiday</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выходной</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РасписаниеПоУмолчаниюholydayКонтекстноеМеню" id="161"/>
+									<ExtendedTooltip name="РасписаниеПоУмолчаниюholydayРасширеннаяПодсказка" id="162"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="Понедельник" id="61">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Понедельник</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Понедельник</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ПонедельникРасширеннаяПодсказка" id="62"/>
+						</UsualGroup>
+						<UsualGroup name="Группа2" id="72">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вторник</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="73"/>
+						</UsualGroup>
+						<UsualGroup name="Группа3" id="83">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Среда</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="84"/>
+						</UsualGroup>
+						<UsualGroup name="Группа4" id="94">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Четверг</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="95"/>
+						</UsualGroup>
+						<UsualGroup name="Группа5" id="105">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пятница</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="106"/>
+						</UsualGroup>
+						<UsualGroup name="Группа6" id="116">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Суббота</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="117"/>
+						</UsualGroup>
+						<UsualGroup name="Группа7" id="127">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Воскресенье</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="128"/>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГрГдеИспользуется" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочно, это же расписание применяется для каналов:</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>web:Black</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гр где используется</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<BackColor>web:Gainsboro</BackColor>
+			<ExtendedTooltip name="ГрГдеИспользуетсяРасширеннаяПодсказка" id="56"/>
+			<ChildItems>
+				<Table name="Сп" id="24">
+					<CommandBarLocation>None</CommandBarLocation>
+					<ReadOnly>true</ReadOnly>
+					<HeightInTableRows>7</HeightInTableRows>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<DataPath>Сп</DataPath>
+					<RowPictureDataPath>Сп.DefaultPicture</RowPictureDataPath>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="СпКонтекстноеМеню" id="25"/>
+					<AutoCommandBar name="СпКоманднаяПанель" id="26"/>
+					<ExtendedTooltip name="СпРасширеннаяПодсказка" id="27"/>
+					<SearchStringAddition name="СпСтрокаПоиска" id="28">
+						<AdditionSource>
+							<Item>Сп</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СпСтрокаПоискаКонтекстноеМеню" id="29"/>
+						<ExtendedTooltip name="СпСтрокаПоискаРасширеннаяПодсказка" id="30"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СпСостояниеПросмотра" id="31">
+						<AdditionSource>
+							<Item>Сп</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СпСостояниеПросмотраКонтекстноеМеню" id="32"/>
+						<ExtendedTooltip name="СпСостояниеПросмотраРасширеннаяПодсказка" id="33"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СпУправлениеПоиском" id="34">
+						<AdditionSource>
+							<Item>Сп</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СпУправлениеПоискомКонтекстноеМеню" id="35"/>
+						<ExtendedTooltip name="СпУправлениеПоискомРасширеннаяПодсказка" id="36"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="Спfull_number" id="49">
+							<DataPath>Сп.full_number</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Канал телефон</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Спfull_numberКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="Спfull_numberРасширеннаяПодсказка" id="51"/>
+						</LabelField>
+						<LabelField name="Спdescription" id="43">
+							<DataPath>Сп.description</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Канал наименование</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СпdescriptionКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="СпdescriptionРасширеннаяПодсказка" id="45"/>
+						</LabelField>
+						<LabelField name="Спregion" id="52">
+							<DataPath>Сп.region</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расписание. Регион</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СпregionКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="СпregionРасширеннаяПодсказка" id="54"/>
+						</LabelField>
+						<LabelField name="Спdepartment" id="40">
+							<DataPath>Сп.department</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расписание. Вид деятельности</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СпdepartmentКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="СпdepartmentРасширеннаяПодсказка" id="42"/>
+						</LabelField>
+						<LabelField name="Спdef_endpoint_num" id="37">
+							<DataPath>Сп.def_endpoint_num</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Канал. Очередь</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Спdef_endpoint_numКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="Спdef_endpoint_numРасширеннаяПодсказка" id="39"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ExternalDataSourceTableObject.AsteriskEdge.incoming_routes</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Сп" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сп</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	incoming_routes.Ссылка КАК Ссылка,
+	incoming_routes.full_number КАК full_number,
+	incoming_routes.schedule КАК schedule,
+	incoming_routes.def_endpoint_num КАК def_endpoint_num,
+	incoming_routes.description КАК description,
+	schedules_names.region КАК region,
+	schedules_names.department КАК department,
+	schedules_names.description КАК description1
+ИЗ
+	ВнешнийИсточникДанных.AsteriskEdge.Таблица.incoming_routes КАК incoming_routes
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.AsteriskEdge.Таблица.schedules_names КАК schedules_names
+		ПО incoming_routes.schedule = schedules_names.id
+ГДЕ
+	incoming_routes.schedule = &amp;schedule
+</QueryText>
+				<MainTable>ExternalDataSource.AsteriskEdge.Table.incoming_routes</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="РасписаниеПоУмолчанию" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="dow" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДеньНедели</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="start_time" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Start time</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Time</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="end_time" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>End time</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Time</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="holiday" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Holiday</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РасписаниеОписание" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание описание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Расписание" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ExternalDataSourceTableRef.AsteriskEdge.schedules_names</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастраиваемоеРасписание" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настраиваемое расписание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ExternalDataSourceTableRef.AsteriskEdge.schedules_custom</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастраиваемыеРасписания" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настраиваемые расписания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	schedules_custom.id КАК id,
+	schedules_custom.id_name КАК id_name,
+	schedules_custom.from_date КАК from_date,
+	schedules_custom.to_date КАК to_date,
+	schedules_custom.start_time КАК start_time,
+	schedules_custom.end_time КАК end_time,
+	schedules_custom.holiday КАК holiday
+ИЗ
+	ВнешнийИсточникДанных.AsteriskEdge.Таблица.schedules_custom КАК schedules_custom
+ГДЕ
+	schedules_custom.id_name = &amp;id_name</QueryText>
+				<MainTable>ExternalDataSource.AsteriskEdge.Table.schedules_custom</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="id_name">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

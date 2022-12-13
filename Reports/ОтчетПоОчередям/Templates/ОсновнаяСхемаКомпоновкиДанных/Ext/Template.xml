@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КаналПриВходящемТелВнутрПриИсходящем</dataPath>
+			<field>КаналПриВходящемТелВнутрПриИсходящем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для входящего - канал,  для исходящего - внутр.телефон звонящего</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сигнатура</dataPath>
+			<field>Сигнатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОператорКод</dataPath>
+			<field>ОператорКод</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АбонентВнешний</dataPath>
+			<field>АбонентВнешний</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерСобытия</dataPath>
+			<field>НомерСобытия</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоВходящий</dataPath>
+			<field>ЭтоВходящий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оператор</dataPath>
+			<field>Оператор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СвойстваСобытия</dataPath>
+			<field>СвойстваСобытия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодСобытия</dataPath>
+			<field>КодСобытия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяСобытия</dataPath>
+			<field>ИмяСобытия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Принят</dataPath>
+			<field>Принят</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АбонентВнутренний</dataPath>
+			<field>АбонентВнутренний</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внутренний телефон сотрудника (службы)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПервыйРазговор</dataPath>
+			<field>ПервыйРазговор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КЦ Разговор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипПеревода</dataPath>
+			<field>ТипПеревода</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип перевода</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПервыйОжидание</dataPath>
+			<field>ПервыйОжидание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КЦ Ожидание</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоследнийОжидание</dataPath>
+			<field>ПоследнийОжидание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОП ожидание</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоследнийРазговор</dataPath>
+			<field>ПоследнийРазговор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОП разговор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦелеваяТочка</dataPath>
+			<field>ЦелеваяТочка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Целевая точка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ЗвонкиМаршруты.Сигнатура КАК Сигнатура,
+	ЗвонкиМаршруты.НомерСобытия КАК НомерСобытияENTERQUEUE,
+	ЗвонкиМаршруты.Дата КАК Дата,
+	ЗвонкиМаршруты.Оператор.Код КАК ОператорКод,
+	ЗвонкиМаршруты.Оператор КАК Оператор,
+	ЗвонкиМаршруты.КодСобытия КАК КодСобытия,
+	ЗвонкиМаршруты.ИмяСобытия КАК ИмяСобытия,
+	ЗвонкиМаршруты.СвойстваСобытия КАК СвойстваСобытия,
+	Звонки.АбонентВнешний КАК АбонентВнешний,
+	Звонки.Принят КАК Принят,
+	Звонки.Инициатор КАК КаналПриВходящемТелВнутрПриИсходящем,
+	Звонки.ЭтоВходящий КАК ЭтоВходящий,
+	Звонки.АбонентВнутренний КАК АбонентВнутренний,
+	1 КАК Количество
+ПОМЕСТИТЬ ВТ01
+ИЗ
+	РегистрСведений.ЗвонкиМаршруты КАК ЗвонкиМаршруты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.Звонки КАК Звонки
+		ПО ЗвонкиМаршруты.Сигнатура = Звонки.Сигнатура
+ГДЕ
+	ЗвонкиМаршруты.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОконачания
+	И ЗвонкиМаршруты.КодСобытия = "ENTERQUEUE"
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗвонкиМаршруты.Сигнатура КАК Сигнатура,
+	ВТ01.НомерСобытияENTERQUEUE КАК НомерСобытияENTERQUEUE,
+	"С уведомлением" КАК ТипПеревода
+ПОМЕСТИТЬ ВТ02_АТрансферы
+ИЗ
+	РегистрСведений.ЗвонкиМаршруты КАК ЗвонкиМаршруты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ01 КАК ВТ01
+		ПО ЗвонкиМаршруты.Сигнатура = ВТ01.Сигнатура
+			И (ЗвонкиМаршруты.НомерСобытия = ВТ01.НомерСобытияENTERQUEUE - 1)
+			И (ЗвонкиМаршруты.КодСобытия = "A-TRANSFER")
+ГДЕ
+	ЗвонкиМаршруты.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОконачания
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ01.Сигнатура КАК Сигнатура,
+	ВТ01.НомерСобытияENTERQUEUE КАК НомерСобытия,
+	ВТ01.Дата КАК Дата,
+	ВТ01.ОператорКод КАК ОператорКод,
+	ВТ01.Оператор КАК Оператор,
+	ВТ01.КодСобытия КАК КодСобытия,
+	ВТ01.ИмяСобытия КАК ИмяСобытия,
+	ВТ01.СвойстваСобытия КАК СвойстваСобытия,
+	ВТ01.АбонентВнешний КАК АбонентВнешний,
+	ВТ01.Принят КАК Принят,
+	ВТ01.КаналПриВходящемТелВнутрПриИсходящем КАК КаналПриВходящемТелВнутрПриИсходящем,
+	ВТ01.ЭтоВходящий КАК ЭтоВходящий,
+	ВТ01.АбонентВнутренний КАК АбонентВнутренний,
+	ВТ01.Количество КАК Количество,
+	ЕСТЬNULL(ВТ02.ТипПеревода, "Без уведомления") КАК ТипПеревода,
+	ЕСТЬNULL(Стат.КЦОжидание, "") КАК ПервыйОжидание,
+	ЕСТЬNULL(Стат.КЦРазговор, "") КАК ПервыйРазговор,
+	ЕСТЬNULL(Стат.ОПОжидание, "") КАК ПоследнийОжидание,
+	ЕСТЬNULL(Стат.ОПРазговор, "") КАК ПоследнийРазговор,
+	ЕСТЬNULL(ЗвонкиДоп.ЦелеваяТочка, ЗНАЧЕНИЕ(Справочник.ТочкиЦелевые.ПустаяСсылка)) КАК ЦелеваяТочка
+ИЗ
+	ВТ01 КАК ВТ01
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ02_АТрансферы КАК ВТ02
+		ПО ВТ01.Сигнатура = ВТ02.Сигнатура
+			И ВТ01.НомерСобытияENTERQUEUE = ВТ02.НомерСобытияENTERQUEUE
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗвонкиСтатОбщая КАК Стат
+		ПО ВТ01.Сигнатура = Стат.Сигнатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗвонкиДоп КАК ЗвонкиДоп
+		ПО ВТ01.Сигнатура = ЗвонкиДоп.Сигнатура</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаОконачания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата оконачания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ОператорКод</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Оператор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АбонентВнешний</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КаналПриВходящемТелВнутрПриИсходящем</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>КодСобытия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ИмяСобытия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>НомерСобытия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Принят</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СвойстваСобытия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЭтоВходящий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сигнатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипПеревода</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦелеваяТочка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПервыйОжидание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПервыйРазговор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПоследнийОжидание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПоследнийРазговор</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Оператор</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ОператорКод</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Дата</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>АбонентВнешний</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КаналПриВходящемТелВнутрПриИсходящем</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Количество</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Принят</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ЦелеваяТочка</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ПервыйОжидание</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ПервыйРазговор</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ПоследнийОжидание</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ПоследнийРазговор</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>АбонентВнутренний</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СвойстваСобытия</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ЭтоВходящий</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ТипПеревода</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Сигнатура</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

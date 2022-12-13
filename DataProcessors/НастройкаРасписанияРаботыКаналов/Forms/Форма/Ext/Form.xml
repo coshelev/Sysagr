@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ВыбраннаяДата" id="179">
+			<DataPath>ВыбраннаяДата</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На дату</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ВыбраннаяДатаКонтекстноеМеню" id="180"/>
+			<ExtendedTooltip name="ВыбраннаяДатаРасширеннаяПодсказка" id="181"/>
+			<Events>
+				<Event name="OnChange">ВыбраннаяДатаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="Сп" id="102">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Сп</DataPath>
+			<RowPictureDataPath>~Сп.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СпКонтекстноеМеню" id="103"/>
+			<AutoCommandBar name="СпКоманднаяПанель" id="104"/>
+			<ExtendedTooltip name="СпРасширеннаяПодсказка" id="105"/>
+			<SearchStringAddition name="СпСтрокаПоиска" id="106">
+				<AdditionSource>
+					<Item>Сп</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СпСтрокаПоискаКонтекстноеМеню" id="107"/>
+				<ExtendedTooltip name="СпСтрокаПоискаРасширеннаяПодсказка" id="108"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СпСостояниеПросмотра" id="109">
+				<AdditionSource>
+					<Item>Сп</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СпСостояниеПросмотраКонтекстноеМеню" id="110"/>
+				<ExtendedTooltip name="СпСостояниеПросмотраРасширеннаяПодсказка" id="111"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СпУправлениеПоиском" id="112">
+				<AdditionSource>
+					<Item>Сп</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СпУправлениеПоискомКонтекстноеМеню" id="113"/>
+				<ExtendedTooltip name="СпУправлениеПоискомРасширеннаяПодсказка" id="114"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СпВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Спincoming_routes_Ссылка" id="115">
+					<DataPath>Сп.incoming_routes_Ссылка</DataPath>
+					<Visible>false</Visible>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="Спincoming_routes_СсылкаКонтекстноеМеню" id="116"/>
+					<ExtendedTooltip name="Спincoming_routes_СсылкаРасширеннаяПодсказка" id="117"/>
+					<Events>
+						<Event name="URLProcessing">Спincoming_routes_СсылкаОбработкаНавигационнойСсылки</Event>
+						<Event name="Click">Спincoming_routes_СсылкаНажатие</Event>
+					</Events>
+				</LabelField>
+				<LabelField name="СпКаналТелефон" id="182">
+					<DataPath>Сп.КаналТелефон</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Канал телефон</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СпКаналТелефонКонтекстноеМеню" id="183"/>
+					<ExtendedTooltip name="СпКаналТелефонРасширеннаяПодсказка" id="184"/>
+				</LabelField>
+				<LabelField name="СпКаналОписание" id="185">
+					<DataPath>~Сп.КаналОписание</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Канал. Описание</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СпКаналОписаниеКонтекстноеМеню" id="186"/>
+					<ExtendedTooltip name="СпКаналОписаниеРасширеннаяПодсказка" id="187"/>
+				</LabelField>
+				<LabelField name="СпКаналНаименование" id="188">
+					<DataPath>Сп.КаналНаименование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Канал наименование</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СпКаналНаименованиеКонтекстноеМеню" id="189"/>
+					<ExtendedTooltip name="СпКаналНаименованиеРасширеннаяПодсказка" id="190"/>
+				</LabelField>
+				<CheckBoxField name="СпАрхивный" id="197">
+					<DataPath>Сп.Архивный</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СпАрхивныйКонтекстноеМеню" id="198"/>
+					<ExtendedTooltip name="СпАрхивныйРасширеннаяПодсказка" id="199"/>
+				</CheckBoxField>
+				<LabelField name="Спschedules_names_Ссылкаregion" id="135">
+					<DataPath>Сп.schedules_names_Ссылка.region</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регион</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Спschedules_names_СсылкаregionКонтекстноеМеню" id="136"/>
+					<ExtendedTooltip name="Спschedules_names_СсылкаregionРасширеннаяПодсказка" id="137"/>
+				</LabelField>
+				<LabelField name="Спschedules_names_Ссылкаdepartment" id="138">
+					<DataPath>Сп.schedules_names_Ссылка.department</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид деятельности</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<ContextMenu name="Спschedules_names_СсылкаdepartmentКонтекстноеМеню" id="139"/>
+					<ExtendedTooltip name="Спschedules_names_СсылкаdepartmentРасширеннаяПодсказка" id="140"/>
+				</LabelField>
+				<LabelField name="СпРасписаниеНаименование" id="191">
+					<DataPath>Сп.РасписаниеНаименование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расписание наименование</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СпРасписаниеНаименованиеКонтекстноеМеню" id="192"/>
+					<ExtendedTooltip name="СпРасписаниеНаименованиеРасширеннаяПодсказка" id="193"/>
+				</LabelField>
+				<LabelField name="СпРасписаниеОписание" id="194">
+					<DataPath>Сп.РасписаниеОписание</DataPath>
+					<ContextMenu name="СпРасписаниеОписаниеКонтекстноеМеню" id="195"/>
+					<ExtendedTooltip name="СпРасписаниеОписаниеРасширеннаяПодсказка" id="196"/>
+				</LabelField>
+				<ColumnGroup name="ГрНастройка" id="153">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настраиваемое расписание</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гр настройка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГрНастройкаРасширеннаяПодсказка" id="154"/>
+					<ChildItems>
+						<LabelField name="Спschedules_custom_Ссылка" id="118">
+							<DataPath>Сп.schedules_custom_Ссылка</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="Спschedules_custom_СсылкаКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="Спschedules_custom_СсылкаРасширеннаяПодсказка" id="120"/>
+						</LabelField>
+						<LabelField name="Спschedules_custom_Ссылкаfrom_date" id="155">
+							<DataPath>Сп.schedules_custom_Ссылка.from_date</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>С даты</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Спschedules_custom_Ссылкаfrom_dateКонтекстноеМеню" id="156"/>
+							<ExtendedTooltip name="Спschedules_custom_Ссылкаfrom_dateРасширеннаяПодсказка" id="157"/>
+						</LabelField>
+						<LabelField name="Спschedules_custom_Ссылкаto_date" id="158">
+							<DataPath>Сп.schedules_custom_Ссылка.to_date</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По дату</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Спschedules_custom_Ссылкаto_dateКонтекстноеМеню" id="159"/>
+							<ExtendedTooltip name="Спschedules_custom_Ссылкаto_dateРасширеннаяПодсказка" id="160"/>
+						</LabelField>
+						<LabelField name="Спschedules_custom_Ссылкаstart_time" id="161">
+							<DataPath>Сп.schedules_custom_Ссылка.start_time</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Со времени</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Спschedules_custom_Ссылкаstart_timeКонтекстноеМеню" id="162"/>
+							<ExtendedTooltip name="Спschedules_custom_Ссылкаstart_timeРасширеннаяПодсказка" id="163"/>
+						</LabelField>
+						<LabelField name="Спschedules_custom_Ссылкаend_time" id="164">
+							<DataPath>Сп.schedules_custom_Ссылка.end_time</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По время</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Спschedules_custom_Ссылкаend_timeКонтекстноеМеню" id="165"/>
+							<ExtendedTooltip name="Спschedules_custom_Ссылкаend_timeРасширеннаяПодсказка" id="166"/>
+						</LabelField>
+						<CheckBoxField name="Спschedules_custom_Ссылкаholiday" id="167">
+							<DataPath>Сп.schedules_custom_Ссылка.holiday</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вых</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выходной</v8:content>
+								</v8:item>
+							</ToolTip>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="Спschedules_custom_СсылкаholidayКонтекстноеМеню" id="168"/>
+							<ExtendedTooltip name="Спschedules_custom_СсылкаholidayРасширеннаяПодсказка" id="169"/>
+						</CheckBoxField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГрРасп" id="133">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расписание по умолчанию (не настраиватется)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гр расп</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГрРаспРасширеннаяПодсказка" id="134"/>
+					<ChildItems>
+						<LabelField name="Спschedules_names_Ссылка" id="124">
+							<DataPath>Сп.schedules_names_Ссылка</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="Спschedules_names_СсылкаКонтекстноеМеню" id="125"/>
+							<ExtendedTooltip name="Спschedules_names_СсылкаРасширеннаяПодсказка" id="126"/>
+						</LabelField>
+						<LabelField name="Спschedules_default_Ссылка1start_time" id="170">
+							<DataPath>~Сп.schedules_default_Ссылка1.start_time</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Со времени</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Спschedules_default_Ссылка1start_timeКонтекстноеМеню" id="171"/>
+							<ExtendedTooltip name="Спschedules_default_Ссылка1start_timeРасширеннаяПодсказка" id="172"/>
+						</LabelField>
+						<LabelField name="Спschedules_default_Ссылка1end_time" id="173">
+							<DataPath>~Сп.schedules_default_Ссылка1.end_time</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По время</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Спschedules_default_Ссылка1end_timeКонтекстноеМеню" id="174"/>
+							<ExtendedTooltip name="Спschedules_default_Ссылка1end_timeРасширеннаяПодсказка" id="175"/>
+						</LabelField>
+						<CheckBoxField name="Спschedules_default_Ссылка1holiday" id="176">
+							<DataPath>~Сп.schedules_default_Ссылка1.holiday</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вых</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="Спschedules_default_Ссылка1holidayКонтекстноеМеню" id="177"/>
+							<ExtendedTooltip name="Спschedules_default_Ссылка1holidayРасширеннаяПодсказка" id="178"/>
+						</CheckBoxField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.НастройкаРасписанияРаботыКаналов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Сп" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сп</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>~Сп.full_number</Field>
+				<Field>~Сп.schedules_default_Ссылка1</Field>
+				<Field>~Сп.Канал</Field>
+				<Field>Сп.incoming_routes_shedule</Field>
+				<Field>Сп.incoming_routes_Ссылка</Field>
+				<Field>Сп.schedules_custom_Ссылка</Field>
+				<Field>Сп.schedules_default_Ссылка</Field>
+				<Field>Сп.schedules_names_restricted</Field>
+				<Field>Сп.schedules_names_Ссылка</Field>
+				<Field>Сп.Архивный</Field>
+				<Field>Сп.КаналТелефон</Field>
+				<Field>Сп.КлючКанала</Field>
+				<Field>Сп.КлючРасписания</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	incoming_routes.Ссылка КАК incoming_routes_Ссылка,
+	schedules_names.Ссылка КАК schedules_names_Ссылка,
+	schedules_default1.Ссылка КАК schedules_default_Ссылка,
+	schedules_custom.Ссылка КАК schedules_custom_Ссылка,
+	incoming_routes.schedule КАК incoming_routes_shedule,
+	incoming_routes.full_number КАК КаналТелефон,
+	incoming_routes.description КАК КаналНаименование,
+	schedules_names.region КАК Регион,
+	schedules_names.department КАК ВидДеятельности,
+	schedules_names.name КАК РасписаниеНаименование,
+	schedules_names.restricted КАК schedules_names_restricted,
+	schedules_names.description КАК РасписаниеОписание,
+	incoming_routes.schedule КАК КлючРасписания,
+	incoming_routes.id КАК КлючКанала,
+	ВЫБОР
+		КОГДА ВЫРАЗИТЬ(ПОДСТРОКА(incoming_routes.full_number, 2, ДЛИНАСТРОКИ(incoming_routes.full_number) - 1) КАК СТРОКА(15)) В (&amp;АрхивныеКаналы)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Архивный
+ИЗ
+	ВнешнийИсточникДанных.AsteriskEdge.Таблица.incoming_routes КАК incoming_routes
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.AsteriskEdge.Таблица.schedules_names КАК schedules_names
+		ПО incoming_routes.schedule = schedules_names.id
+		ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.AsteriskEdge.Таблица.schedules_default КАК schedules_default1
+		ПО incoming_routes.schedule = schedules_default1.id_name
+			И (schedules_default1.dow = &amp;ДеньНедели)
+		ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.AsteriskEdge.Таблица.schedules_custom КАК schedules_custom
+		ПО incoming_routes.schedule = schedules_custom.id_name
+			И (&amp;CurrentDate МЕЖДУ schedules_custom.from_date И schedules_custom.to_date)</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>incoming_routes_Ссылка</dcssch:dataPath>
+					<dcssch:field>incoming_routes_Ссылка</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Incoming routes ссылка</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>incoming_routes_shedule</dcssch:dataPath>
+					<dcssch:field>incoming_routes_shedule</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Incoming routes shedule</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КлючКанала</dcssch:dataPath>
+					<dcssch:field>КлючКанала</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ канала</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>schedules_names_Ссылка</dcssch:dataPath>
+					<dcssch:field>schedules_names_Ссылка</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Schedules names ссылка</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>schedules_default_Ссылка</dcssch:dataPath>
+					<dcssch:field>schedules_default_Ссылка</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Schedules default ссылка</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Регион</dcssch:dataPath>
+					<dcssch:field>Регион</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регион</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КаналНаименование</dcssch:dataPath>
+					<dcssch:field>КаналНаименование</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Канал наименование</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>schedules_custom_Ссылка</dcssch:dataPath>
+					<dcssch:field>schedules_custom_Ссылка</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Schedules custom ссылка</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КаналТелефон</dcssch:dataPath>
+					<dcssch:field>КаналТелефон</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Канал телефон</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидДеятельности</dcssch:dataPath>
+					<dcssch:field>ВидДеятельности</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид деятельности</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РасписаниеНаименование</dcssch:dataPath>
+					<dcssch:field>РасписаниеНаименование</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расписание наименование</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>schedules_names_restricted</dcssch:dataPath>
+					<dcssch:field>schedules_names_restricted</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Schedules names restricted</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РасписаниеОписание</dcssch:dataPath>
+					<dcssch:field>РасписаниеОписание</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расписание описание</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КлючРасписания</dcssch:dataPath>
+					<dcssch:field>КлючРасписания</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ расписания</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Архивный</dcssch:dataPath>
+					<dcssch:field>Архивный</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Архивный</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Parameter>
+					<dcssch:name>CurrentDate</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Current date</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcssch:value>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ДеньНедели</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>День недели</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:string"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>АрхивныеКаналы</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Архивные каналы</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>15</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:string"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+					<dcssch:valueListAllowed>true</dcssch:valueListAllowed>
+				</Parameter>
+				<KeyType>FieldValue</KeyType>
+				<KeyField>incoming_routes_Ссылка</KeyField>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВыбраннаяДата" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранная дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьРасписание" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать расписание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать расписание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьРасписание</Action>
+		</Command>
+	</Commands>
+</Form>

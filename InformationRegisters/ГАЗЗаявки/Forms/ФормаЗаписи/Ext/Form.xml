@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Стрцы" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стрцы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стрцы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтрцыРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Page name="СтрОсновные" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стр основные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтрОсновныеРасширеннаяПодсказка" id="28"/>
+					<ChildItems>
+						<InputField name="ИдГАЗ" id="40">
+							<DataPath>Запись.Ид</DataPath>
+							<ContextMenu name="ИдГАЗКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ИдГАЗРасширеннаяПодсказка" id="42"/>
+						</InputField>
+						<InputField name="Контрагент" id="31">
+							<DataPath>Запись.Контрагент</DataPath>
+							<ContextMenu name="КонтрагентКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="33"/>
+						</InputField>
+						<InputField name="АбонентВнешний" id="13">
+							<DataPath>Запись.АбонентВнешний</DataPath>
+							<ContextMenu name="АбонентВнешнийКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="АбонентВнешнийРасширеннаяПодсказка" id="15"/>
+							<Events>
+								<Event name="OnChange">АбонентВнешнийПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Почта" id="34">
+							<DataPath>Запись.Почта</DataPath>
+							<ContextMenu name="ПочтаКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ПочтаРасширеннаяПодсказка" id="36"/>
+						</InputField>
+						<InputField name="Регион" id="10">
+							<DataPath>Запись.Регион</DataPath>
+							<ContextMenu name="РегионКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="РегионРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="ТочкаРазмещения" id="43">
+							<DataPath>Запись.ТочкаРазмещения</DataPath>
+							<ContextMenu name="ТочкаРазмещенияКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ТочкаРазмещенияРасширеннаяПодсказка" id="45"/>
+						</InputField>
+						<InputField name="Содержание" id="37">
+							<DataPath>Запись.Содержание</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="СодержаниеКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="СодержаниеРасширеннаяПодсказка" id="39"/>
+						</InputField>
+						<InputField name="Комментарий" id="16">
+							<DataPath>Запись.Комментарий</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="18"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтрДополнительные" id="29">
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стр дополнительные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтрДополнительныеРасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<InputField name="Сигнатура" id="1">
+							<DataPath>Запись.Сигнатура</DataPath>
+							<ContextMenu name="СигнатураКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="СигнатураРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<CheckBoxField name="Завершен" id="19">
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗавершенКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ЗавершенРасширеннаяПодсказка" id="21"/>
+						</CheckBoxField>
+						<InputField name="Начало" id="4">
+							<DataPath>Запись.Начало</DataPath>
+							<ContextMenu name="НачалоКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НачалоРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Окончание" id="7">
+							<DataPath>Запись.Окончание</DataPath>
+							<ContextMenu name="ОкончаниеКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ОкончаниеРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="Автор" id="46">
+							<DataPath>Запись.Автор</DataPath>
+							<ContextMenu name="АвторКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="48"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ГАЗЗаявки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Стрцы" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стрцы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стрцы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтрцыРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<Page name="СтрЯИсполнитель" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Я - Исполнитель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стр я исполнитель</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.hammer_16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтрЯИсполнительРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<UsualGroup name="ГрКнопки" id="101">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр кнопки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр кнопки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГрКнопкиРасширеннаяПодсказка" id="102"/>
+							<ChildItems>
+								<Button name="Принять" id="99">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Принять</CommandName>
+									<Shape>Usual</Shape>
+									<ExtendedTooltip name="ПринятьРасширеннаяПодсказка" id="100"/>
+								</Button>
+								<Button name="Доработать" id="103">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Доработать</CommandName>
+									<ExtendedTooltip name="ДоработатьРасширеннаяПодсказка" id="104"/>
+								</Button>
+								<Button name="Прослушать" id="105">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Прослушать</CommandName>
+									<ExtendedTooltip name="ПрослушатьРасширеннаяПодсказка" id="106"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Проверка" id="44">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Проверка</DataPath>
+							<RowPictureDataPath>~Проверка.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>true</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ПроверкаКонтекстноеМеню" id="45"/>
+							<AutoCommandBar name="ПроверкаКоманднаяПанель" id="46"/>
+							<ExtendedTooltip name="ПроверкаРасширеннаяПодсказка" id="47"/>
+							<SearchStringAddition name="ПроверкаСтрокаПоиска" id="48">
+								<AdditionSource>
+									<Item>Проверка</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроверкаСтрокаПоискаКонтекстноеМеню" id="49"/>
+								<ExtendedTooltip name="ПроверкаСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПроверкаСостояниеПросмотра" id="51">
+								<AdditionSource>
+									<Item>Проверка</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроверкаСостояниеПросмотраКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="ПроверкаСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПроверкаУправлениеПоиском" id="54">
+								<AdditionSource>
+									<Item>Проверка</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроверкаУправлениеПоискомКонтекстноеМеню" id="55"/>
+								<ExtendedTooltip name="ПроверкаУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПроверкаИд" id="136">
+									<DataPath>Проверка.Ид</DataPath>
+									<ContextMenu name="ПроверкаИдКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="ПроверкаИдРасширеннаяПодсказка" id="138"/>
+								</LabelField>
+								<LabelField name="ПроверкаТелефон" id="93">
+									<DataPath>Проверка.Телефон</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Телефон</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПроверкаТелефонКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="ПроверкаТелефонРасширеннаяПодсказка" id="95"/>
+								</LabelField>
+								<LabelField name="ПроверкаПочта" id="151">
+									<DataPath>Проверка.Почта</DataPath>
+									<Width>15</Width>
+									<ContextMenu name="ПроверкаПочтаКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="ПроверкаПочтаРасширеннаяПодсказка" id="153"/>
+								</LabelField>
+								<LabelField name="ПроверкаЗвонокЗакрытия" id="69">
+									<DataPath>Проверка.ЗвонокЗакрытия</DataPath>
+									<ContextMenu name="ПроверкаЗвонокЗакрытияКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ПроверкаЗвонокЗакрытияРасширеннаяПодсказка" id="71"/>
+								</LabelField>
+								<LabelField name="ПроверкаПричинаЗакрытия" id="87">
+									<DataPath>Проверка.ПричинаЗакрытия</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Причина ручного закрытия</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПроверкаПричинаЗакрытияКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="ПроверкаПричинаЗакрытияРасширеннаяПодсказка" id="89"/>
+								</LabelField>
+								<LabelField name="ПроверкаДатаПостановки" id="66">
+									<DataPath>Проверка.ДатаПостановки</DataPath>
+									<ContextMenu name="ПроверкаДатаПостановкиКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ПроверкаДатаПостановкиРасширеннаяПодсказка" id="68"/>
+								</LabelField>
+								<LabelField name="ПроверкаДатаЗакрытия" id="60">
+									<DataPath>Проверка.ДатаЗакрытия</DataPath>
+									<ContextMenu name="ПроверкаДатаЗакрытияКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ПроверкаДатаЗакрытияРасширеннаяПодсказка" id="62"/>
+								</LabelField>
+								<LabelField name="ПроверкаДатаПервогоПерезвона" id="63">
+									<DataPath>~Проверка.ДатаПервогоПерезвона</DataPath>
+									<ContextMenu name="ПроверкаДатаПервогоПерезвонаКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ПроверкаДатаПервогоПерезвонаРасширеннаяПодсказка" id="65"/>
+								</LabelField>
+								<LabelField name="ПроверкаИнициатор" id="72">
+									<DataPath>~Проверка.Инициатор</DataPath>
+									<ContextMenu name="ПроверкаИнициаторКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ПроверкаИнициаторРасширеннаяПодсказка" id="74"/>
+								</LabelField>
+								<LabelField name="ПроверкаИсполнитель" id="75">
+									<DataPath>Проверка.Исполнитель</DataPath>
+									<ContextMenu name="ПроверкаИсполнительКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ПроверкаИсполнительРасширеннаяПодсказка" id="77"/>
+								</LabelField>
+								<LabelField name="ПроверкаКомментарий" id="81">
+									<DataPath>Проверка.Комментарий</DataPath>
+									<ContextMenu name="ПроверкаКомментарийКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ПроверкаКомментарийРасширеннаяПодсказка" id="83"/>
+								</LabelField>
+								<LabelField name="ПроверкаИсполнительТелефон" id="78">
+									<DataPath>~Проверка.ИсполнительТелефон</DataPath>
+									<ContextMenu name="ПроверкаИсполнительТелефонКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ПроверкаИсполнительТелефонРасширеннаяПодсказка" id="80"/>
+								</LabelField>
+								<LabelField name="ПроверкаНапоминаниеПерезвонить" id="84">
+									<DataPath>~Проверка.НапоминаниеПерезвонить</DataPath>
+									<ContextMenu name="ПроверкаНапоминаниеПерезвонитьКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ПроверкаНапоминаниеПерезвонитьРасширеннаяПодсказка" id="86"/>
+								</LabelField>
+								<LabelField name="ПроверкаЗаявкаГАЗ" id="96">
+									<DataPath>Проверка.ЗаявкаГАЗ</DataPath>
+									<ContextMenu name="ПроверкаЗаявкаГАЗКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="ПроверкаЗаявкаГАЗРасширеннаяПодсказка" id="98"/>
+								</LabelField>
+								<LabelField name="ПроверкаТочкаРазмещения" id="139">
+									<DataPath>Проверка.ТочкаРазмещения</DataPath>
+									<ContextMenu name="ПроверкаТочкаРазмещенияКонтекстноеМеню" id="140"/>
+									<ExtendedTooltip name="ПроверкаТочкаРазмещенияРасширеннаяПодсказка" id="141"/>
+								</LabelField>
+								<LabelField name="ПроверкаАвтор" id="145">
+									<DataPath>Проверка.Автор</DataPath>
+									<ContextMenu name="ПроверкаАвторКонтекстноеМеню" id="146"/>
+									<ExtendedTooltip name="ПроверкаАвторРасширеннаяПодсказка" id="147"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтрЯПостановщик" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Я - постановщик</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стр я постановщик</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.point_16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтрЯПостановщикРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<Table name="Заявки" id="1">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Заявки</DataPath>
+							<RowPictureDataPath>Заявки.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ЗаявкиКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="ЗаявкиКоманднаяПанель" id="3">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ЗаявкиОбновить" id="128">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Заявки.StandardCommand.Refresh</CommandName>
+										<ExtendedTooltip name="ЗаявкиОбновитьРасширеннаяПодсказка" id="129"/>
+									</Button>
+									<Button name="ЗаявкиСоздать" id="116">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Заявки.StandardCommand.Create</CommandName>
+										<ExtendedTooltip name="ЗаявкиСоздатьРасширеннаяПодсказка" id="117"/>
+									</Button>
+									<Button name="ЗаявкиСкопировать" id="118">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Заявки.StandardCommand.Copy</CommandName>
+										<ExtendedTooltip name="ЗаявкиСкопироватьРасширеннаяПодсказка" id="119"/>
+									</Button>
+									<Button name="ЗаявкиИзменить" id="120">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Заявки.StandardCommand.Change</CommandName>
+										<ExtendedTooltip name="ЗаявкиИзменитьРасширеннаяПодсказка" id="121"/>
+									</Button>
+									<Button name="ЗаявкиНастройкаСписка" id="122">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Заявки.StandardCommand.ListSettings</CommandName>
+										<ExtendedTooltip name="ЗаявкиНастройкаСпискаРасширеннаяПодсказка" id="123"/>
+									</Button>
+									<Button name="ЗаявкиСтандартныеНастройкиДинамическогоСписка" id="124">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Заявки.StandardCommand.DynamicListStandardSettings</CommandName>
+										<ExtendedTooltip name="ЗаявкиСтандартныеНастройкиДинамическогоСпискаРасширеннаяПодсказка" id="125"/>
+									</Button>
+									<Button name="ЗаявкиВывестиСписок" id="126">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Заявки.StandardCommand.OutputList</CommandName>
+										<ExtendedTooltip name="ЗаявкиВывестиСписокРасширеннаяПодсказка" id="127"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЗаявкиРасширеннаяПодсказка" id="4"/>
+							<SearchStringAddition name="ЗаявкиСтрокаПоиска" id="5">
+								<AdditionSource>
+									<Item>Заявки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаявкиСтрокаПоискаКонтекстноеМеню" id="6"/>
+								<ExtendedTooltip name="ЗаявкиСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗаявкиСостояниеПросмотра" id="8">
+								<AdditionSource>
+									<Item>Заявки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаявкиСостояниеПросмотраКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="ЗаявкиСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗаявкиУправлениеПоиском" id="11">
+								<AdditionSource>
+									<Item>Заявки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаявкиУправлениеПоискомКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ЗаявкиУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЗаявкиОписание" id="35">
+									<DataPath>~Заявки.Описание</DataPath>
+									<ContextMenu name="ЗаявкиОписаниеКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ЗаявкиОписаниеРасширеннаяПодсказка" id="37"/>
+								</LabelField>
+								<LabelField name="ЗаявкиИд" id="133">
+									<DataPath>Заявки.Ид</DataPath>
+									<ContextMenu name="ЗаявкиИдКонтекстноеМеню" id="134"/>
+									<ExtendedTooltip name="ЗаявкиИдРасширеннаяПодсказка" id="135"/>
+								</LabelField>
+								<LabelField name="ЗаявкиАбонентВнешний" id="26">
+									<DataPath>Заявки.АбонентВнешний</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Телефон</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗаявкиАбонентВнешнийКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ЗаявкиАбонентВнешнийРасширеннаяПодсказка" id="28"/>
+								</LabelField>
+								<LabelField name="ЗаявкиПочта" id="107">
+									<DataPath>Заявки.Почта</DataPath>
+									<ContextMenu name="ЗаявкиПочтаКонтекстноеМеню" id="108"/>
+									<ExtendedTooltip name="ЗаявкиПочтаРасширеннаяПодсказка" id="109"/>
+								</LabelField>
+								<LabelField name="ЗаявкиКонтрагент" id="110">
+									<DataPath>Заявки.Контрагент</DataPath>
+									<ContextMenu name="ЗаявкиКонтрагентКонтекстноеМеню" id="111"/>
+									<ExtendedTooltip name="ЗаявкиКонтрагентРасширеннаяПодсказка" id="112"/>
+								</LabelField>
+								<LabelField name="ЗаявкиАвтор" id="148">
+									<DataPath>Заявки.Автор</DataPath>
+									<ContextMenu name="ЗаявкиАвторКонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="ЗаявкиАвторРасширеннаяПодсказка" id="150"/>
+								</LabelField>
+								<LabelField name="ЗаявкиИдГАЗ" id="130">
+									<DataPath>~Заявки.ИдГАЗ</DataPath>
+									<ContextMenu name="ЗаявкиИдГАЗКонтекстноеМеню" id="131"/>
+									<ExtendedTooltip name="ЗаявкиИдГАЗРасширеннаяПодсказка" id="132"/>
+								</LabelField>
+								<LabelField name="ЗаявкиРегион" id="23">
+									<DataPath>Заявки.Регион</DataPath>
+									<ContextMenu name="ЗаявкиРегионКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ЗаявкиРегионРасширеннаяПодсказка" id="25"/>
+								</LabelField>
+								<LabelField name="ЗаявкиСодержание" id="113">
+									<DataPath>Заявки.Содержание</DataPath>
+									<ContextMenu name="ЗаявкиСодержаниеКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="ЗаявкиСодержаниеРасширеннаяПодсказка" id="115"/>
+								</LabelField>
+								<LabelField name="ЗаявкиНачало" id="17">
+									<DataPath>Заявки.Начало</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата заявки</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗаявкиНачалоКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ЗаявкиНачалоРасширеннаяПодсказка" id="19"/>
+								</LabelField>
+								<LabelField name="ЗаявкиОкончание" id="20">
+									<DataPath>Заявки.Окончание</DataPath>
+									<ContextMenu name="ЗаявкиОкончаниеКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ЗаявкиОкончаниеРасширеннаяПодсказка" id="22"/>
+								</LabelField>
+								<LabelField name="ЗаявкиКомментарий" id="29">
+									<DataPath>Заявки.Комментарий</DataPath>
+									<ContextMenu name="ЗаявкиКомментарийКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ЗаявкиКомментарийРасширеннаяПодсказка" id="31"/>
+								</LabelField>
+								<LabelField name="ЗаявкиСигнатура" id="14">
+									<DataPath>Заявки.Сигнатура</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сигнатура заявки ГАЗ</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗаявкиСигнатураКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="ЗаявкиСигнатураРасширеннаяПодсказка" id="16"/>
+								</LabelField>
+								<CheckBoxField name="ЗаявкиЗавершен" id="32">
+									<DataPath>~Заявки.Завершен</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗаявкиЗавершенКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ЗаявкиЗавершенРасширеннаяПодсказка" id="34"/>
+								</CheckBoxField>
+								<LabelField name="ЗаявкиТочкаРазмещения" id="142">
+									<DataPath>Заявки.ТочкаРазмещения</DataPath>
+									<ContextMenu name="ЗаявкиТочкаРазмещенияКонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="ЗаявкиТочкаРазмещенияРасширеннаяПодсказка" id="144"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонсольИсходящихГАЗЗаявки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Заявки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ГАЗЗаявки</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Начало</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Проверка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ЗадачиПроверки.Телефон КАК Телефон,
+	ЗадачиПроверки.ДатаЗакрытия КАК ДатаЗакрытия,
+	ЗадачиПроверки.Исполнитель КАК Исполнитель,
+	ЗадачиПроверки.Комментарий КАК Комментарий,
+	ЗадачиПроверки.ДатаПостановки КАК ДатаПостановки,
+	ЗадачиПроверки.Сигнатура КАК ЗаявкаГАЗ,
+	ЗадачиЗвонка.ПричинаЗакрытия КАК ПричинаЗакрытия,
+	ЗадачиЗвонка.ЗвонокЗакрытия КАК ЗвонокЗакрытия,
+	ГАЗЗаявки.Ид КАК Ид,
+	ГАЗЗаявки.ТочкаРазмещения КАК ТочкаРазмещения,
+	ГАЗЗаявки.Автор КАК Автор,
+	ГАЗЗаявки.Почта КАК Почта
+ИЗ
+	РегистрСведений.ЗадачиГАЗЗаявки КАК ЗадачиПроверки
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ЗадачиГАЗЗаявки КАК ЗадачиЗвонка
+		ПО ЗадачиПроверки.Сигнатура = ЗадачиЗвонка.Сигнатура
+			И ЗадачиПроверки.Телефон = ЗадачиЗвонка.Телефон
+			И (ЗадачиЗвонка.ДатаЗакрытия = ЗадачиПроверки.ДатаПостановки)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ГАЗЗаявки КАК ГАЗЗаявки
+		ПО ЗадачиПроверки.Сигнатура = ГАЗЗаявки.Сигнатура
+ГДЕ
+	ЗадачиПроверки.АдресацияРоль = ЗНАЧЕНИЕ(Справочник.Роли.КлиентскаяСлужбаЦентр_Администратор)</QueryText>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Ид</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Добавить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Добавить</Action>
+		</Command>
+		<Command name="Принять" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принять</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принять</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Принять</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Доработать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуть на доработку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доработать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Доработать</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Прослушать" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прослушать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прослушать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Динамик</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Прослушать</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

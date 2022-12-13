@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="AgregatorTelef"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="AgregatorTelef"
+		name="Agregator"
+		targetNamespace="AgregatorTelef">
+	<types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xs1="AgregatorTelef"
+				targetNamespace="AgregatorTelef"
+				attributeFormDefault="unqualified"
+				elementFormDefault="qualified">
+			<xs:complexType name="Звонок">
+				<xs:sequence>
+					<xs:element name="Сигнатура"
+							type="xs:string"/>
+					<xs:element name="Дата"
+							type="xs:dateTime"/>
+					<xs:element name="Входящий"
+							type="xs:boolean"/>
+					<xs:element name="Принят"
+							type="xs:boolean"/>
+					<xs:element name="АбонентВнешний"
+							type="xs:string"/>
+					<xs:element name="Регион"
+							type="xs:string"/>
+					<xs:element name="АбонентВнутренний"
+							type="xs:string"/>
+					<xs:element name="Подразделение"
+							type="xs:string"/>
+					<xs:element name="ДлительностьРазговора"
+							type="xs:decimal"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="СписокЗвонков">
+				<xs:sequence>
+					<xs:element name="Звонок"
+							type="xsd1:Звонок"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ЗагрузитьЗвонки">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Данные"
+								type="xsd1:СписокЗвонков"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ЗагрузитьЗвонкиResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:boolean"
+								nillable="true"/>
+						<xs:element name="ТекстСообщения"
+								type="xs:string"
+								nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</types>
+	<message name="ЗагрузитьЗвонкиRequestMessage">
+		<part name="parameters"
+				element="tns:ЗагрузитьЗвонки"/>
+	</message>
+	<message name="ЗагрузитьЗвонкиResponseMessage">
+		<part name="parameters"
+				element="tns:ЗагрузитьЗвонкиResponse"/>
+	</message>
+	<portType name="AgregatorPortType">
+		<operation name="ЗагрузитьЗвонки">
+			<input name="ЗагрузитьЗвонкиRequest"
+					message="tns:ЗагрузитьЗвонкиRequestMessage"/>
+			<output name="ЗагрузитьЗвонкиResponse"
+					message="tns:ЗагрузитьЗвонкиResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="AgregatorSoapBinding"
+			type="tns:AgregatorPortType">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="ЗагрузитьЗвонки">
+			<soapbind:operation style="document"
+					soapAction="AgregatorTelef#Agregator:ЗагрузитьЗвонки"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="AgregatorSoap12Binding"
+			type="tns:AgregatorPortType">
+		<soap12bind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="ЗагрузитьЗвонки">
+			<soap12bind:operation style="document"
+					soapAction="AgregatorTelef#Agregator:ЗагрузитьЗвонки"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="Agregator">
+		<port name="AgregatorSoap"
+				binding="tns:AgregatorSoapBinding">
+			<documentation> 
+				<wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
+						conformsTo="http://ws-i.org/profiles/basic/1.1"/>
+			</documentation>
+			<soapbind:address location="http://tunstation102/test_web_erp/ws/Agregator.1cws"/>
+		</port>
+		<port name="AgregatorSoap12"
+				binding="tns:AgregatorSoap12Binding">
+			<soap12bind:address location="http://tunstation102/test_web_erp/ws/Agregator.1cws"/>
+		</port>
+	</service>
+</definitions>

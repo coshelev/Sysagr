@@ -1,0 +1,3840 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Консоль оператора контакт-центра</v8:content>
+		</v8:item>
+	</Title>
+	<Width>100</Width>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="ExternalEvent">ВнешнееСобытие</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСостояние" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние консоли</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображение сведений о состоянии консоли, управление состоянием консоли</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<Button name="КонсольТелефонВыбрать" id="1">
+					<Type>UsualButton</Type>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<CommandName>Form.Command.КонсольТелефонВыбрать</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрать телефон</v8:content>
+						</v8:item>
+					</Title>
+					<Shape>Oval</Shape>
+					<ShapeRepresentation>Always</ShapeRepresentation>
+					<ExtendedTooltip name="КонсольТелефонВыбратьРасширеннаяПодсказка" id="2"/>
+				</Button>
+				<CheckBoxField name="КонсольПауза" id="8">
+					<DataPath>КонсольПауза</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пауза</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КонсольПаузаКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="КонсольПаузаРасширеннаяПодсказка" id="10"/>
+					<Events>
+						<Event name="OnChange">КонсольПаузаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<Button name="Позвонить" id="366">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Позвонить</CommandName>
+					<Shape>Oval</Shape>
+					<ExtendedTooltip name="ПозвонитьРасширеннаяПодсказка" id="367"/>
+				</Button>
+				<Button name="Очистить" id="214">
+					<Type>UsualButton</Type>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<CommandName>Form.Command.Очистить</CommandName>
+					<Shape>Oval</Shape>
+					<ShapeRepresentation>Always</ShapeRepresentation>
+					<ExtendedTooltip name="ОчиститьРасширеннаяПодсказка" id="215"/>
+				</Button>
+				<Button name="ПереключитьЗвонокПоРасширеннойАнкете2" id="225">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПереключитьЗвонокПоРасширеннойАнкете2</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Анкета</v8:content>
+						</v8:item>
+					</Title>
+					<Shape>Oval</Shape>
+					<ShapeRepresentation>Always</ShapeRepresentation>
+					<ExtendedTooltip name="ПереключитьЗвонокПоРасширеннойАнкете2РасширеннаяПодсказка" id="226"/>
+				</Button>
+				<Button name="НаписатьПисьмо" id="199">
+					<Type>UsualButton</Type>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<CommandName>Form.Command.ОтправитьПисьмо_ПоставитьЗадачу</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Письмо</v8:content>
+						</v8:item>
+					</Title>
+					<Shape>Oval</Shape>
+					<ShapeRepresentation>Always</ShapeRepresentation>
+					<ExtendedTooltip name="НаписатьПисьмоРасширеннаяПодсказка" id="200"/>
+				</Button>
+				<Button name="ОбновитьДинСписки" id="413">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОбновитьДинСписки</CommandName>
+					<Shape>Oval</Shape>
+					<ExtendedTooltip name="ОбновитьДинСпискиРасширеннаяПодсказка" id="414"/>
+				</Button>
+				<Button name="ИзменитьНапоминаниеПерезвонить" id="405">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ИзменитьНапоминаниеПерезвонить</CommandName>
+					<Shape>Oval</Shape>
+					<ExtendedTooltip name="ИзменитьНапоминаниеПерезвонитьРасширеннаяПодсказка" id="406"/>
+				</Button>
+				<Button name="АбонентИстория" id="125">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.АбонентИстория</CommandName>
+					<BackColor>#FFFFFF</BackColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>История</v8:content>
+						</v8:item>
+					</Title>
+					<Shape>Oval</Shape>
+					<ShapeRepresentation>Always</ShapeRepresentation>
+					<ExtendedTooltip name="АбонентИсторияРасширеннаяПодсказка" id="126"/>
+				</Button>
+				<Button name="ВыбратьПоСотруднику" id="223">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВыбратьСотрудника</CommandName>
+					<Shape>Oval</Shape>
+					<ShapeRepresentation>Always</ShapeRepresentation>
+					<ExtendedTooltip name="ВыбратьПоСотрудникуРасширеннаяПодсказка" id="224"/>
+				</Button>
+				<Button name="Отладка_ЗначенияПеременных" id="638">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Отладка_ЗначенияПеременных</CommandName>
+					<Shape>Oval</Shape>
+					<ExtendedTooltip name="Отладка_ЗначенияПеременныхРасширеннаяПодсказка" id="639"/>
+				</Button>
+				<Button name="ТестСообщения" id="948">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ТестСообщения</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СВД</v8:content>
+						</v8:item>
+					</Title>
+					<Shape>Oval</Shape>
+					<ExtendedTooltip name="ТестСообщенияРасширеннаяПодсказка" id="949"/>
+				</Button>
+				<CheckBoxField name="МоиНастройки_ТестовыйРежим" id="211">
+					<DataPath>МоиНастройки_ТестовыйРежим</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тест</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="МоиНастройки_ТестовыйРежимКонтекстноеМеню" id="212"/>
+					<ExtendedTooltip name="МоиНастройки_ТестовыйРежимРасширеннаяПодсказка" id="213"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДисплейИстория" id="750">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дисплей история</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дисплей история</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДисплейИсторияРасширеннаяПодсказка" id="751"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаДисплей" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация о текущем звонке</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отображение информации о текущем звонке</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>web:AliceBlue</BackColor>
+					<ExtendedTooltip name="ГруппаДисплейРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="206">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="207"/>
+							<ChildItems>
+								<LabelDecoration name="Дисплей01" id="13">
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>#FF6600</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>_</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="Дисплей01КонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="Дисплей01РасширеннаяПодсказка" id="15"/>
+								</LabelDecoration>
+								<LabelDecoration name="Дисплей03" id="208">
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>web:Green</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="Дисплей03КонтекстноеМеню" id="209"/>
+									<ExtendedTooltip name="Дисплей03РасширеннаяПодсказка" id="210"/>
+									<Events>
+										<Event name="Click">Дисплей03Нажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="СайтИнтернетЗаявкиАвтозвонка" id="1092">
+							<DataPath>СайтИнтернетЗаявкиАвтозвонка</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleTextColor>web:Green</TitleTextColor>
+							<TitleFont ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>1</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<VerticalStretch>false</VerticalStretch>
+							<MultiLine>true</MultiLine>
+							<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
+							<ContextMenu name="СайтИнтернетЗаявкиАвтозвонкаКонтекстноеМеню" id="1093"/>
+							<ExtendedTooltip name="СайтИнтернетЗаявкиАвтозвонкаРасширеннаяПодсказка" id="1094"/>
+						</InputField>
+						<LabelDecoration name="Дисплей02" id="35">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>_</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Дисплей02КонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="Дисплей02РасширеннаяПодсказка" id="37"/>
+							<Events>
+								<Event name="Click">ПанельБыстрогоВызова</Event>
+							</Events>
+						</LabelDecoration>
+						<UsualGroup name="Группа3" id="240">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="241"/>
+							<ChildItems>
+								<InputField name="ДисплейИмяАвтозвонка" id="230">
+									<DataPath>ДисплейИмяАвтозвонка</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<BackColor>web:AliceBlue</BackColor>
+									<BorderColor>web:AliceBlue</BorderColor>
+									<ContextMenu name="ДисплейИмяАвтозвонкаКонтекстноеМеню" id="231"/>
+									<ExtendedTooltip name="ДисплейИмяАвтозвонкаРасширеннаяПодсказка" id="232"/>
+								</InputField>
+								<InputField name="ДисплейМайлАвтозвонка" id="233">
+									<DataPath>ДисплейМайлАвтозвонка</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<BackColor>web:AliceBlue</BackColor>
+									<BorderColor>web:AliceBlue</BorderColor>
+									<ContextMenu name="ДисплейМайлАвтозвонкаКонтекстноеМеню" id="234"/>
+									<ExtendedTooltip name="ДисплейМайлАвтозвонкаРасширеннаяПодсказка" id="235"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelField name="ДисплейДругиеИнтернетЗаявкиПоТелефону" id="1074">
+							<DataPath>ДисплейДругиеСайты</DataPath>
+							<TitleTextColor>style:SpecialTextColor</TitleTextColor>
+							<TitleFont ref="style:NormalTextFont" height="11" kind="StyleItem"/>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="style:NormalTextFont" height="11" kind="StyleItem"/>
+							<ContextMenu name="ДисплейДругиеИнтернетЗаявкиПоТелефонуКонтекстноеМеню" id="1075"/>
+							<ExtendedTooltip name="ДисплейДругиеИнтернетЗаявкиПоТелефонуРасширеннаяПодсказка" id="1076"/>
+						</LabelField>
+						<LabelDecoration name="ДисплейСодержаниеИнтернетПочтовойЗаявки" id="1077">
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="ДисплейСодержаниеИнтернетПочтовойЗаявкиКонтекстноеМеню" id="1078"/>
+							<ExtendedTooltip name="ДисплейСодержаниеИнтернетПочтовойЗаявкиРасширеннаяПодсказка" id="1079"/>
+							<Events>
+								<Event name="Click">ДисплейСодержаниеИнтернетПочтовойЗаявкиНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<HTMLDocumentField name="Новости" id="754">
+					<DataPath>Новости</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>15</Width>
+					<Height>1</Height>
+					<ContextMenu name="НовостиКонтекстноеМеню" id="755"/>
+					<ExtendedTooltip name="НовостиРасширеннаяПодсказка" id="756"/>
+					<Events>
+						<Event name="OnClick">НовостиПриНажатии</Event>
+					</Events>
+				</HTMLDocumentField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ПанельСтраниц" id="127">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель страниц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель страниц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ПанельСтраницРасширеннаяПодсказка" id="128"/>
+			<Events>
+				<Event name="OnCurrentPageChange">ПанельСтраницПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="СтраницаСправочник" id="129">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Телефонный справочник</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Телефонный справочник предприятия</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.Catalog</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаСправочникРасширеннаяПодсказка" id="130"/>
+					<ChildItems>
+						<InputField name="СправочникПоиск" id="77">
+							<DataPath>СправочникПоиск</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ClearButton>true</ClearButton>
+							<EditTextUpdate>DontUse</EditTextUpdate>
+							<BackColor>style:ToolTipBackColor</BackColor>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Быстрый поиск в телефонном справочнике по фамилии, подразделению или номерам телефонов</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="СправочникПоискКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="СправочникПоискРасширеннаяПодсказка" id="79"/>
+							<Events>
+								<Event name="OnChange">СправочникПоискПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаСправочник" id="105">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа справочник</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа справочник</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСправочникРасширеннаяПодсказка" id="106"/>
+							<ChildItems>
+								<Table name="Справочник" id="38">
+									<CommandBarLocation>None</CommandBarLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<InitialTreeView>ExpandTopLevel</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Справочник</DataPath>
+									<RowPictureDataPath>Справочник.DefaultPicture</RowPictureDataPath>
+									<CommandSet>
+										<ExcludedCommand>LevelDown</ExcludedCommand>
+										<ExcludedCommand>LevelUp</ExcludedCommand>
+										<ExcludedCommand>List</ExcludedCommand>
+										<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+										<ExcludedCommand>Tree</ExcludedCommand>
+									</CommandSet>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+									<ContextMenu name="СправочникКонтекстноеМеню" id="39"/>
+									<AutoCommandBar name="СправочникКоманднаяПанель" id="40">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СправочникРасширеннаяПодсказка" id="41"/>
+									<SearchStringAddition name="СправочникСтрокаПоиска" id="42">
+										<AdditionSource>
+											<Item>Справочник</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СправочникСтрокаПоискаКонтекстноеМеню" id="43"/>
+										<ExtendedTooltip name="СправочникСтрокаПоискаРасширеннаяПодсказка" id="44"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СправочникСостояниеПросмотра" id="45">
+										<AdditionSource>
+											<Item>Справочник</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СправочникСостояниеПросмотраКонтекстноеМеню" id="46"/>
+										<ExtendedTooltip name="СправочникСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СправочникУправлениеПоиском" id="48">
+										<AdditionSource>
+											<Item>Справочник</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СправочникУправлениеПоискомКонтекстноеМеню" id="49"/>
+										<ExtendedTooltip name="СправочникУправлениеПоискомРасширеннаяПодсказка" id="50"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">СправочникВыбор</Event>
+										<Event name="OnActivateRow">СправочникПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СписокНаименование" id="51">
+											<DataPath>Справочник.Наименование</DataPath>
+											<ContextMenu name="СписокНаименованиеКонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="СписокНаименованиеРасширеннаяПодсказка" id="53"/>
+										</LabelField>
+										<LabelField name="СписокТочкаРазмещения" id="72">
+											<DataPath>Справочник.ТочкаРазмещения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Местонахождение</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокТочкаРазмещенияКонтекстноеМеню" id="73"/>
+											<ExtendedTooltip name="СписокТочкаРазмещенияРасширеннаяПодсказка" id="74"/>
+										</LabelField>
+										<LabelField name="СписокДолжность" id="60">
+											<DataPath>Справочник.Должность</DataPath>
+											<ContextMenu name="СписокДолжностьКонтекстноеМеню" id="61"/>
+											<ExtendedTooltip name="СписокДолжностьРасширеннаяПодсказка" id="62"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+								<Table name="Телефоны" id="80">
+									<Representation>List</Representation>
+									<TitleLocation>Top</TitleLocation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Телефоны</DataPath>
+									<BackColor>style:FormBackColor</BackColor>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список телефонов</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+									</CommandSet>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТелефоныКонтекстноеМеню" id="81"/>
+									<AutoCommandBar name="ТелефоныКоманднаяПанель" id="82"/>
+									<ExtendedTooltip name="ТелефоныРасширеннаяПодсказка" id="83"/>
+									<SearchStringAddition name="ТелефоныСтрокаПоиска" id="84">
+										<AdditionSource>
+											<Item>Телефоны</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТелефоныСтрокаПоискаКонтекстноеМеню" id="85"/>
+										<ExtendedTooltip name="ТелефоныСтрокаПоискаРасширеннаяПодсказка" id="86"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТелефоныСостояниеПросмотра" id="87">
+										<AdditionSource>
+											<Item>Телефоны</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТелефоныСостояниеПросмотраКонтекстноеМеню" id="88"/>
+										<ExtendedTooltip name="ТелефоныСостояниеПросмотраРасширеннаяПодсказка" id="89"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТелефоныУправлениеПоиском" id="90">
+										<AdditionSource>
+											<Item>Телефоны</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТелефоныУправлениеПоискомКонтекстноеМеню" id="91"/>
+										<ExtendedTooltip name="ТелефоныУправлениеПоискомРасширеннаяПодсказка" id="92"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ТелефоныВыбор</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ТелефоныТип" id="99">
+											<DataPath>Телефоны.Тип</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТелефоныТипКонтекстноеМеню" id="100"/>
+											<ExtendedTooltip name="ТелефоныТипРасширеннаяПодсказка" id="101"/>
+										</LabelField>
+										<LabelField name="ТелефоныAtxfer" id="119">
+											<DataPath>Телефоны.Atxfer</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CellHyperlink>true</CellHyperlink>
+											<ContextMenu name="ТелефоныAtxferКонтекстноеМеню" id="120"/>
+											<ExtendedTooltip name="ТелефоныAtxferРасширеннаяПодсказка" id="121"/>
+										</LabelField>
+										<LabelField name="ТелефоныRedirect" id="122">
+											<DataPath>Телефоны.Redirect</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CellHyperlink>true</CellHyperlink>
+											<ContextMenu name="ТелефоныRedirectКонтекстноеМеню" id="123"/>
+											<ExtendedTooltip name="ТелефоныRedirectРасширеннаяПодсказка" id="124"/>
+										</LabelField>
+										<InputField name="ТелефоныВладелец" id="945">
+											<DataPath>Телефоны.Владелец</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТелефоныВладелецКонтекстноеМеню" id="946"/>
+											<ExtendedTooltip name="ТелефоныВладелецРасширеннаяПодсказка" id="947"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Декорация4" id="640">
+							<ContextMenu name="Декорация4КонтекстноеМеню" id="641"/>
+							<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="642"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="Почта" id="487">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Почта</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Почта</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.ОтправитьЭлектронноеПисьмо</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ПочтаРасширеннаяПодсказка" id="488"/>
+					<ChildItems>
+						<Table name="ЗадачиСписокПочта" id="489">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ЗадачиСписокПочта</DataPath>
+							<RowPictureDataPath>~ЗадачиСписокПочта.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ЗадачиСписокПочтаКонтекстноеМеню" id="490"/>
+							<AutoCommandBar name="ЗадачиСписокПочтаКоманднаяПанель" id="491"/>
+							<ExtendedTooltip name="ЗадачиСписокПочтаРасширеннаяПодсказка" id="492"/>
+							<SearchStringAddition name="ЗадачиСписокПочтаСтрокаПоиска" id="493">
+								<AdditionSource>
+									<Item>ЗадачиСписокПочта</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиСписокПочтаСтрокаПоискаКонтекстноеМеню" id="494"/>
+								<ExtendedTooltip name="ЗадачиСписокПочтаСтрокаПоискаРасширеннаяПодсказка" id="495"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗадачиСписокПочтаСостояниеПросмотра" id="496">
+								<AdditionSource>
+									<Item>ЗадачиСписокПочта</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиСписокПочтаСостояниеПросмотраКонтекстноеМеню" id="497"/>
+								<ExtendedTooltip name="ЗадачиСписокПочтаСостояниеПросмотраРасширеннаяПодсказка" id="498"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗадачиСписокПочтаУправлениеПоиском" id="499">
+								<AdditionSource>
+									<Item>ЗадачиСписокПочта</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиСписокПочтаУправлениеПоискомКонтекстноеМеню" id="500"/>
+								<ExtendedTooltip name="ЗадачиСписокПочтаУправлениеПоискомРасширеннаяПодсказка" id="501"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ЗадачиСписокПочтаВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ЗадачиСписокПочтаДатаАктуальности" id="511">
+									<DataPath>~ЗадачиСписокПочта.ДатаАктуальности</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаДатаАктуальностиКонтекстноеМеню" id="512"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаДатаАктуальностиРасширеннаяПодсказка" id="513"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаАдресПолучателя" id="505">
+									<DataPath>~ЗадачиСписокПочта.АдресПолучателя</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаАдресПолучателяКонтекстноеМеню" id="506"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаАдресПолучателяРасширеннаяПодсказка" id="507"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаДатаПостановки" id="523">
+									<DataPath>~ЗадачиСписокПочта.ДатаПостановки</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаДатаПостановкиКонтекстноеМеню" id="524"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаДатаПостановкиРасширеннаяПодсказка" id="525"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаСайтИлиПочтаОтправителя" id="556">
+									<DataPath>~ЗадачиСписокПочта.СайтИлиПочтаОтправителя</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаСайтИлиПочтаОтправителяКонтекстноеМеню" id="557"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаСайтИлиПочтаОтправителяРасширеннаяПодсказка" id="558"/>
+								</LabelField>
+								<CheckBoxField name="ЗадачиСписокПочтаВыполнена" id="508">
+									<DataPath>~ЗадачиСписокПочта.Выполнена</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗадачиСписокПочтаВыполненаКонтекстноеМеню" id="509"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаВыполненаРасширеннаяПодсказка" id="510"/>
+								</CheckBoxField>
+								<LabelField name="ЗадачиСписокПочтаДатаЗакрытия" id="514">
+									<DataPath>~ЗадачиСписокПочта.ДатаЗакрытия</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаДатаЗакрытияКонтекстноеМеню" id="515"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаДатаЗакрытияРасширеннаяПодсказка" id="516"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаПричинаЗакрытияЗадачи" id="544">
+									<DataPath>~ЗадачиСписокПочта.ПричинаЗакрытияЗадачи</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаПричинаЗакрытияЗадачиКонтекстноеМеню" id="545"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаПричинаЗакрытияЗадачиРасширеннаяПодсказка" id="546"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаПричинаРучногоЗакрытия" id="547">
+									<DataPath>~ЗадачиСписокПочта.ПричинаРучногоЗакрытия</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаПричинаРучногоЗакрытияКонтекстноеМеню" id="548"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаПричинаРучногоЗакрытияРасширеннаяПодсказка" id="549"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаКомментарий" id="535">
+									<DataPath>~ЗадачиСписокПочта.Комментарий</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаКомментарийКонтекстноеМеню" id="536"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаКомментарийРасширеннаяПодсказка" id="537"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаИсполнитель" id="529">
+									<DataPath>~ЗадачиСписокПочта.Исполнитель</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаИсполнительКонтекстноеМеню" id="530"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаИсполнительРасширеннаяПодсказка" id="531"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаТелИсполнителяПерезвонаКЦ" id="568">
+									<DataPath>~ЗадачиСписокПочта.ТелИсполнителяПерезвонаКЦ</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаТелИсполнителяПерезвонаКЦКонтекстноеМеню" id="569"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаТелИсполнителяПерезвонаКЦРасширеннаяПодсказка" id="570"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаНапоминаниеПерезвонить" id="538">
+									<DataPath>~ЗадачиСписокПочта.НапоминаниеПерезвонить</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаНапоминаниеПерезвонитьКонтекстноеМеню" id="539"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаНапоминаниеПерезвонитьРасширеннаяПодсказка" id="540"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаДатаПервогоПерезвона" id="520">
+									<DataPath>~ЗадачиСписокПочта.ДатаПервогоПерезвона</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаДатаПервогоПерезвонаКонтекстноеМеню" id="521"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаДатаПервогоПерезвонаРасширеннаяПодсказка" id="522"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаДатаОтправки" id="517">
+									<DataPath>~ЗадачиСписокПочта.ДатаОтправки</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаДатаОтправкиКонтекстноеМеню" id="518"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаДатаОтправкиРасширеннаяПодсказка" id="519"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаЗвонокЗакрытияСигнатура" id="526">
+									<DataPath>~ЗадачиСписокПочта.ЗвонокЗакрытияСигнатура</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаЗвонокЗакрытияСигнатураКонтекстноеМеню" id="527"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаЗвонокЗакрытияСигнатураРасширеннаяПодсказка" id="528"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаКанал" id="532">
+									<DataPath>~ЗадачиСписокПочта.Канал</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаКаналКонтекстноеМеню" id="533"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаКаналРасширеннаяПодсказка" id="534"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаТелефон" id="799">
+									<DataPath>~ЗадачиСписокПочта.Телефон</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаТелефонКонтекстноеМеню" id="800"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаТелефонРасширеннаяПодсказка" id="801"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаАдресОтправителя" id="802">
+									<DataPath>~ЗадачиСписокПочта.АдресОтправителя</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаАдресОтправителяКонтекстноеМеню" id="803"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаАдресОтправителяРасширеннаяПодсказка" id="804"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаПисьмоИнициатор" id="848">
+									<DataPath>~ЗадачиСписокПочта.ПисьмоИнициатор</DataPath>
+									<ContextMenu name="ЗадачиСписокПочтаПисьмоИнициаторКонтекстноеМеню" id="849"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаПисьмоИнициаторРасширеннаяПодсказка" id="850"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаОтпрОтправлено" id="1068">
+									<DataPath>~ЗадачиСписокПочта.ОтпрОтправлено</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Переслано когда</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗадачиСписокПочтаОтпрОтправленоКонтекстноеМеню" id="1069"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаОтпрОтправленоРасширеннаяПодсказка" id="1070"/>
+								</LabelField>
+								<LabelField name="ЗадачиСписокПочтаОтпрПолучатели" id="1071">
+									<DataPath>~ЗадачиСписокПочта.ОтпрПолучатели</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Переслано кому</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗадачиСписокПочтаОтпрПолучателиКонтекстноеМеню" id="1072"/>
+									<ExtendedTooltip name="ЗадачиСписокПочтаОтпрПолучателиРасширеннаяПодсказка" id="1073"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<Button name="ЗадачаОтменить2" id="580">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗадачаОтменить</CommandName>
+							<ExtendedTooltip name="ЗадачаОтменить2РасширеннаяПодсказка" id="581"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="Звонки" id="415">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Звонки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Звонки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.Позвонить</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ЗвонкиРасширеннаяПодсказка" id="416"/>
+					<ChildItems>
+						<UsualGroup name="ГрЗвонки" id="617">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр звонки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр звонки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГрЗвонкиРасширеннаяПодсказка" id="618"/>
+							<ChildItems>
+								<Table name="ЗадачиСписокЗвонки" id="417">
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>ЗадачиСписокЗвонки</DataPath>
+									<RowPictureDataPath>~ЗадачиСписокЗвонки.DefaultPicture</RowPictureDataPath>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+									<ContextMenu name="ЗадачиСписокЗвонкиКонтекстноеМеню" id="418"/>
+									<AutoCommandBar name="ЗадачиСписокЗвонкиКоманднаяПанель" id="419"/>
+									<ExtendedTooltip name="ЗадачиСписокЗвонкиРасширеннаяПодсказка" id="420"/>
+									<SearchStringAddition name="ЗадачиСписокЗвонкиСтрокаПоиска" id="421">
+										<AdditionSource>
+											<Item>ЗадачиСписокЗвонки</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗадачиСписокЗвонкиСтрокаПоискаКонтекстноеМеню" id="422"/>
+										<ExtendedTooltip name="ЗадачиСписокЗвонкиСтрокаПоискаРасширеннаяПодсказка" id="423"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ЗадачиСписокЗвонкиСостояниеПросмотра" id="424">
+										<AdditionSource>
+											<Item>ЗадачиСписокЗвонки</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗадачиСписокЗвонкиСостояниеПросмотраКонтекстноеМеню" id="425"/>
+										<ExtendedTooltip name="ЗадачиСписокЗвонкиСостояниеПросмотраРасширеннаяПодсказка" id="426"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ЗадачиСписокЗвонкиУправлениеПоиском" id="427">
+										<AdditionSource>
+											<Item>ЗадачиСписокЗвонки</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗадачиСписокЗвонкиУправлениеПоискомКонтекстноеМеню" id="428"/>
+										<ExtendedTooltip name="ЗадачиСписокЗвонкиУправлениеПоискомРасширеннаяПодсказка" id="429"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateRow">ЗадачиСписокЗвонкиПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ЗадачиСписокДатаАктуальности" id="433">
+											<DataPath>ЗадачиСписокЗвонки.ДатаАктуальности</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Срок исполнения</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЗадачиСписокДатаАктуальностиКонтекстноеМеню" id="434"/>
+											<ExtendedTooltip name="ЗадачиСписокДатаАктуальностиРасширеннаяПодсказка" id="435"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокДатаПостановки" id="445">
+											<DataPath>ЗадачиСписокЗвонки.ДатаПостановки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата постановки</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЗадачиСписокДатаПостановкиКонтекстноеМеню" id="446"/>
+											<ExtendedTooltip name="ЗадачиСписокДатаПостановкиРасширеннаяПодсказка" id="447"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокКанал" id="457">
+											<DataPath>ЗадачиСписокЗвонки.Канал</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Канал/Сайт</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЗадачиСписокКаналКонтекстноеМеню" id="458"/>
+											<ExtendedTooltip name="ЗадачиСписокКаналРасширеннаяПодсказка" id="459"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокЗвонкиКаналНазначение" id="1065">
+											<DataPath>ЗадачиСписокЗвонки.КаналНазначение</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Канал/Сайт - назначение</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЗадачиСписокЗвонкиКаналНазначениеКонтекстноеМеню" id="1066"/>
+											<ExtendedTooltip name="ЗадачиСписокЗвонкиКаналНазначениеРасширеннаяПодсказка" id="1067"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокТелефон" id="478">
+											<DataPath>ЗадачиСписокЗвонки.Телефон</DataPath>
+											<ContextMenu name="ЗадачиСписокТелефонКонтекстноеМеню" id="479"/>
+											<ExtendedTooltip name="ЗадачиСписокТелефонРасширеннаяПодсказка" id="480"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокЗвонкиРегион" id="475">
+											<DataPath>ЗадачиСписокЗвонки.Регион</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Регион</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЗадачиСписокЗвонкиРегионКонтекстноеМеню" id="476"/>
+											<ExtendedTooltip name="ЗадачиСписокЗвонкиРегионРасширеннаяПодсказка" id="477"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокЗвонкиНапоминаниеПерезвонить" id="463">
+											<DataPath>ЗадачиСписокЗвонки.НапоминаниеПерезвонить</DataPath>
+											<ContextMenu name="ЗадачиСписокЗвонкиНапоминаниеПерезвонитьКонтекстноеМеню" id="464"/>
+											<ExtendedTooltip name="ЗадачиСписокЗвонкиНапоминаниеПерезвонитьРасширеннаяПодсказка" id="465"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокТип" id="484">
+											<DataPath>ЗадачиСписокЗвонки.Тип</DataPath>
+											<ContextMenu name="ЗадачиСписокТипКонтекстноеМеню" id="485"/>
+											<ExtendedTooltip name="ЗадачиСписокТипРасширеннаяПодсказка" id="486"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокЗвонкиОснование" id="744">
+											<DataPath>ЗадачиСписокЗвонки.Основание</DataPath>
+											<ContextMenu name="ЗадачиСписокЗвонкиОснованиеКонтекстноеМеню" id="745"/>
+											<ExtendedTooltip name="ЗадачиСписокЗвонкиОснованиеРасширеннаяПодсказка" id="746"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокДатаЗакрытия" id="436">
+											<DataPath>ЗадачиСписокЗвонки.ДатаЗакрытия</DataPath>
+											<ContextMenu name="ЗадачиСписокДатаЗакрытияКонтекстноеМеню" id="437"/>
+											<ExtendedTooltip name="ЗадачиСписокДатаЗакрытияРасширеннаяПодсказка" id="438"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокЗвонкиПричинаЗакрытияЗадачи" id="469">
+											<DataPath>ЗадачиСписокЗвонки.ПричинаЗакрытияЗадачи</DataPath>
+											<ContextMenu name="ЗадачиСписокЗвонкиПричинаЗакрытияЗадачиКонтекстноеМеню" id="470"/>
+											<ExtendedTooltip name="ЗадачиСписокЗвонкиПричинаЗакрытияЗадачиРасширеннаяПодсказка" id="471"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокПричинаРучногоЗакрытия" id="472">
+											<DataPath>ЗадачиСписокЗвонки.ПричинаРучногоЗакрытия</DataPath>
+											<ContextMenu name="ЗадачиСписокПричинаРучногоЗакрытияКонтекстноеМеню" id="473"/>
+											<ExtendedTooltip name="ЗадачиСписокПричинаРучногоЗакрытияРасширеннаяПодсказка" id="474"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокЗвонкиИсполнитель" id="454">
+											<DataPath>ЗадачиСписокЗвонки.Исполнитель</DataPath>
+											<ContextMenu name="ЗадачиСписокЗвонкиИсполнительКонтекстноеМеню" id="455"/>
+											<ExtendedTooltip name="ЗадачиСписокЗвонкиИсполнительРасширеннаяПодсказка" id="456"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокЗвонкиТелИсполнителяПерезвонаКЦ" id="481">
+											<DataPath>ЗадачиСписокЗвонки.ТелИсполнителяПерезвонаКЦ</DataPath>
+											<ContextMenu name="ЗадачиСписокЗвонкиТелИсполнителяПерезвонаКЦКонтекстноеМеню" id="482"/>
+											<ExtendedTooltip name="ЗадачиСписокЗвонкиТелИсполнителяПерезвонаКЦРасширеннаяПодсказка" id="483"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокЗвонкиЗвонокИнициатор" id="451">
+											<DataPath>ЗадачиСписокЗвонки.ЗвонокИнициатор</DataPath>
+											<ContextMenu name="ЗадачиСписокЗвонкиЗвонокИнициаторКонтекстноеМеню" id="452"/>
+											<ExtendedTooltip name="ЗадачиСписокЗвонкиЗвонокИнициаторРасширеннаяПодсказка" id="453"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокЗвонкиДатаОтправки" id="439">
+											<DataPath>ЗадачиСписокЗвонки.ДатаОтправки</DataPath>
+											<ContextMenu name="ЗадачиСписокЗвонкиДатаОтправкиКонтекстноеМеню" id="440"/>
+											<ExtendedTooltip name="ЗадачиСписокЗвонкиДатаОтправкиРасширеннаяПодсказка" id="441"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокЗвонкиДатаПервогоПерезвона" id="442">
+											<DataPath>ЗадачиСписокЗвонки.ДатаПервогоПерезвона</DataPath>
+											<ContextMenu name="ЗадачиСписокЗвонкиДатаПервогоПерезвонаКонтекстноеМеню" id="443"/>
+											<ExtendedTooltip name="ЗадачиСписокЗвонкиДатаПервогоПерезвонаРасширеннаяПодсказка" id="444"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокЗвонкиЗвонокЗакрытияСигнатура" id="448">
+											<DataPath>ЗадачиСписокЗвонки.ЗвонокЗакрытияСигнатура</DataPath>
+											<ContextMenu name="ЗадачиСписокЗвонкиЗвонокЗакрытияСигнатураКонтекстноеМеню" id="449"/>
+											<ExtendedTooltip name="ЗадачиСписокЗвонкиЗвонокЗакрытияСигнатураРасширеннаяПодсказка" id="450"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокЗвонкиКодПричиныНепринят" id="460">
+											<DataPath>ЗадачиСписокЗвонки.КодПричиныНепринят</DataPath>
+											<ContextMenu name="ЗадачиСписокЗвонкиКодПричиныНепринятКонтекстноеМеню" id="461"/>
+											<ExtendedTooltip name="ЗадачиСписокЗвонкиКодПричиныНепринятРасширеннаяПодсказка" id="462"/>
+										</LabelField>
+										<CheckBoxField name="ЗадачиСписокВыполнена" id="430">
+											<DataPath>ЗадачиСписокЗвонки.Выполнена</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЗадачиСписокВыполненаКонтекстноеМеню" id="431"/>
+											<ExtendedTooltip name="ЗадачиСписокВыполненаРасширеннаяПодсказка" id="432"/>
+										</CheckBoxField>
+										<LabelField name="ЗадачиСписокЗвонкиПисьмоИнициатор" id="466">
+											<DataPath>ЗадачиСписокЗвонки.ПисьмоИнициатор</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Письмо / сайт</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЗадачиСписокЗвонкиПисьмоИнициаторКонтекстноеМеню" id="467"/>
+											<ExtendedTooltip name="ЗадачиСписокЗвонкиПисьмоИнициаторРасширеннаяПодсказка" id="468"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+								<Button name="ЗадачаОтменить3" id="582">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЗадачаОтменить</CommandName>
+									<ExtendedTooltip name="ЗадачаОтменить3РасширеннаяПодсказка" id="583"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГрЗвонкиИстория" id="619">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>История</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр звонки история</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГрЗвонкиИсторияРасширеннаяПодсказка" id="620"/>
+							<ChildItems>
+								<Table name="ИсторияЗвонков1" id="854">
+									<CommandBarLocation>None</CommandBarLocation>
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ИсторияЗвонков</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ИсторияЗвонков1КонтекстноеМеню" id="855"/>
+									<AutoCommandBar name="ИсторияЗвонков1КоманднаяПанель" id="856"/>
+									<ExtendedTooltip name="ИсторияЗвонков1РасширеннаяПодсказка" id="857"/>
+									<SearchStringAddition name="ИсторияЗвонков1СтрокаПоиска" id="858">
+										<AdditionSource>
+											<Item>ИсторияЗвонков1</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсторияЗвонков1СтрокаПоискаКонтекстноеМеню" id="859"/>
+										<ExtendedTooltip name="ИсторияЗвонков1СтрокаПоискаРасширеннаяПодсказка" id="860"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ИсторияЗвонков1СостояниеПросмотра" id="861">
+										<AdditionSource>
+											<Item>ИсторияЗвонков1</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсторияЗвонков1СостояниеПросмотраКонтекстноеМеню" id="862"/>
+										<ExtendedTooltip name="ИсторияЗвонков1СостояниеПросмотраРасширеннаяПодсказка" id="863"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ИсторияЗвонков1УправлениеПоиском" id="864">
+										<AdditionSource>
+											<Item>ИсторияЗвонков1</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсторияЗвонков1УправлениеПоискомКонтекстноеМеню" id="865"/>
+										<ExtendedTooltip name="ИсторияЗвонков1УправлениеПоискомРасширеннаяПодсказка" id="866"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ИсторияЗвонков1Выбор</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ИсторияЗвонков1Событие" id="1086">
+											<DataPath>Объект.ИсторияЗвонков.Событие</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсторияЗвонков1СобытиеКонтекстноеМеню" id="1087"/>
+											<ExtendedTooltip name="ИсторияЗвонков1СобытиеРасширеннаяПодсказка" id="1088"/>
+										</InputField>
+										<InputField name="ИсторияЗвонков1Дата" id="1011">
+											<DataPath>Объект.ИсторияЗвонков.Дата</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсторияЗвонков1ДатаКонтекстноеМеню" id="1012"/>
+											<ExtendedTooltip name="ИсторияЗвонков1ДатаРасширеннаяПодсказка" id="1013"/>
+										</InputField>
+										<InputField name="ИсторияЗвонков1Инициатор" id="1083">
+											<DataPath>Объект.ИсторияЗвонков.Инициатор</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Канал/Сайт/Оператор</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсторияЗвонков1ИнициаторКонтекстноеМеню" id="1084"/>
+											<ExtendedTooltip name="ИсторияЗвонков1ИнициаторРасширеннаяПодсказка" id="1085"/>
+										</InputField>
+										<InputField name="ИсторияЗвонков1Оператор" id="1029">
+											<DataPath>Объект.ИсторияЗвонков.Оператор</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсторияЗвонков1ОператорКонтекстноеМеню" id="1030"/>
+											<ExtendedTooltip name="ИсторияЗвонков1ОператорРасширеннаяПодсказка" id="1031"/>
+										</InputField>
+										<InputField name="ИсторияЗвонков1ТочкаРазмещения" id="1032">
+											<DataPath>Объект.ИсторияЗвонков.ТочкаРазмещения</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсторияЗвонков1ТочкаРазмещенияКонтекстноеМеню" id="1033"/>
+											<ExtendedTooltip name="ИсторияЗвонков1ТочкаРазмещенияРасширеннаяПодсказка" id="1034"/>
+										</InputField>
+										<CheckBoxField name="ИсторияЗвонков1Принят" id="1017">
+											<DataPath>Объект.ИсторияЗвонков.Принят</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИсторияЗвонков1ПринятКонтекстноеМеню" id="1018"/>
+											<ExtendedTooltip name="ИсторияЗвонков1ПринятРасширеннаяПодсказка" id="1019"/>
+										</CheckBoxField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ВебСервис" id="242">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Интернет-заявки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Веб сервис</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.telegram_16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ВебСервисРасширеннаяПодсказка" id="243"/>
+					<ChildItems>
+						<UsualGroup name="КомандыВэбСервиса" id="302">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Команды вэб сервиса</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Команды лояльности ремонтов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="КомандыВэбСервисаРасширеннаяПодсказка" id="303"/>
+						</UsualGroup>
+						<UsualGroup name="ГрВебСервисЗадачиСписок" id="368">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр веб сервис задачи список</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр веб сервис задачи список</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГрВебСервисЗадачиСписокРасширеннаяПодсказка" id="369"/>
+							<ChildItems>
+								<Table name="ЗадачиСписокВебСервис" id="306">
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>ЗадачиСписокВебСервис</DataPath>
+									<RowPictureDataPath>~ЗадачиСписокВебСервис.DefaultPicture</RowPictureDataPath>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+									<ContextMenu name="ЗадачиСписокВебСервисКонтекстноеМеню" id="307"/>
+									<AutoCommandBar name="ЗадачиСписокВебСервисКоманднаяПанель" id="308"/>
+									<ExtendedTooltip name="ЗадачиСписокВебСервисРасширеннаяПодсказка" id="309"/>
+									<SearchStringAddition name="ЗадачиСписокВебСервисСтрокаПоиска" id="310">
+										<AdditionSource>
+											<Item>ЗадачиСписокВебСервис</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗадачиСписокВебСервисСтрокаПоискаКонтекстноеМеню" id="311"/>
+										<ExtendedTooltip name="ЗадачиСписокВебСервисСтрокаПоискаРасширеннаяПодсказка" id="312"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ЗадачиСписокВебСервисСостояниеПросмотра" id="313">
+										<AdditionSource>
+											<Item>ЗадачиСписокВебСервис</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗадачиСписокВебСервисСостояниеПросмотраКонтекстноеМеню" id="314"/>
+										<ExtendedTooltip name="ЗадачиСписокВебСервисСостояниеПросмотраРасширеннаяПодсказка" id="315"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ЗадачиСписокВебСервисУправлениеПоиском" id="316">
+										<AdditionSource>
+											<Item>ЗадачиСписокВебСервис</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗадачиСписокВебСервисУправлениеПоискомКонтекстноеМеню" id="317"/>
+										<ExtendedTooltip name="ЗадачиСписокВебСервисУправлениеПоискомРасширеннаяПодсказка" id="318"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateRow">ВэбСервисПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="АвтозвонокТелефон" id="361">
+											<DataPath>ЗадачиСписокВебСервис.Телефон</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Телефон</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="АвтозвонокТелефонКонтекстноеМеню" id="362"/>
+											<ExtendedTooltip name="АвтозвонокТелефонРасширеннаяПодсказка" id="363"/>
+										</LabelField>
+										<LabelField name="Автозвонокemail" id="319">
+											<DataPath>ЗадачиСписокВебСервис.email</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>email</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="АвтозвонокemailКонтекстноеМеню" id="320"/>
+											<ExtendedTooltip name="АвтозвонокemailРасширеннаяПодсказка" id="321"/>
+										</LabelField>
+										<LabelField name="АвтозвонокИнициатор" id="343">
+											<DataPath>ЗадачиСписокВебСервис.Инициатор</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сайт</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="АвтозвонокИнициаторКонтекстноеМеню" id="344"/>
+											<ExtendedTooltip name="АвтозвонокИнициаторРасширеннаяПодсказка" id="345"/>
+										</LabelField>
+										<LabelField name="АвтозвонокName" id="325">
+											<DataPath>ЗадачиСписокВебСервис.name</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Имя</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="АвтозвонокNameКонтекстноеМеню" id="326"/>
+											<ExtendedTooltip name="АвтозвонокNameРасширеннаяПодсказка" id="327"/>
+										</LabelField>
+										<CheckBoxField name="ЗадачиСписокВебСервисНеАвтозвонок" id="1089">
+											<DataPath>ЗадачиСписокВебСервис.НеАвтозвонок</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЗадачиСписокВебСервисНеАвтозвонокКонтекстноеМеню" id="1090"/>
+											<ExtendedTooltip name="ЗадачиСписокВебСервисНеАвтозвонокРасширеннаяПодсказка" id="1091"/>
+										</CheckBoxField>
+										<LabelField name="АвтозвонокForm_type" id="322">
+											<DataPath>ЗадачиСписокВебСервис.form_type</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тип заявки</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="АвтозвонокForm_typeКонтекстноеМеню" id="323"/>
+											<ExtendedTooltip name="АвтозвонокForm_typeРасширеннаяПодсказка" id="324"/>
+										</LabelField>
+										<LabelField name="АвтозвонокДатаПостановки" id="337">
+											<DataPath>ЗадачиСписокВебСервис.ДатаПостановки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата постановки</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="АвтозвонокДатаПостановкиКонтекстноеМеню" id="338"/>
+											<ExtendedTooltip name="АвтозвонокДатаПостановкиРасширеннаяПодсказка" id="339"/>
+										</LabelField>
+										<LabelField name="АвтозвонокДатаЗакрытия" id="334">
+											<DataPath>ЗадачиСписокВебСервис.ДатаЗакрытия</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата закрытия</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="АвтозвонокДатаЗакрытияКонтекстноеМеню" id="335"/>
+											<ExtendedTooltip name="АвтозвонокДатаЗакрытияРасширеннаяПодсказка" id="336"/>
+										</LabelField>
+										<LabelField name="АвтозвонокКомментарий" id="349">
+											<DataPath>ЗадачиСписокВебСервис.Комментарий</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Комментарий</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="АвтозвонокКомментарийКонтекстноеМеню" id="350"/>
+											<ExtendedTooltip name="АвтозвонокКомментарийРасширеннаяПодсказка" id="351"/>
+										</LabelField>
+										<LabelField name="АвтозвонокНапоминаниеПерезвонить" id="352">
+											<DataPath>ЗадачиСписокВебСервис.НапоминаниеПерезвонить</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Напоминание перезвонить</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="АвтозвонокНапоминаниеПерезвонитьКонтекстноеМеню" id="353"/>
+											<ExtendedTooltip name="АвтозвонокНапоминаниеПерезвонитьРасширеннаяПодсказка" id="354"/>
+										</LabelField>
+										<CheckBoxField name="АвтозвонокЗаблокирована" id="340">
+											<DataPath>ЗадачиСписокВебСервис.Заблокирована</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заблокирована</v8:content>
+												</v8:item>
+											</Title>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="АвтозвонокЗаблокированаКонтекстноеМеню" id="341"/>
+											<ExtendedTooltip name="АвтозвонокЗаблокированаРасширеннаяПодсказка" id="342"/>
+										</CheckBoxField>
+										<LabelField name="АвтозвонокИсполнитель" id="346">
+											<DataPath>ЗадачиСписокВебСервис.Исполнитель</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Телефон оператора КЦ</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="АвтозвонокИсполнительКонтекстноеМеню" id="347"/>
+											<ExtendedTooltip name="АвтозвонокИсполнительРасширеннаяПодсказка" id="348"/>
+										</LabelField>
+										<LabelField name="АвтозвонокПричинаЗакрытия" id="355">
+											<DataPath>ЗадачиСписокВебСервис.ПричинаЗакрытия</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Причина ручного закрытия</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="АвтозвонокПричинаЗакрытияКонтекстноеМеню" id="356"/>
+											<ExtendedTooltip name="АвтозвонокПричинаЗакрытияРасширеннаяПодсказка" id="357"/>
+										</LabelField>
+										<LabelField name="АвтозвонокДатаБлокировки" id="331">
+											<DataPath>ЗадачиСписокВебСервис.ДатаБлокировки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата блокировки</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="АвтозвонокДатаБлокировкиКонтекстноеМеню" id="332"/>
+											<ExtendedTooltip name="АвтозвонокДатаБлокировкиРасширеннаяПодсказка" id="333"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокВебСервисСигнатура" id="358">
+											<DataPath>ЗадачиСписокВебСервис.Сигнатура</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сигнатура</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЗадачиСписокВебСервисСигнатураКонтекстноеМеню" id="359"/>
+											<ExtendedTooltip name="ЗадачиСписокВебСервисСигнатураРасширеннаяПодсказка" id="360"/>
+										</LabelField>
+										<CheckBoxField name="АвтозвонокВыполнена" id="328">
+											<DataPath>ЗадачиСписокВебСервис.Выполнена</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выполнена</v8:content>
+												</v8:item>
+											</Title>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="АвтозвонокВыполненаКонтекстноеМеню" id="329"/>
+											<ExtendedTooltip name="АвтозвонокВыполненаРасширеннаяПодсказка" id="330"/>
+										</CheckBoxField>
+									</ChildItems>
+								</Table>
+								<Button name="ЗадачаОтменить1" id="364">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЗадачаОтменить</CommandName>
+									<ExtendedTooltip name="ЗадачаОтменить1РасширеннаяПодсказка" id="365"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГрВебСервисДетали" id="370">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр веб сервис детали</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр веб сервис детали</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГрВебСервисДеталиРасширеннаяПодсказка" id="371"/>
+							<ChildItems>
+								<Table name="ИсторияЗвонков" id="805">
+									<CommandBarLocation>None</CommandBarLocation>
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ИсторияЗвонков</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ИсторияЗвонковКонтекстноеМеню" id="806"/>
+									<AutoCommandBar name="ИсторияЗвонковКоманднаяПанель" id="807"/>
+									<ExtendedTooltip name="ИсторияЗвонковРасширеннаяПодсказка" id="808"/>
+									<SearchStringAddition name="ИсторияЗвонковСтрокаПоиска" id="809">
+										<AdditionSource>
+											<Item>ИсторияЗвонков</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсторияЗвонковСтрокаПоискаКонтекстноеМеню" id="810"/>
+										<ExtendedTooltip name="ИсторияЗвонковСтрокаПоискаРасширеннаяПодсказка" id="811"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ИсторияЗвонковСостояниеПросмотра" id="812">
+										<AdditionSource>
+											<Item>ИсторияЗвонков</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсторияЗвонковСостояниеПросмотраКонтекстноеМеню" id="813"/>
+										<ExtendedTooltip name="ИсторияЗвонковСостояниеПросмотраРасширеннаяПодсказка" id="814"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ИсторияЗвонковУправлениеПоиском" id="815">
+										<AdditionSource>
+											<Item>ИсторияЗвонков</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсторияЗвонковУправлениеПоискомКонтекстноеМеню" id="816"/>
+										<ExtendedTooltip name="ИсторияЗвонковУправлениеПоискомРасширеннаяПодсказка" id="817"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ИсторияЗвонковВыбор</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ИсторияЗвонковЭтоВходящий" id="1044">
+											<DataPath>Объект.ИсторияЗвонков.ЭтоВходящий</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>БЛ=Исх. звонок; БИ=Вх. звонок</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="ИсторияЗвонковЭтоВходящийКонтекстноеМеню" id="1045"/>
+											<ExtendedTooltip name="ИсторияЗвонковЭтоВходящийРасширеннаяПодсказка" id="1046"/>
+										</LabelField>
+										<InputField name="ИсторияЗвонковДата" id="1041">
+											<DataPath>Объект.ИсторияЗвонков.Дата</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсторияЗвонковДатаКонтекстноеМеню" id="1042"/>
+											<ExtendedTooltip name="ИсторияЗвонковДатаРасширеннаяПодсказка" id="1043"/>
+										</InputField>
+										<InputField name="ИсторияЗвонковОператор" id="1059">
+											<DataPath>Объект.ИсторияЗвонков.Оператор</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсторияЗвонковОператорКонтекстноеМеню" id="1060"/>
+											<ExtendedTooltip name="ИсторияЗвонковОператорРасширеннаяПодсказка" id="1061"/>
+										</InputField>
+										<InputField name="ИсторияЗвонковТочкаРазмещения" id="1062">
+											<DataPath>Объект.ИсторияЗвонков.ТочкаРазмещения</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсторияЗвонковТочкаРазмещенияКонтекстноеМеню" id="1063"/>
+											<ExtendedTooltip name="ИсторияЗвонковТочкаРазмещенияРасширеннаяПодсказка" id="1064"/>
+										</InputField>
+										<CheckBoxField name="ИсторияЗвонковПринят" id="1047">
+											<DataPath>Объект.ИсторияЗвонков.Принят</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИсторияЗвонковПринятКонтекстноеМеню" id="1048"/>
+											<ExtendedTooltip name="ИсторияЗвонковПринятРасширеннаяПодсказка" id="1049"/>
+										</CheckBoxField>
+									</ChildItems>
+								</Table>
+								<HTMLDocumentField name="ИнтернетПочтоваяЗаявкаСодержаниеОтображение" id="1080">
+									<DataPath>ИнтернетПочтоваяЗаявкаСодержаниеОтображение</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ИнтернетПочтоваяЗаявкаСодержаниеОтображениеКонтекстноеМеню" id="1081"/>
+									<ExtendedTooltip name="ИнтернетПочтоваяЗаявкаСодержаниеОтображениеРасширеннаяПодсказка" id="1082"/>
+								</HTMLDocumentField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗадачи" id="131">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочее</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задачи по обратному звонку</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="СтраницаЗадачиРасширеннаяПодсказка" id="132"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЗадача" id="155">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа задача</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа задача</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗадачаРасширеннаяПодсказка" id="156"/>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГАЗ" id="649">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ГАЗ-заявки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ГАЗ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.ГАЗ</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГАЗРасширеннаяПодсказка" id="650"/>
+					<ChildItems>
+						<UsualGroup name="Группа2" id="690">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="691"/>
+							<ChildItems>
+								<Table name="ЗадачиСписокГАЗ" id="651">
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>ЗадачиСписокГАЗ</DataPath>
+									<RowPictureDataPath>~ЗадачиСписокГАЗ.DefaultPicture</RowPictureDataPath>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>600</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+									<ContextMenu name="ЗадачиСписокГАЗКонтекстноеМеню" id="652"/>
+									<AutoCommandBar name="ЗадачиСписокГАЗКоманднаяПанель" id="653"/>
+									<ExtendedTooltip name="ЗадачиСписокГАЗРасширеннаяПодсказка" id="654"/>
+									<SearchStringAddition name="ЗадачиСписокГАЗСтрокаПоиска" id="655">
+										<AdditionSource>
+											<Item>ЗадачиСписокГАЗ</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗадачиСписокГАЗСтрокаПоискаКонтекстноеМеню" id="656"/>
+										<ExtendedTooltip name="ЗадачиСписокГАЗСтрокаПоискаРасширеннаяПодсказка" id="657"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ЗадачиСписокГАЗСостояниеПросмотра" id="658">
+										<AdditionSource>
+											<Item>ЗадачиСписокГАЗ</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗадачиСписокГАЗСостояниеПросмотраКонтекстноеМеню" id="659"/>
+										<ExtendedTooltip name="ЗадачиСписокГАЗСостояниеПросмотраРасширеннаяПодсказка" id="660"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ЗадачиСписокГАЗУправлениеПоиском" id="661">
+										<AdditionSource>
+											<Item>ЗадачиСписокГАЗ</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗадачиСписокГАЗУправлениеПоискомКонтекстноеМеню" id="662"/>
+										<ExtendedTooltip name="ЗадачиСписокГАЗУправлениеПоискомРасширеннаяПодсказка" id="663"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateRow">ЗадачиСписокГАЗПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ЗадачиСписокГАЗТелефон" id="679">
+											<DataPath>ЗадачиСписокГАЗ.Телефон</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Телефон</v8:content>
+												</v8:item>
+											</Title>
+											<Width>10</Width>
+											<ContextMenu name="ЗадачиСписокГАЗТелефонКонтекстноеМеню" id="680"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗТелефонРасширеннаяПодсказка" id="681"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокГАЗПочта" id="747">
+											<DataPath>ЗадачиСписокГАЗ.Почта</DataPath>
+											<Width>15</Width>
+											<ContextMenu name="ЗадачиСписокГАЗПочтаКонтекстноеМеню" id="748"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗПочтаРасширеннаяПодсказка" id="749"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокГАЗРегион" id="687">
+											<DataPath>ЗадачиСписокГАЗ.Регион</DataPath>
+											<ContextMenu name="ЗадачиСписокГАЗРегионКонтекстноеМеню" id="688"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗРегионРасширеннаяПодсказка" id="689"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокГАЗТочкаРазмещения" id="741">
+											<DataPath>ЗадачиСписокГАЗ.ТочкаРазмещения</DataPath>
+											<ContextMenu name="ЗадачиСписокГАЗТочкаРазмещенияКонтекстноеМеню" id="742"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗТочкаРазмещенияРасширеннаяПодсказка" id="743"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокГАЗКонтрагент" id="738">
+											<DataPath>ЗадачиСписокГАЗ.Контрагент</DataPath>
+											<ContextMenu name="ЗадачиСписокГАЗКонтрагентКонтекстноеМеню" id="739"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗКонтрагентРасширеннаяПодсказка" id="740"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокГАЗНапоминаниеПерезвонить" id="673">
+											<DataPath>ЗадачиСписокГАЗ.НапоминаниеПерезвонить</DataPath>
+											<ContextMenu name="ЗадачиСписокГАЗНапоминаниеПерезвонитьКонтекстноеМеню" id="674"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗНапоминаниеПерезвонитьРасширеннаяПодсказка" id="675"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокГАЗДатаПервогоПерезвона" id="667">
+											<DataPath>ЗадачиСписокГАЗ.ДатаПервогоПерезвона</DataPath>
+											<ContextMenu name="ЗадачиСписокГАЗДатаПервогоПерезвонаКонтекстноеМеню" id="668"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗДатаПервогоПерезвонаРасширеннаяПодсказка" id="669"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокГАЗДатаПостановки" id="670">
+											<DataPath>ЗадачиСписокГАЗ.ДатаПостановки</DataPath>
+											<ContextMenu name="ЗадачиСписокГАЗДатаПостановкиКонтекстноеМеню" id="671"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗДатаПостановкиРасширеннаяПодсказка" id="672"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокГАЗСодержание" id="726">
+											<DataPath>ЗадачиСписокГАЗ.Содержание</DataPath>
+											<ContextMenu name="ЗадачиСписокГАЗСодержаниеКонтекстноеМеню" id="727"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗСодержаниеРасширеннаяПодсказка" id="728"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокГАЗКомментарий" id="735">
+											<DataPath>ЗадачиСписокГАЗ.Комментарий</DataPath>
+											<ContextMenu name="ЗадачиСписокГАЗКомментарийКонтекстноеМеню" id="736"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗКомментарийРасширеннаяПодсказка" id="737"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокГАЗУточнение" id="732">
+											<DataPath>~ЗадачиСписокГАЗ.Уточнение</DataPath>
+											<ContextMenu name="ЗадачиСписокГАЗУточнениеКонтекстноеМеню" id="733"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗУточнениеРасширеннаяПодсказка" id="734"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокГАЗДатаЗакрытия" id="664">
+											<DataPath>ЗадачиСписокГАЗ.ДатаЗакрытия</DataPath>
+											<ContextMenu name="ЗадачиСписокГАЗДатаЗакрытияКонтекстноеМеню" id="665"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗДатаЗакрытияРасширеннаяПодсказка" id="666"/>
+										</LabelField>
+										<CheckBoxField name="ЗадачиСписокГАЗВыполнена" id="684">
+											<DataPath>ЗадачиСписокГАЗ.Выполнена</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЗадачиСписокГАЗВыполненаКонтекстноеМеню" id="685"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗВыполненаРасширеннаяПодсказка" id="686"/>
+										</CheckBoxField>
+										<LabelField name="ЗадачиСписокГАЗИд" id="729">
+											<DataPath>ЗадачиСписокГАЗ.Ид</DataPath>
+											<ContextMenu name="ЗадачиСписокГАЗИдКонтекстноеМеню" id="730"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗИдРасширеннаяПодсказка" id="731"/>
+										</LabelField>
+										<LabelField name="ЗадачиСписокГАЗСигнатура" id="676">
+											<DataPath>ЗадачиСписокГАЗ.Сигнатура</DataPath>
+											<ContextMenu name="ЗадачиСписокГАЗСигнатураКонтекстноеМеню" id="677"/>
+											<ExtendedTooltip name="ЗадачиСписокГАЗСигнатураРасширеннаяПодсказка" id="678"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+								<Table name="ИсторияЗвонков2" id="897">
+									<CommandBarLocation>None</CommandBarLocation>
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ИсторияЗвонков2КонтекстноеМеню" id="898"/>
+									<AutoCommandBar name="ИсторияЗвонков2КоманднаяПанель" id="899"/>
+									<ExtendedTooltip name="ИсторияЗвонков2РасширеннаяПодсказка" id="900"/>
+									<SearchStringAddition name="ИсторияЗвонков2СтрокаПоиска" id="901">
+										<AdditionSource>
+											<Item>ИсторияЗвонков2</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсторияЗвонков2СтрокаПоискаКонтекстноеМеню" id="902"/>
+										<ExtendedTooltip name="ИсторияЗвонков2СтрокаПоискаРасширеннаяПодсказка" id="903"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ИсторияЗвонков2СостояниеПросмотра" id="904">
+										<AdditionSource>
+											<Item>ИсторияЗвонков2</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсторияЗвонков2СостояниеПросмотраКонтекстноеМеню" id="905"/>
+										<ExtendedTooltip name="ИсторияЗвонков2СостояниеПросмотраРасширеннаяПодсказка" id="906"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ИсторияЗвонков2УправлениеПоиском" id="907">
+										<AdditionSource>
+											<Item>ИсторияЗвонков2</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсторияЗвонков2УправлениеПоискомКонтекстноеМеню" id="908"/>
+										<ExtendedTooltip name="ИсторияЗвонков2УправлениеПоискомРасширеннаяПодсказка" id="909"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ИсторияЗвонков2Выбор</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ИсторияЗвонков2ЭтоВходящий" id="919">
+											<EditMode>EnterOnInput</EditMode>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>БЛ=Исх; БИ=Вход</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="ИсторияЗвонков2ЭтоВходящийКонтекстноеМеню" id="920"/>
+											<ExtendedTooltip name="ИсторияЗвонков2ЭтоВходящийРасширеннаяПодсказка" id="921"/>
+										</LabelField>
+										<InputField name="ИсторияЗвонков2Дата" id="916">
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсторияЗвонков2ДатаКонтекстноеМеню" id="917"/>
+											<ExtendedTooltip name="ИсторияЗвонков2ДатаРасширеннаяПодсказка" id="918"/>
+										</InputField>
+										<InputField name="ИсторияЗвонков2Оператор" id="934">
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсторияЗвонков2ОператорКонтекстноеМеню" id="935"/>
+											<ExtendedTooltip name="ИсторияЗвонков2ОператорРасширеннаяПодсказка" id="936"/>
+										</InputField>
+										<InputField name="ИсторияЗвонков2ТочкаРазмещения" id="937">
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсторияЗвонков2ТочкаРазмещенияКонтекстноеМеню" id="938"/>
+											<ExtendedTooltip name="ИсторияЗвонков2ТочкаРазмещенияРасширеннаяПодсказка" id="939"/>
+										</InputField>
+										<CheckBoxField name="ИсторияЗвонков2Принят" id="922">
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИсторияЗвонков2ПринятКонтекстноеМеню" id="923"/>
+											<ExtendedTooltip name="ИсторияЗвонков2ПринятРасширеннаяПодсказка" id="924"/>
+										</CheckBoxField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="ЗадачаОтменить" id="682">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗадачаОтменить</CommandName>
+							<ExtendedTooltip name="ЗадачаОтменитьРасширеннаяПодсказка" id="683"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="АрхивНовости" id="757">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новости</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Архив новости</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.CNN</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="АрхивНовостиРасширеннаяПодсказка" id="758"/>
+					<ChildItems>
+						<HTMLDocumentField name="АрхивНовостей" id="759">
+							<DataPath>АрхивНовостей</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="АрхивНовостейКонтекстноеМеню" id="760"/>
+							<ExtendedTooltip name="АрхивНовостейРасширеннаяПодсказка" id="761"/>
+							<Events>
+								<Event name="OnClick">АрхивНовостей1ПриНажатии</Event>
+							</Events>
+						</HTMLDocumentField>
+					</ChildItems>
+				</Page>
+				<Page name="Лог" id="1095">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лог</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лог</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЛогРасширеннаяПодсказка" id="1096"/>
+				</Page>
+				<Page name="СтрWebSocket" id="584">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Websocket &amp; SSE</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стр web socket</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтрWebSocketРасширеннаяПодсказка" id="585"/>
+					<ChildItems>
+						<CheckBoxField name="Websocket1" id="624">
+							<DataPath>Websocket</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>1. Поставь галку,  если ее нет, Websocket</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="Websocket1КонтекстноеМеню" id="625"/>
+							<ExtendedTooltip name="Websocket1РасширеннаяПодсказка" id="626"/>
+							<Events>
+								<Event name="OnChange">Websocket1ПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<LabelDecoration name="Декорация1" id="629">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>2. Выбери телефон, как обычно</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="630"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="631"/>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация2" id="632">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>3. Напечатай свой номер телефона и нажми кнопку "Click to start"</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="633"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="634"/>
+						</LabelDecoration>
+						<HTMLDocumentField name="html" id="577">
+							<DataPath>html</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Height>3</Height>
+							<ContextMenu name="htmlКонтекстноеМеню" id="578"/>
+							<ExtendedTooltip name="htmlРасширеннаяПодсказка" id="579"/>
+							<Events>
+								<Event name="OnClick">htmlПриНажатии</Event>
+							</Events>
+						</HTMLDocumentField>
+						<UsualGroup name="ГруппаЗадачаУправление" id="185">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа задача управление</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа задача управление</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗадачаУправлениеРасширеннаяПодсказка" id="186"/>
+							<ChildItems>
+								<CheckBoxField name="ОбрабатыватьАвтозвонки" id="203">
+									<DataPath>МоиНастройки_ОбрабатыватьАвтозвонки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обрабатывать автозвонки</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбрабатыватьАвтозвонкиКонтекстноеМеню" id="204"/>
+									<ExtendedTooltip name="ОбрабатыватьАвтозвонкиРасширеннаяПодсказка" id="205"/>
+								</CheckBoxField>
+								<CheckBoxField name="Фильтры" id="643">
+									<DataPath>Фильтры</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ФильтрыКонтекстноеМеню" id="644"/>
+									<ExtendedTooltip name="ФильтрыРасширеннаяПодсказка" id="645"/>
+								</CheckBoxField>
+								<CheckBoxField name="МоиНастройки_ПоказыватьИсториюЗвонков" id="851">
+									<DataPath>МоиНастройки_ПоказыватьИсториюЗвонков</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показывать историю звонков</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="МоиНастройки_ПоказыватьИсториюЗвонковКонтекстноеМеню" id="852"/>
+									<ExtendedTooltip name="МоиНастройки_ПоказыватьИсториюЗвонковРасширеннаяПодсказка" id="853"/>
+								</CheckBoxField>
+								<CheckBoxField name="МоиНастройки_ПолучатьИсториюЗвонковАсинхронно" id="950">
+									<DataPath>МоиНастройки_ПолучатьИсториюАсинхронно</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Получать историю в фоне</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="МоиНастройки_ПолучатьИсториюЗвонковАсинхронноКонтекстноеМеню" id="951"/>
+									<ExtendedTooltip name="МоиНастройки_ПолучатьИсториюЗвонковАсинхронноРасширеннаяПодсказка" id="952"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="IPАдресСервера" id="646">
+							<DataPath>IPАдресСервера</DataPath>
+							<ContextMenu name="IPАдресСервераКонтекстноеМеню" id="647"/>
+							<ExtendedTooltip name="IPАдресСервераРасширеннаяПодсказка" id="648"/>
+						</InputField>
+						<InputField name="тестДанные" id="1099">
+							<DataPath>тестДанные</DataPath>
+							<ContextMenu name="тестДанныеКонтекстноеМеню" id="1100"/>
+							<ExtendedTooltip name="тестДанныеРасширеннаяПодсказка" id="1101"/>
+						</InputField>
+						<Button name="тест" id="1097">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.тест</CommandName>
+							<ExtendedTooltip name="тестРасширеннаяПодсказка" id="1098"/>
+						</Button>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонсольКонтактЦентраSSE</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="КонсольПауза" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Консоль пауза</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Справочник" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Справочник.НаименованиеПолное</Field>
+				<Field>Справочник.Ссылка</Field>
+				<Field>Справочник.Телефоны</Field>
+				<Field>Справочник.ЭтоГруппа</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Предприятие.Ссылка КАК Ссылка,
+	Предприятие.ЭтоГруппа КАК ЭтоГруппа,
+	Предприятие.Наименование КАК Наименование,
+	Предприятие.Должность КАК Должность,
+	Предприятие.НаименованиеПолное КАК НаименованиеПолное,
+	Предприятие.Состояние КАК Состояние,
+	Точки.Наименование КАК ТочкаРазмещения,
+	ЕСТЬNULL(ТелСпр.Телефоны, "") КАК Телефоны,
+	Предприятие.Сотрудник КАК Сотрудник
+ИЗ
+	Справочник.Предприятие КАК Предприятие
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ТочкиРазмещения КАК Точки
+		ПО (Точки.Ссылка = Предприятие.ТочкаРазмещения)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ТелСправочник КАК ТелСпр
+		ПО (ТелСпр.Владелец = Предприятие.Ссылка)</QueryText>
+				<MainTable>Catalog.Предприятие</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СправочникПоиск" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрый поиск в телефонном справочнике по фамилии, подразделению или номерам телефонов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Телефоны" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефоны</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Телефон</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТелМобильные</v8:Type>
+						<v8:Type>cfg:CatalogRef.ТелОчереди</v8:Type>
+						<v8:Type>cfg:CatalogRef.ТелВнутренние</v8:Type>
+						<v8:Type>cfg:CatalogRef.ТелВнешние</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Тип" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Atxfer" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>С уведомлением</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Redirect" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Без уведомления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Владелец" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Владелец</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Предприятие</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="КонсольСостояние" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние звонка
+0 - не выполняется
+1 - выполняется входящий звонок
+2 - выполняется исходящий звонок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КаналИнициатор" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Канал-инициатор звонка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:Type>cfg:CatalogRef.ТелВнешние</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КаналСистемный" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Системный канал звонка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АбонентВнешний" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер телефона внешнего абонента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗадачаКомментарий" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание текущей задачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗвонокИдентификатор" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор текущего звонка (LinkedID). Если реквизит не заполнен, значит звонок не выполняется</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="к_LinkedID" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>linked ID текущего звонка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>32</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МоиНастройки_ОбрабатыватьАвтозвонки" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мои настройки обрабатывать автозвонки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МоиНастройки_ОповещатьОбОшибкахОтправкиПочты" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мои настройки оповещать об ошибках отправки почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МоиНастройки_ТестовыйРежим" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мои настройки тестовый режим</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокИдФоновыхЗаданийОтправкиПисем" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список ид фоновых заданий отправки писем</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="к_ТелВнутрОП" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внутренний телефон сотрудника ОП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>4</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Отладка_Лог" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лог ведется если МоиНастройки_ТестовыйРежим=Истина</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СайтИнтернетЗаявкиАвтозвонка" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сайт отправитель автозвонка. Заполнена только тогда когда это интернет-заявка-автозвонок. Если это интернет-заявка-НЕ-автозвонок, тогда не заполнена </v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонсольТелефон" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Консоль телефон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>4</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДисплейТекстАвтозвонка" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дисплей свойство TEXT автозвонка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДисплейИмяАвтозвонка" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дисплей: свойство name автозвонка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДисплейМайлАвтозвонка" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дисплей: свойство EMAIL автозвонка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗадачиСписокВебСервис" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи список веб сервис</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ЗадачиСписокВебСервис.Читабельная</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Задачи.Телефон КАК Телефон,
+	Задачи.ДатаЗакрытия КАК ДатаЗакрытия,
+	Задачи.Исполнитель КАК Исполнитель,
+	Задачи.Инициатор КАК Инициатор,
+	Задачи.ПричинаЗакрытия КАК ПричинаЗакрытия,
+	Задачи.ДатаПостановки КАК ДатаПостановки,
+	Задачи.Заблокирована КАК Заблокирована,
+	Задачи.Сигнатура КАК Сигнатура,
+	ВЫБОР
+		КОГДА Задачи.ДатаЗакрытия = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК Выполнена,
+	Задачи.НапоминаниеПерезвонить КАК НапоминаниеПерезвонить,
+	Задачи.ДатаБлокировки КАК ДатаБлокировки,
+	ЕСТЬNULL(Свойства1.Значение, "") КАК form_type,
+	ЕСТЬNULL(Свойства2.Значение.ПолнаяСтрока, "") КАК Комментарий,
+	ЕСТЬNULL(Свойства3.Значение, "") КАК name,
+	ЕСТЬNULL(Свойства4.Значение, "") КАК email,
+	ВЫБОР
+		КОГДА СТРНАЙТИ(ИнтернетЗаявки.Комментарий, "&lt;!DOCTYPE html&gt;") &gt; 0
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Читабельная,
+	НЕ Задачи.ВыполнитьАвтозвонок КАК НеАвтозвонок
+ИЗ
+	РегистрСведений.ЗадачиИнтернетЗаявки КАК Задачи
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ИнтернетЗаявки КАК ИнтернетЗаявки
+		ПО Задачи.Сигнатура = ИнтернетЗаявки.Сигнатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИнтернетЗаявкиСвойства КАК Свойства1
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыСтрокИнтернетЗаявок КАК Идентификаторы1
+			ПО Свойства1.Свойство = Идентификаторы1.Ссылка
+				И (Идентификаторы1.МодифицированнаяСтрока = "form_type")
+		ПО Задачи.Сигнатура = Свойства1.Сигнатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИнтернетЗаявкиСвойства КАК Свойства2
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыСтрокИнтернетЗаявок КАК Идентификаторы2
+			ПО Свойства2.Свойство = Идентификаторы2.Ссылка
+				И (Идентификаторы2.МодифицированнаяСтрока = "text")
+		ПО Задачи.Сигнатура = Свойства2.Сигнатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИнтернетЗаявкиСвойства КАК Свойства3
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыСтрокИнтернетЗаявок КАК Идентификаторы3
+			ПО Свойства3.Свойство = Идентификаторы3.Ссылка
+				И (Идентификаторы3.МодифицированнаяСтрока = "name")
+		ПО Задачи.Сигнатура = Свойства3.Сигнатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИнтернетЗаявкиСвойства КАК Свойства4
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыСтрокИнтернетЗаявок КАК Идентификаторы4
+			ПО Свойства4.Свойство = Идентификаторы4.Ссылка
+				И (Идентификаторы4.МодифицированнаяСтрока = "email")
+		ПО Задачи.Сигнатура = Свойства4.Сигнатура</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Телефон</dcssch:dataPath>
+					<dcssch:field>Телефон</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаЗакрытия</dcssch:dataPath>
+					<dcssch:field>ДатаЗакрытия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Выполнена</dcssch:dataPath>
+					<dcssch:field>Выполнена</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнена</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НапоминаниеПерезвонить</dcssch:dataPath>
+					<dcssch:field>НапоминаниеПерезвонить</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Исполнитель</dcssch:dataPath>
+					<dcssch:field>Исполнитель</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Заблокирована</dcssch:dataPath>
+					<dcssch:field>Заблокирована</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПричинаЗакрытия</dcssch:dataPath>
+					<dcssch:field>ПричинаЗакрытия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Инициатор</dcssch:dataPath>
+					<dcssch:field>Инициатор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>name</dcssch:dataPath>
+					<dcssch:field>name</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Name</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПостановки</dcssch:dataPath>
+					<dcssch:field>ДатаПостановки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сигнатура</dcssch:dataPath>
+					<dcssch:field>Сигнатура</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаБлокировки</dcssch:dataPath>
+					<dcssch:field>ДатаБлокировки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>form_type</dcssch:dataPath>
+					<dcssch:field>form_type</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Form type</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>email</dcssch:dataPath>
+					<dcssch:field>email</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Email</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Читабельная</dcssch:dataPath>
+					<dcssch:field>Читабельная</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Читабельная</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НеАвтозвонок</dcssch:dataPath>
+					<dcssch:field>НеАвтозвонок</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вручную</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Телефон</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>НапоминаниеПерезвонить</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">НапоминаниеПерезвонить</dcsset:left>
+									<dcsset:comparisonType>Filled</dcsset:comparisonType>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:Plum</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>НеАвтозвонок</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">НеАвтозвонок</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:MediumSeaGreen</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ИмяАктивногоДинамичСписка" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя активного динамич списка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоследнийНабранныйНомерВнутрАбонента" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Последний набранный номер внутр абонента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>4</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СайтИнтернетЗаявкиНеАвтозвонка" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сайт отправитель автозвонка. Заполнена только тогда когда это интернет-заявка-автозвонок. Если это интернет-заявка-НЕ-автозвонок, тогда не заполнена </v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗадачиСписокЗвонки" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи список звонки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Задачи.Телефон КАК Телефон,
+	Задачи.Тип КАК Тип,
+	Задачи.ДатаПостановки КАК ДатаПостановки,
+	Задачи.ДатаАктуальности КАК ДатаАктуальности,
+	Задачи.ДатаЗакрытия КАК ДатаЗакрытия,
+	Задачи.Исполнитель КАК Исполнитель,
+	ВЫБОР
+		КОГДА Задачи.ДатаЗакрытия = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК Выполнена,
+	Задачи.ПричинаЗакрытия КАК ПричинаРучногоЗакрытия,
+	Задачи.ПисьмоИнициатор КАК ПисьмоИнициатор,
+	Задачи.ЗвонокИнициатор КАК ЗвонокИнициатор,
+	Задачи.ДатаПервогоПерезвона КАК ДатаПервогоПерезвона,
+	Задачи.НапоминаниеПерезвонить КАК НапоминаниеПерезвонить,
+	Задачи.Основание КАК Основание,
+	"" КАК ДатаОтправки,
+	ВЫБОР
+		КОГДА Задачи.Тип В (ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.Непринятый), ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.Сброс))
+			ТОГДА Звонки.Инициатор.Наименование
+		КОГДА Задачи.Тип = ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.НепринятыйИсходящий)
+			ТОГДА Задачи.ПисьмоИнициатор
+		ИНАЧЕ ""
+	КОНЕЦ КАК Канал,
+	ВЫБОР
+		КОГДА Задачи.Тип В (ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.Непринятый), ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.Сброс))
+			ТОГДА Звонки.Инициатор.Назначение
+		КОГДА Задачи.Тип = ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.НепринятыйИсходящий)
+			ТОГДА Задачи.ПисьмоИнициатор
+		ИНАЧЕ ""
+	КОНЕЦ КАК КаналНазначение,
+	Звонки.Регион КАК Регион,
+	ЕСТЬNULL(ЗвонкиСтатОбщая.КодПричиныНепринят, 0) КАК КодПричиныНепринят,
+	ЕСТЬNULL(ЗвонкиЗакрытия.Сигнатура, "") КАК ЗвонокЗакрытияСигнатура,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ПОДСТРОКА(ЗвонкиЗакрытия.Сигнатура, 1, 1), "") = "0"
+			ТОГДА "Закрыта исходящим"
+		КОГДА ЕСТЬNULL(ПОДСТРОКА(ЗвонкиЗакрытия.Сигнатура, 1, 1), "") = "1"
+			ТОГДА "Закрыта повторным входящим"
+		КОГДА ЕСТЬNULL(ПОДСТРОКА(ЗвонкиЗакрытия.Сигнатура, 1, 1), "") = ""
+				И Задачи.ДатаЗакрытия &gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА "Закрыта вручную (нет звонка закрытия)"
+	КОНЕЦ КАК ПричинаЗакрытияЗадачи,
+	ВЫБОР
+		КОГДА ТИПЗНАЧЕНИЯ(ЗвонкиЗакрытия.Инициатор) = ТИП(Справочник.ТелВнутренние)
+			ТОГДА ЗвонкиЗакрытия.Инициатор
+	КОНЕЦ КАК ТелИсполнителяПерезвонаКЦ
+ИЗ
+	РегистрСведений.ЗадачиОбратныйЗвонок КАК Задачи
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.Звонки КАК Звонки
+		ПО Задачи.ЗвонокИнициатор = Звонки.Сигнатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗвонкиСтатОбщая КАК ЗвонкиСтатОбщая
+		ПО (Звонки.Сигнатура = ЗвонкиСтатОбщая.Сигнатура)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Звонки КАК ЗвонкиЗакрытия
+		ПО Задачи.ЗвонокЗакрытия = ЗвонкиЗакрытия.Сигнатура
+ГДЕ
+	Задачи.Тип В (ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.Непринятый), ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.НепринятыйИсходящий), ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.Сброс))</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПричинаРучногоЗакрытия</dcssch:dataPath>
+					<dcssch:field>ПричинаРучногоЗакрытия</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причина ручного закрытия</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТелИсполнителяПерезвонаКЦ</dcssch:dataPath>
+					<dcssch:field>ТелИсполнителяПерезвонаКЦ</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тел исполнителя перезвона КЦ</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Телефон</dcssch:dataPath>
+					<dcssch:field>Телефон</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Тип</dcssch:dataPath>
+					<dcssch:field>Тип</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПисьмоИнициатор</dcssch:dataPath>
+					<dcssch:field>ПисьмоИнициатор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПостановки</dcssch:dataPath>
+					<dcssch:field>ДатаПостановки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаАктуальности</dcssch:dataPath>
+					<dcssch:field>ДатаАктуальности</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаЗакрытия</dcssch:dataPath>
+					<dcssch:field>ДатаЗакрытия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПервогоПерезвона</dcssch:dataPath>
+					<dcssch:field>ДатаПервогоПерезвона</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Выполнена</dcssch:dataPath>
+					<dcssch:field>Выполнена</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнена</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НапоминаниеПерезвонить</dcssch:dataPath>
+					<dcssch:field>НапоминаниеПерезвонить</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Исполнитель</dcssch:dataPath>
+					<dcssch:field>Исполнитель</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Регион</dcssch:dataPath>
+					<dcssch:field>Регион</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗвонокИнициатор</dcssch:dataPath>
+					<dcssch:field>ЗвонокИнициатор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Основание</dcssch:dataPath>
+					<dcssch:field>Основание</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаОтправки</dcssch:dataPath>
+					<dcssch:field>ДатаОтправки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата отправки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПричинаЗакрытияЗадачи</dcssch:dataPath>
+					<dcssch:field>ПричинаЗакрытияЗадачи</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причина закрытия задачи</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Канал</dcssch:dataPath>
+					<dcssch:field>Канал</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Канал</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КаналНазначение</dcssch:dataPath>
+					<dcssch:field>КаналНазначение</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Канал назначение</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КодПричиныНепринят</dcssch:dataPath>
+					<dcssch:field>КодПричиныНепринят</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код причины непринят</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗвонокЗакрытияСигнатура</dcssch:dataPath>
+					<dcssch:field>ЗвонокЗакрытияСигнатура</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Звонок закрытия сигнатура</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЗадачиСписокПочта" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи список почта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>~ЗадачиСписокПочта.Сигнатура</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Задачи.Телефон КАК Телефон,
+	Задачи.ДатаПостановки КАК ДатаПостановки,
+	Задачи.ДатаАктуальности КАК ДатаАктуальности,
+	Задачи.ДатаЗакрытия КАК ДатаЗакрытия,
+	Задачи.Исполнитель КАК Исполнитель,
+	ВЫБОР
+		КОГДА Задачи.ДатаЗакрытия = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК Выполнена,
+	Задачи.ПричинаЗакрытия КАК ПричинаРучногоЗакрытия,
+	Задачи.ДатаПервогоПерезвона КАК ДатаПервогоПерезвона,
+	Задачи.НапоминаниеПерезвонить КАК НапоминаниеПерезвонить,
+	Задачи.ПисьмоИнициатор КАК ПисьмоИнициатор,
+	ЕСТЬNULL(Письма.АдресОтправителя, "") КАК АдресОтправителя,
+	ЕСТЬNULL(Письма.ДатаОтправки, "") КАК ДатаОтправки,
+	ЕСТЬNULL(Письма.Инициатор, "") КАК Канал,
+	ЕСТЬNULL(Письма.АдресПолучателя, "") КАК АдресПолучателя,
+	ЕСТЬNULL(ЗвонкиЗакрытия.Сигнатура, "") КАК ЗвонокЗакрытияСигнатура,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ПОДСТРОКА(ЗвонкиЗакрытия.Сигнатура, 1, 1), "") = "0"
+			ТОГДА "Закрыта исходящим"
+		КОГДА ЕСТЬNULL(ПОДСТРОКА(ЗвонкиЗакрытия.Сигнатура, 1, 1), "") = "1"
+			ТОГДА "Закрыта повторным входящим"
+		КОГДА ЕСТЬNULL(ПОДСТРОКА(ЗвонкиЗакрытия.Сигнатура, 1, 1), "") = ""
+				И Задачи.ДатаЗакрытия &gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА "Закрыта вручную (нет звонка закрытия)"
+	КОНЕЦ КАК ПричинаЗакрытияЗадачи,
+	ВЫБОР
+		КОГДА ТИПЗНАЧЕНИЯ(ЗвонкиЗакрытия.Инициатор) = ТИП(Справочник.ТелВнутренние)
+			ТОГДА ЗвонкиЗакрытия.Инициатор
+	КОНЕЦ КАК ТелИсполнителяПерезвонаКЦ,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(Письма.АдресОтправителя, "") = "info@krible.com"
+			ТОГДА ЕСТЬNULL(Письма.Инициатор, "")
+		ИНАЧЕ ЕСТЬNULL(Письма.АдресОтправителя, "")
+	КОНЕЦ КАК СайтИлиПочтаОтправителя,
+	ЕСТЬNULL(Письма.Сигнатура, "") КАК Сигнатура,
+	ЕСТЬNULL(Отпр.Получатели, "") КАК ОтпрПолучатели,
+	ЕСТЬNULL(Отпр.Отправлено, ДАТАВРЕМЯ(1, 1, 1)) КАК ОтпрОтправлено
+ИЗ
+	РегистрСведений.ЗадачиОбратныйЗвонок КАК Задачи
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Письма КАК Письма
+		ПО Задачи.ПисьмоИнициатор = Письма.Сигнатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Звонки КАК ЗвонкиЗакрытия
+		ПО Задачи.ЗвонокЗакрытия = ЗвонкиЗакрытия.Сигнатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПисьмаОтправленные КАК Отпр
+		ПО (Письма.Сигнатура = Отпр.Входящее)
+ГДЕ
+	(Задачи.Тип = ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.ЗаявкаКорпСайта)
+			ИЛИ Задачи.Тип = ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.ЗаявкаСайтаKrible)
+			ИЛИ Задачи.Тип = ЗНАЧЕНИЕ(Перечисление.ТипЗадачи.ПрочаяПочта))</QueryText>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="html" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Html</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Websocket" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать Websocket вместо TCP/IP</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МоиНастройки_ПричинаРучногоЗакрытияРегистрирующаяСпаммера" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мои настройки причина ручного закрытия регистрирующая спаммера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Регион" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регион. Используется только как параметр для формы анкеты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>64</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерИНазначениеВнешнегоТелефонаЛуидор" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер и назначение внешнего телефона Луидор. Используется только как параметр формы анкеты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Фильтры" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фильтры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="IPАдресСервера" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>IPАдрес сервера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗадачиСписокГАЗ" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи список ГАЗ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Задачи.Телефон КАК Телефон,
+	Задачи.ДатаПостановки КАК ДатаПостановки,
+	Задачи.ДатаЗакрытия КАК ДатаЗакрытия,
+	Задачи.Сигнатура КАК Сигнатура,
+	Задачи.ДатаПервогоПерезвона КАК ДатаПервогоПерезвона,
+	Задачи.НапоминаниеПерезвонить КАК НапоминаниеПерезвонить,
+	ВЫБОР
+		КОГДА Задачи.ДатаЗакрытия = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК Выполнена,
+	Задачи.Комментарий КАК Комментарий,
+	ГАЗЗаявки.Регион КАК Регион,
+	ГАЗЗаявки.Почта КАК Почта,
+	ГАЗЗаявки.Содержание КАК Содержание,
+	ГАЗЗаявки.Ид КАК Ид,
+	ГАЗЗаявки.Контрагент КАК Контрагент,
+	ГАЗЗаявки.ТочкаРазмещения КАК ТочкаРазмещения
+ИЗ
+	РегистрСведений.ЗадачиГАЗЗаявки КАК Задачи
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ГАЗЗаявки КАК ГАЗЗаявки
+		ПО Задачи.Сигнатура = ГАЗЗаявки.Сигнатура
+ГДЕ
+	Задачи.АдресацияРоль = ЗНАЧЕНИЕ(Справочник.Роли.ОператорКонтактЦентра)</QueryText>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ИнтернетЗаявкаСигнатура" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интернет заявка сигнатура</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КаналИнициаторЗадачиОбратногоЗвонка" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Канал-инициатор звонка, устанавливаем из активной строки таблицы задачи обратного звонка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:Type>cfg:CatalogRef.ТелВнешние</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Новости" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новости</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АрхивНовостей" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Архив новостей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МоиНастройки_ПоказыватьИсториюЗвонков" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мои настройки показывать историю звонков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КлючСкрытогоОбсужденияСистемыВзаимодействия" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ключ скрытого обсуждения системы взаимодействия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>40</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МоиНастройки_ПолучатьИсториюАсинхронно" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мои настройки получать историю асинхронно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДисплейДругиеСайты" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>_</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнтернетПочтоваяЗаявкаСодержание" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интернет почтовая заявка содержание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнтернетПочтоваяЗаявкаСодержаниеОтображение" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интернет почтовая заявка содержание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="тестДанные" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест данные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТелефоныAtxfer</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Телефоны.Тип</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#008000</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>С уведомл.</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТелефоныRedirect</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Телефоны.Тип</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#0000FF</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Без уведомл.</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЗадачаИстория</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ЗадачаИстория.Принят</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЗадачаИстория1</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ЗадачаИстория.Принят</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЗадачиСписокТелефон</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ЗадачиСписокЗвонки.НапоминаниеПерезвонить</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Plum</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЗадачиСписокПочтаТелефон</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ЗадачиСписокПочта.НапоминаниеПерезвонить</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Plum</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЗадачаИстория</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ЗадачаИстория.Принят</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LightSalmon</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ИсторияЗвонков</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ИсторияЗвонков1</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ИсторияЗвонков.Принят</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ИсторияЗвонков.ЭтоЗвонок</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LightSalmon</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КонсольТелефонВыбрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать телефон рабочего места</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать телефон рабочего места</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КонсольТелефонВыбрать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="АбонентИстория" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История звонков</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму с историей звонков по текущему абоненту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ShowData</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>АбонентИстория</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтправитьПисьмо_ПоставитьЗадачу" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить письмо</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить письмо поставить задачу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОтправитьЭлектронноеПисьмо</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтправитьПисьмо_ПоставитьЗадачу</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Очистить" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Очистить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отладка_ЗначенияПеременных" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отладка значения переменных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Отладка_ЗначенияПеременных</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьСотрудника" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудники</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать сотрудника</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьСотрудника</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПереключитьЗвонокПоРасширеннойАнкете2" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключить звонок по расширенной анкете</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключить звонок по расширенной анкете</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.InformationRegister</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереключитьЗвонокПоРасширеннойАнкете</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗадачаОтменить" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задача отменить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задача отменить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗадачаОтменить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Позвонить" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Звонить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Позвонить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Позвонить</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Позвонить</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьНапоминаниеПерезвонить" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Напоминание перезвонить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить напоминание перезвонить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ИсторияИзменений</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьНапоминаниеПерезвонить</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьДинСписки" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить списки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить список</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьДинСписки</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьНапоминаниеПерезвонитьВоВремяЗвонка" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Напоминание перезвонить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить напоминание перезвонить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ИсторияИзменений</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьНапоминаниеПерезвонитьВоВремяЗвонка</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыполниИсходящийАвтоЗвонокТестКнопкой" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполни исходящий авто звонок тест кнопкой</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполни исходящий авто звонок тест кнопкой</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполниИсходящийАвтоЗвонокТестКнопкой</Action>
+		</Command>
+		<Command name="ТестСообщения" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест сообщения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТестСообщения</Action>
+		</Command>
+		<Command name="тест" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>тест</Action>
+		</Command>
+	</Commands>
+</Form>

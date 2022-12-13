@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Subsystem uuid="49a7606b-cfd6-4b3c-a1a8-b56820bbad00">
+		<Properties>
+			<Name>АрхивНеУдалять</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Архив - не удалять</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">7e17c853-5132-4dc7-ab69-6dde3f744c60</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">7f2794b0-9153-47cd-a0e9-5a764cf3ead2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">fe643cb4-d348-4a0f-9a5c-19acc5105f89</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">e0b0b7ba-d55e-4b29-bc28-e7fe5267b359</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">6dee6476-97d8-4406-bae3-c80b6d7276d8</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">9e952fd7-6a77-49a1-80c1-9dfafc176a46</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">01cf2a81-7949-4365-baca-1d0622ac379d</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">061d74b9-c542-4772-86f4-f695d1b21dac</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">5a81a3c9-f446-4ff1-816e-9b745d6244bf</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">6a0670d3-b1e4-4460-a701-21e215f08c42</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">d40b8fc6-50dd-418c-a3cd-154ac4d29070</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">68719c4c-88f8-4573-bd7a-7391d44f3779</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">b85258f5-87d6-4ef6-baca-011760dd5860</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">e75e6b90-e937-4dab-9cc7-71eb9984ffd9</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">8710c255-e4af-4b72-842e-8355b9fa8f67</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">83c7014e-accd-4e45-ae9b-7a7a9d8b85a1</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>
