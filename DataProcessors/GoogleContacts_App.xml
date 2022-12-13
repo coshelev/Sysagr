@@ -31,6 +31,9 @@
 			<Form>ТонкийКлиент</Form>
 			<Template>Инструкция_docx</Template>
 			<Template>СкриптBasДляГенерацииJWT</Template>
+			<Template>ФайлЗакрытогоКлюча</Template>
+			<Template>ДанныеСервисногоАккаунтаСодержащиеИмяИЗакрытыйКлюч</Template>
+			<Template>ФайлЗакрытогоКлюча_json</Template>
 		</ChildObjects>
 	</DataProcessor>
 </MetaDataObject>

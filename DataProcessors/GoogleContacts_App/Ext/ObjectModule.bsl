@@ -74,22 +74,24 @@
 Процедура ПолучиДанные(AccessToken)
 	//Собственно получение данных
 	//-----------------------------
-		
-	//Spreadsheet ID (см. https://developers.google.com/sheets/api/guides/concepts#spreadsheet_id)
-	//Every API method requires a spreadsheetId parameter which is used to identify which spreadsheet is to be accessed or altered. 
-	//--------------------------------------------------------------------------------------------------------------------------------	
-	spreadsheetId="1rMYnx6YTp6qnssSOg-rU64UczMZ3cFdxWVsMNf-uAtw"; 		//книга notifyme348@gmail.com_SysAgr_for_Adwords из аккаунта notifyme348@gmail.com 				- работает
 	
-	//Прочитай диапазон из spreasheet.Чтение Sheet2 - количества заполненных строк на листе Sheet1. Using the HTTP Authorization header like this: Authorization: Bearer oauth2-token
-	//----------------------------------------------------------------------------------------------------------------------
-	//кмд = СтрШаблон("curl -X GET 'https://people.googleapis.com/v1/people/me/connections?personFields=names,emailAddresses' -H 'Authorization:Bearer %1,' -H 'Content-Type:application/x-www-form-urlencoded'", AccessToken);	 //не работает
-	//кмд = СтрШаблон("curl -X GET 'https://people.googleapis.com/v1/people/me' -H 'Authorization:Bearer %1,' -H 'Content-Type:application/x-www-form-urlencoded'", AccessToken); // не работает
+	//Кейс 1. Чтение SpreadSheet. Работает
+	//Spreadsheet_Чтение(AccessToken);
 	
-	//кмд = СтрШаблон("curl -X GET 'https://people.googleapis.com/v1/contactGroups' -H 'Authorization:Bearer %1,' -H 'Content-Type:application/x-www-form-urlencoded'", AccessToken);	// это работает, возвращает список групп
-	//кмд = СтрШаблон("curl -X GET 'https://people.googleapis.com/v1/otherContacts?readMask=names,emailAddresses' -H 'Authorization:Bearer %1,' -H 'Content-Type:application/x-www-form-urlencoded'", AccessToken);	// возвращает пустой json
+	//Кейс 2. Чтение списка  групп. Работает
+	Сообщить("------------ чтение групп --------------------");
+	кмд = СтрШаблон("curl -X GET 'https://people.googleapis.com/v1/contactGroups' -H 'Authorization:Bearer %1,' -H 'Content-Type:application/x-www-form-urlencoded'", AccessToken);	// это работает, возвращает список групп
+    Ответ = Авито.CURL_HttpResponse(кмд);	
+	Если Ответ.КодСостояния <> 200 Тогда
+		Возврат;
+	КонецЕсли; 
+	json = Ответ.ПолучитьТелоКакСтроку(); //Пример ответа: {"range": "Sheet2!A1",  "majorDimension": "ROWS", "values": [["373"]]}	
+	Сообщить(json);  
 	
-	//Кэширующий запрос
-	ТекДата = ТекущаяДата();
+	//Кейс 3. Поиск контакта, содержащего "t"
+	Сообщить("-------- поиск контакта ------------------------");
+	ТекДата = ТекущаяДата(); 
+	//Кэширующий запрос  	
 	кмд = СтрШаблон("curl -X GET 'https://people.googleapis.com/v1/people:searchContacts?query=&readMask=names,emailAddresses' -H 'Authorization:Bearer %1,' -H 'Content-Type:application/x-www-form-urlencoded'", AccessToken);	// возвращает пустой json
 	Ответ = Авито.CURL_HttpResponse(кмд);	
 	Если Ответ.КодСостояния <> 200 Тогда
@@ -101,8 +103,7 @@
 			Прервать;
 		КонецЕсли;
 	КонецЦикла;
-	кмд = СтрШаблон("curl -X GET 'https://people.googleapis.com/v1/people:searchContacts?query=test&readMask=names,emailAddresses' -H 'Authorization:Bearer %1,' -H 'Content-Type:application/x-www-form-urlencoded'", AccessToken); //	не возвращает
-	
+	кмд = СтрШаблон("curl -X GET 'https://people.googleapis.com/v1/people:searchContacts?query=t&readMask=names,emailAddresses' -H 'Authorization:Bearer %1,' -H 'Content-Type:application/x-www-form-urlencoded'", AccessToken); //	не возвращает	
 	Ответ = Авито.CURL_HttpResponse(кмд);	
 	
 	Если Ответ.КодСостояния <> 200 Тогда
@@ -111,42 +112,16 @@
 		Возврат
 	КонецЕсли;  
 	
-	json = Ответ.ПолучитьТелоКакСтроку(); //Пример ответа: {"range": "Sheet2!A1",  "majorDimension": "ROWS", "values": [["373"]]}	
-	
-	Сообщить(json);
-		
+	json = Ответ.ПолучитьТелоКакСтроку(); //Пример ответа: {"range": "Sheet2!A1",  "majorDimension": "ROWS", "values": [["373"]]}		
+	Сообщить(json);	
 	Об = Авито.ПрочитатьЗначениеJSON(json);
 		
-	Если Об.values[0].Количество()= 0 Тогда
-		Возврат
-	КонецЕсли;
+    //кмд = СтрШаблон("curl -X GET 'https://people.googleapis.com/v1/people/me/connections?personFields=names,emailAddresses' -H 'Authorization:Bearer %1,' -H 'Content-Type:application/x-www-form-urlencoded'", AccessToken);	 //не работает
+	//кмд = СтрШаблон("curl -X GET 'https://people.googleapis.com/v1/people/me' -H 'Authorization:Bearer %1,' -H 'Content-Type:application/x-www-form-urlencoded'", AccessToken); // не работает
+	//кмд = СтрШаблон("curl -X GET 'https://people.googleapis.com/v1/otherContacts?readMask=names,emailAddresses' -H 'Authorization:Bearer %1,' -H 'Content-Type:application/x-www-form-urlencoded'", AccessToken);	// возвращает пустой json	
 	
-	Данные = Об.values[0];
-	Sheet1_КоличествоСтрок = Число(Данные[0]);
-	
-	Если Число(Sheet1_КоличествоСтрок) = 0 Тогда
-		Возврат;
-	КонецЕсли;
-	
-	//Чтение Sheet1
-	//----------------
-	Sheet1_КоличествоСтрок = СтрЗаменить(Sheet1_КоличествоСтрок, Символ(160), "");  // Если былло "1 153" то получим "1153"
-		
-	//Прочитай диапазон из spreasheet
-	//---------------------------------
-	кмд   = СтрШаблон("curl -X GET 'https://sheets.googleapis.com/v4/spreadsheets/%1/values/Sheet1!A1:F%2'  -H 'Authorization:Bearer %3,' -H 'Content-Type:application/x-www-form-urlencoded'", spreadsheetId,Sheet1_КоличествоСтрок, AccessToken);
-	Ответ = Авито.CURL_HttpResponse(кмд);
 
-	Если Ответ.КодСостояния <> 200 Тогда
-		Сообщить(СтрШаблон("Ошибка: Ответ.КодСостояния = %1", Ответ.КодСостояния));
-		ЗаписьЖурналаРегистрации("ПолучиДанные()", УровеньЖурналаРегистрации.Ошибка, , кмд, "Http response code <> 200");
-		Возврат
-	КонецЕсли; 
-	json = Ответ.ПолучитьТелоКакСтроку();
-
-	ЗаписатьСтоимости(json);	
-
-КонецПроцедуры
+КонецПроцедуры  
 
 Функция ЗаписатьСтоимости(json)  
 	Возврат "отмена";
@@ -526,6 +501,61 @@
 	
 КонецФункции
 
-#КонецОбласти
+#КонецОбласти 
+
+Функция Spreadsheet_Чтение(AccessToken)
+	//Собственно получение данных
+	//-----------------------------
+		
+	//Spreadsheet ID (см. https://developers.google.com/sheets/api/guides/concepts#spreadsheet_id)
+	//Every API method requires a spreadsheetId parameter which is used to identify which spreadsheet is to be accessed or altered. 
+	//--------------------------------------------------------------------------------------------------------------------------------	
+	spreadsheetId="1rMYnx6YTp6qnssSOg-rU64UczMZ3cFdxWVsMNf-uAtw"; 		//книга notifyme348@gmail.com_SysAgr_for_Adwords из аккаунта notifyme348@gmail.com 				- работает
+	
+	//Прочитай диапазон из spreasheet.Чтение Sheet2 - количества заполненных строк на листе Sheet1. Using the HTTP Authorization header like this: Authorization: Bearer oauth2-token
+	//----------------------------------------------------------------------------------------------------------------------
+	кмд = СтрШаблон("curl -X GET 'https://sheets.googleapis.com/v4/spreadsheets/%1/values/Sheet2!A1:A1 -H 'Authorization:Bearer %2,' -H 'Content-Type:application/x-www-form-urlencoded'", spreadsheetId, AccessToken);
+	Ответ = Авито.CURL_HttpResponse(кмд);	
+	
+	Если Ответ.КодСостояния <> 200 Тогда
+		Сообщить(СтрШаблон("Ошибка: Ответ.КодСостояния = %1", Ответ.КодСостояния));
+		ЗаписьЖурналаРегистрации("ПолучиДанные()", УровеньЖурналаРегистрации.Ошибка, ,кмд, "Http response code <> 200");
+		Возврат "ошибка"
+	КонецЕсли;  
+	
+	json = Ответ.ПолучитьТелоКакСтроку(); //Пример ответа: {"range": "Sheet2!A1",  "majorDimension": "ROWS", "values": [["373"]]}	
+		
+	Об = Авито.ПрочитатьЗначениеJSON(json);
+		
+	Если Об.values[0].Количество()= 0 Тогда
+		Возврат "";
+	КонецЕсли;
+	
+	Данные = Об.values[0];
+	Sheet1_КоличествоСтрок = Число(Данные[0]);
+	
+	Если Число(Sheet1_КоличествоСтрок) = 0 Тогда
+		Возврат "";
+	КонецЕсли;
+	
+	//Чтение Sheet1
+	//----------------
+	Sheet1_КоличествоСтрок = СтрЗаменить(Sheet1_КоличествоСтрок, Символ(160), "");  // Если былло "1 153" то получим "1153"
+		
+	//Прочитай диапазон из spreasheet
+	//---------------------------------
+	кмд   = СтрШаблон("curl -X GET 'https://sheets.googleapis.com/v4/spreadsheets/%1/values/Sheet1!A1:F%2'  -H 'Authorization:Bearer %3,' -H 'Content-Type:application/x-www-form-urlencoded'", spreadsheetId,Sheet1_КоличествоСтрок, AccessToken);
+	Ответ = Авито.CURL_HttpResponse(кмд);
+
+	Если Ответ.КодСостояния <> 200 Тогда
+		Сообщить(СтрШаблон("Ошибка: Ответ.КодСостояния = %1", Ответ.КодСостояния));
+		ЗаписьЖурналаРегистрации("ПолучиДанные()", УровеньЖурналаРегистрации.Ошибка, , кмд, "Http response code <> 200");
+		Возврат "";
+	КонецЕсли; 
+	json = Ответ.ПолучитьТелоКакСтроку();
+
+	ЗаписатьСтоимости(json);	
+	
+КонецФункции
  
  

@@ -614,8 +614,8 @@
 		<Metadata name="CommonForm.ЭлПисьмо.Form" id="6e47edc9-3690-46a3-b164-943078bf9dbf.0" configVersion="545ff87dc5c8e4439ee29635910acc4c00000000"/>
 		<Metadata name="CommonModule.GoogleYandexJdan" id="d1e3abb4-0c5f-444c-8cb2-ba75db8d6fa5" configVersion="1709627eb9475a4d87e56da589dfcd3f00000000"/>
 		<Metadata name="CommonModule.GoogleYandexJdan.Module" id="d1e3abb4-0c5f-444c-8cb2-ba75db8d6fa5.0" configVersion="9b0a80cb3c639c43a05b1ac6664408b500000000"/>
-		<Metadata name="CommonModule.Авито" id="62434175-eef2-4381-b2f8-4b90135103b1" configVersion="23095fc14c733f41895ac5f42504892200000000"/>
-		<Metadata name="CommonModule.Авито.Module" id="62434175-eef2-4381-b2f8-4b90135103b1.0" configVersion="b80eb93f69787d468ae08206babb95a900000000"/>
+		<Metadata name="CommonModule.Авито" id="62434175-eef2-4381-b2f8-4b90135103b1" configVersion="7d5a476b7f500a4b95e8cbca91ebdb6200000000"/>
+		<Metadata name="CommonModule.Авито.Module" id="62434175-eef2-4381-b2f8-4b90135103b1.0" configVersion="b28f7f68c3b80642925fc996e2ff3a0500000000"/>
 		<Metadata name="CommonModule.Анкета" id="200d8b94-5dba-4c99-a5bd-53689cc26c9b" configVersion="18b847d49ddfa2478b6946f634b6726800000000"/>
 		<Metadata name="CommonModule.Анкета.Module" id="200d8b94-5dba-4c99-a5bd-53689cc26c9b.0" configVersion="6fc6489e6e9dd440963cea18f8e3a87300000000"/>
 		<Metadata name="CommonModule.ВэбСервисы" id="e8d79b76-113a-46b2-9345-8fe14a1ed840" configVersion="f3aa19cccbe45f40b34da21224b4cfab00000000"/>
@@ -823,14 +823,20 @@
 		<Metadata name="DataProcessor.GoogleAdwords_User.Form.ТонкийКлиент.Form" id="b429e5e5-6d07-4574-9e9e-6ef6529d65c5.0" configVersion="54acf5dd622a1f4bb14db85a2f4cc63a00000000"/>
 		<Metadata name="DataProcessor.GoogleAdwords_User.Template.Инструкция_docx" id="a6a605cb-0618-4e2e-9e96-ba3cc40afcd8" configVersion="dddd8d6c909b3e4eb3e003848ec338ec00000000"/>
 		<Metadata name="DataProcessor.GoogleAdwords_User.Template.Инструкция_docx.Template" id="a6a605cb-0618-4e2e-9e96-ba3cc40afcd8.0" configVersion="6b01a0f197823e44b7b107b346950b0900000000"/>
-		<Metadata name="DataProcessor.GoogleContacts_App" id="9e57857d-652e-49fe-a94e-2f5b28d74a78" configVersion="c585ac28272958439e4eb59565cd3d8b00000000"/>
+		<Metadata name="DataProcessor.GoogleContacts_App" id="9e57857d-652e-49fe-a94e-2f5b28d74a78" configVersion="e43da9bb229f6d45bb8226c4be60bd8e00000000"/>
 		<Metadata name="DataProcessor.GoogleContacts_App.Form.ТонкийКлиент" id="dfe75a62-9689-45d4-9bbd-34b1614f2881" configVersion="4af7c21e22a90b4e835929e29912888000000000"/>
 		<Metadata name="DataProcessor.GoogleContacts_App.Form.ТонкийКлиент.Form" id="dfe75a62-9689-45d4-9bbd-34b1614f2881.0" configVersion="c9365d091c8ccc46be818adbf9def8f700000000"/>
-		<Metadata name="DataProcessor.GoogleContacts_App.ObjectModule" id="9e57857d-652e-49fe-a94e-2f5b28d74a78.0" configVersion="05712a5c41c26f49855deb9102260d0000000000"/>
+		<Metadata name="DataProcessor.GoogleContacts_App.ObjectModule" id="9e57857d-652e-49fe-a94e-2f5b28d74a78.0" configVersion="e6ce3af9d8cf504aba895a725ad1a92800000000"/>
+		<Metadata name="DataProcessor.GoogleContacts_App.Template.ДанныеСервисногоАккаунтаСодержащиеИмяИЗакрытыйКлюч" id="87dd2de2-e25e-4616-9a7d-ced3e856f6cf" configVersion="7290488a404aee4fa1f21c66989846a400000000"/>
+		<Metadata name="DataProcessor.GoogleContacts_App.Template.ДанныеСервисногоАккаунтаСодержащиеИмяИЗакрытыйКлюч.Template" id="87dd2de2-e25e-4616-9a7d-ced3e856f6cf.0" configVersion="d84f4c5ce4af874198ac89a0491152fb00000000"/>
 		<Metadata name="DataProcessor.GoogleContacts_App.Template.Инструкция_docx" id="a731d64f-52e0-449e-b77f-9cb9248ce928" configVersion="6d5273089140e448a9951eb24a09b58500000000"/>
 		<Metadata name="DataProcessor.GoogleContacts_App.Template.Инструкция_docx.Template" id="a731d64f-52e0-449e-b77f-9cb9248ce928.0" configVersion="4285fbaf0ca50947b504ce1c8722ebcc00000000"/>
 		<Metadata name="DataProcessor.GoogleContacts_App.Template.СкриптBasДляГенерацииJWT" id="ff781f24-c180-4cf5-a5ea-fdc927736742" configVersion="832ecf06e5f9064c9380a53b38370a7700000000"/>
 		<Metadata name="DataProcessor.GoogleContacts_App.Template.СкриптBasДляГенерацииJWT.Template" id="ff781f24-c180-4cf5-a5ea-fdc927736742.0" configVersion="c0d05eaf07be7c468e1463efe989d21100000000"/>
+		<Metadata name="DataProcessor.GoogleContacts_App.Template.ФайлЗакрытогоКлюча" id="68d02615-32ec-4c44-8d26-aa9d16d1d559" configVersion="a6ddba4396996547b2dd89ffb078d77500000000"/>
+		<Metadata name="DataProcessor.GoogleContacts_App.Template.ФайлЗакрытогоКлюча.Template" id="68d02615-32ec-4c44-8d26-aa9d16d1d559.0" configVersion="d88799a5a3aaad4f842020c4968055d500000000"/>
+		<Metadata name="DataProcessor.GoogleContacts_App.Template.ФайлЗакрытогоКлюча_json" id="8b77448b-55d5-4e20-b402-90ca8aa3bab1" configVersion="86118b9271606c4daf6fc72d2ffb589900000000"/>
+		<Metadata name="DataProcessor.GoogleContacts_App.Template.ФайлЗакрытогоКлюча_json.Template" id="8b77448b-55d5-4e20-b402-90ca8aa3bab1.0" configVersion="a9480ad5f0724041b354cd6e2ce6480600000000"/>
 		<Metadata name="DataProcessor.WebКонсольИсходящихЗвонковПродажи" id="ae1301aa-1ba4-467e-8025-d6f316a9ff9f" configVersion="c72a0ec0df5ae249b70259a05fc3e67500000000"/>
 		<Metadata name="DataProcessor.WebКонсольИсходящихЗвонковПродажи.Form.Форма" id="f72a99b8-50f5-4b12-9c3f-b187cfab7e0a" configVersion="7fafdf5ce31a7a48948b1c0d20bbb75c00000000"/>
 		<Metadata name="DataProcessor.WebКонсольИсходящихЗвонковПродажи.Form.Форма.Form" id="f72a99b8-50f5-4b12-9c3f-b187cfab7e0a.0" configVersion="0981ee35e3ade94aba96b977d3c597c800000000"/>
