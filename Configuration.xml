@@ -625,7 +625,8 @@
 			<InformationRegister>ЗвонкиСделки</InformationRegister>
 			<InformationRegister>ИнтернетЗаявки</InformationRegister>
 			<InformationRegister>ИнтернетЗаявкиШаблоныПараметров</InformationRegister>
-			<InformationRegister>ИнтернетЗаявкиПараметры</InformationRegister>
+			<InformationRegister>Удалить_ИнтернетЗаявкиПараметрыСтрокой</InformationRegister>
+			<InformationRegister>Удалить_ИнтернетЗаявкиПараметры</InformationRegister>
 			<InformationRegister>ИнтернетЗаявкиСвойства</InformationRegister>
 			<InformationRegister>ИнтернетЗаявкиСтоимость</InformationRegister>
 			<InformationRegister>КонтрагентыВСотрудники</InformationRegister>

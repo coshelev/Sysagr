@@ -31,87 +31,131 @@
 				</v8:item>
 			</ToolTip>
 			<HorizontalStretch>true</HorizontalStretch>
-			<Group>Vertical</Group>
+			<Group>AlwaysHorizontal</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<BackColor>#FFFFFF</BackColor>
 			<ExtendedTooltip name="ГруппаДисплейРасширеннаяПодсказка" id="150"/>
 			<ChildItems>
-				<UsualGroup name="Группа1" id="151">
-					<Group>Horizontal</Group>
-					<Behavior>Usual</Behavior>
-					<Representation>None</Representation>
-					<ChildItemsWidth>Equal</ChildItemsWidth>
+				<UsualGroup name="ГруппаОбщее" id="465">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа общее</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа общее</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="152"/>
+					<ExtendedTooltip name="ГруппаОбщееРасширеннаяПодсказка" id="466"/>
 					<ChildItems>
-						<LabelDecoration name="Дисплей01" id="153">
+						<UsualGroup name="Группа1" id="151">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="152"/>
+							<ChildItems>
+								<LabelDecoration name="Дисплей01" id="153">
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>#FF6600</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>(НомерТелефона и Направление)</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="Дисплей01КонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="Дисплей01РасширеннаяПодсказка" id="155"/>
+								</LabelDecoration>
+								<LabelDecoration name="Дисплей03" id="156">
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>web:Green</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="Дисплей03КонтекстноеМеню" id="157"/>
+									<ExtendedTooltip name="Дисплей03РасширеннаяПодсказка" id="158"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Дисплей02" id="159">
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<HorizontalStretch>true</HorizontalStretch>
-							<TextColor>#FF6600</TextColor>
-							<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>(НомерТелефона и Направление)</v8:content>
+									<v8:content>(Сведения о канале) или (Подразделение)</v8:content>
 								</v8:item>
 							</Title>
-							<VerticalAlign>Center</VerticalAlign>
-							<ContextMenu name="Дисплей01КонтекстноеМеню" id="154"/>
-							<ExtendedTooltip name="Дисплей01РасширеннаяПодсказка" id="155"/>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="Дисплей02КонтекстноеМеню" id="160"/>
+							<ExtendedTooltip name="Дисплей02РасширеннаяПодсказка" id="161"/>
+							<Events>
+								<Event name="Click">ПанельБыстрогоВызова</Event>
+							</Events>
 						</LabelDecoration>
-						<LabelDecoration name="Дисплей03" id="156">
-							<HorizontalStretch>true</HorizontalStretch>
-							<TextColor>web:Green</TextColor>
-							<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-							<VerticalAlign>Center</VerticalAlign>
-							<ContextMenu name="Дисплей03КонтекстноеМеню" id="157"/>
-							<ExtendedTooltip name="Дисплей03РасширеннаяПодсказка" id="158"/>
+						<LabelField name="ДисплейДругиеСайты" id="453">
+							<DataPath>ДисплейДругиеСайты</DataPath>
+							<TitleTextColor>style:SpecialTextColor</TitleTextColor>
+							<TitleFont ref="style:NormalTextFont" height="11" kind="StyleItem"/>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="style:NormalTextFont" height="11" kind="StyleItem"/>
+							<ContextMenu name="ДисплейДругиеСайтыКонтекстноеМеню" id="454"/>
+							<ExtendedTooltip name="ДисплейДругиеСайтыРасширеннаяПодсказка" id="455"/>
+						</LabelField>
+						<LabelDecoration name="ДисплейСодержаниеИнтернетПочтовойЗаявки" id="456">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показать</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="ДисплейСодержаниеИнтернетПочтовойЗаявкиКонтекстноеМеню" id="457"/>
+							<ExtendedTooltip name="ДисплейСодержаниеИнтернетПочтовойЗаявкиРасширеннаяПодсказка" id="458"/>
+							<Events>
+								<Event name="Click">ДисплейСодержаниеИнтернетПочтовойЗаявкиНажатие</Event>
+							</Events>
 						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
-				<LabelDecoration name="Дисплей02" id="159">
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<HorizontalStretch>true</HorizontalStretch>
-					<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-					<Title formatted="false">
+				<UsualGroup name="ГруппаПараметрыИнтернетЗаявки" id="467">
+					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>(Сведения о канале) или (Подразделение)</v8:content>
+							<v8:content>Группа параметры интернет заявки</v8:content>
 						</v8:item>
 					</Title>
-					<Hyperlink>true</Hyperlink>
-					<ContextMenu name="Дисплей02КонтекстноеМеню" id="160"/>
-					<ExtendedTooltip name="Дисплей02РасширеннаяПодсказка" id="161"/>
-					<Events>
-						<Event name="Click">ПанельБыстрогоВызова</Event>
-					</Events>
-				</LabelDecoration>
-				<LabelField name="ДисплейДругиеСайты" id="453">
-					<DataPath>ДисплейДругиеСайты</DataPath>
-					<TitleTextColor>style:SpecialTextColor</TitleTextColor>
-					<TitleFont ref="style:NormalTextFont" height="11" kind="StyleItem"/>
-					<TitleLocation>None</TitleLocation>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<Font ref="style:NormalTextFont" height="11" kind="StyleItem"/>
-					<ContextMenu name="ДисплейДругиеСайтыКонтекстноеМеню" id="454"/>
-					<ExtendedTooltip name="ДисплейДругиеСайтыРасширеннаяПодсказка" id="455"/>
-				</LabelField>
-				<LabelDecoration name="ДисплейСодержаниеИнтернетПочтовойЗаявки" id="456">
-					<Title formatted="false">
+					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Показать</v8:content>
+							<v8:content>Группа параметры интернет заявки</v8:content>
 						</v8:item>
-					</Title>
-					<Hyperlink>true</Hyperlink>
-					<ContextMenu name="ДисплейСодержаниеИнтернетПочтовойЗаявкиКонтекстноеМеню" id="457"/>
-					<ExtendedTooltip name="ДисплейСодержаниеИнтернетПочтовойЗаявкиРасширеннаяПодсказка" id="458"/>
-					<Events>
-						<Event name="Click">ДисплейСодержаниеИнтернетПочтовойЗаявкиНажатие</Event>
-					</Events>
-				</LabelDecoration>
+					</ToolTip>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПараметрыИнтернетЗаявкиРасширеннаяПодсказка" id="468"/>
+					<ChildItems>
+						<HTMLDocumentField name="СтрИнтернетЗаявкаПараметры" id="469">
+							<DataPath>ИнтернетЗаявкаСвойства</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>14</Width>
+							<ContextMenu name="СтрИнтернетЗаявкаПараметрыКонтекстноеМеню" id="470"/>
+							<ExtendedTooltip name="СтрИнтернетЗаявкаПараметрыРасширеннаяПодсказка" id="471"/>
+						</HTMLDocumentField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГрОткрытыеДокументы" id="438">
@@ -1902,6 +1946,21 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ИнтернетЗаявкаСвойства" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интернет заявка свойства</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -2419,6 +2478,15 @@
 		<Parameter name="СайтИнтернетЗаявки_АвтоответНаВопросРегионАбонента">
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ИнтернетЗаявкаСвойства">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Parameter>
 	</Parameters>

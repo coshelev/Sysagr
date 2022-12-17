@@ -26,7 +26,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Сайты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.GoogleContacts_App</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИнтернетЗаявкиШаблоныПараметров</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИнтернетЗаявкиПараметры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Удалить_ИнтернетЗаявкиПараметры</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

@@ -643,6 +643,17 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.Удалить_ИнтернетЗаявкиПараметрыСтрокой</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.АгентыЦелевые.Attribute.НачБлокировки</name>
 		<right>
 			<name>Edit</name>
@@ -657,7 +668,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ИнтернетЗаявкиПараметры</name>
+		<name>InformationRegister.Удалить_ИнтернетЗаявкиПараметры</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
